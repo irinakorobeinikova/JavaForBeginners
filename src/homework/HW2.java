@@ -4,13 +4,19 @@ public class HW2 {
 
     public static void main(String[] args){
 
-//Task 11 Создать целочисленные переменные k, l, m и присвоить им значения на ваше усмотрение.
-        int k = 3;
-        int l = 8;
-        int m = 25;
+        /**Task 11
+         * Create integer variables k, l, m and assign them the values of your choice.
+         */
+        System.out.println("Task 11");
+
+        int k = 5;
+        int l = 10;
+        int m = 15;
         String line = "______________________________________________________________________________________________";
 
-//Task 12 Вывести значения переменных в столбик.
+        /**Task 12
+         * Display the values of variables in a column.
+         */
         System.out.println("Task 12");
 
         System.out.println(k);
@@ -18,7 +24,9 @@ public class HW2 {
         System.out.println(m);
         System.out.println(line);
 
-        //Task 13 Вывести значения переменных в строку.
+        /**Task 13
+         *Print the values of variables to a string.
+         */
         System.out.println("Task 13");
 
         System.out.print(k);
@@ -26,16 +34,19 @@ public class HW2 {
         System.out.println(m);
         System.out.println(line);
 
-        //Task 14 Используя конкатенацию, вывести значения переменных в строку через запятую.
+        /**Task 14
+         * Using concatenation, print the values of variables into a string separated by commas.
+         */
         System.out.println("Task 14");
 
         System.out.println(k + ", " + l + ", " + m);
         System.out.println(line);
 
-        //Task 15 Вывести значения этих переменных так, чтобы было понятно, какое значение к какой переменной относится.
-        //Например, должно быть распечатано:
-        // int a = 5;
-        // или a = 5
+        /**Task 15
+         * Display the values of these variables so that it is clear which value belongs to which variable.
+         * For example, it should print:
+         * int a = 5; or a = 5;
+         */
         System.out.println("Task 15");
 
         System.out.println("int k = " + k);
@@ -43,68 +54,79 @@ public class HW2 {
         System.out.println("int m = " + m);
         System.out.println(line);
 
-        //Task 16 Распечатать следующие выражения, где вместо … будет выведен результат арифметической операции:
-        //Sum of k and l = …
-        //k * m = …
-        //Разность переменных l и m = …
+        /**Task 16 Print the following expressions, where instead of ... the result of an arithmetic operation
+         * will be displayed: Sum of k and l = …, k * m = …, Difference of variables l and m = …
+         */
         System.out.println("Task 16");
 
         System.out.println("Sum of k and l = " + (k + l));
         System.out.println("k * m = " + (k * m));
-        System.out.println("Subtract m from l = " + (l - m));
+        System.out.println("Difference of variables l and m" + (l - m));
         System.out.println(line);
 
-        //Task 17 Распечатать следующие выражения:
-        //Результат деления k на l = …, а остаток от деления  = …
-        //Результат деления k на m = …, а остаток от деления  = …
-        //Результат деления l на m = …, а остаток от деления  = …
-        //Результат деления m на k = …, а остаток от деления  = …
+        /**Task 17 Print the following expressions:
+         * The result of dividing k by l = …, and the remainder of the division = …
+         * The result of dividing k by m = …, and the remainder of the division = …
+         * The result of dividing l by m = …, and the remainder of the division = …
+         * The result of dividing m by k = …, and the remainder of the division = …
+         */
         System.out.println("Task 17");
 
-        System.out.println("The result of dividing k by l = " + (k / l) + ", "
-                + "and the remainder of the division equals " + (k % l) + ".");
+        String text1 = "The result of dividing";
+        String text2 = "and the remainder of the division = ";
 
-        System.out.println("The result of dividing k by m = " + (k / m) + ", "
-                + "and the remainder of the division equals " + (k % m) + ".");
-
-        System.out.println("The result of dividing k by l = " + (l / m) + ", "
-                + "and the remainder of the division equals " + (l % m) + ".");
-
-        System.out.println("The result of dividing k by l = " + (m / k) + ", "
-                + "and the remainder of the division equals " + (m % k) + ".");
+        System.out.println(text1 + "k by l = " + (k / l) + ", " + text2 + (k % l) + ".");
+        System.out.println(text1 + "k by m = " + (k / m) + ", " + text2 + (k % m) + ".");
+        System.out.println(text1 + "k by l = " + (l / m) + ", " + text2 + (l % m) + ".");
+        System.out.println(text1 + "m by k = " + (m / k) + ", " + text2 + (m % k) + ".");
         System.out.println(line);
 
-        //Task 18 Создать переменные apple и  student и присвоить им значения 40 и 6 соотетственно.
-        // Распечатать выражение:
-        //Если … яблок поделить на … учеников, то каждый ученик получит по … яблок(a), и … яблок(а) останется учителю.
-        //Распечатать это же выражение со значениями 100 и 21.
+        /**Task 18 Create variables apple and student and assign them the values 40 and 6 respectively.
+         * Print the following expressions:
+         * If ... apples are divided by ... students, then each student will receive ... apples,
+         * and ... apples will remain for the teacher.
+         * Print the same expression with the values 100 and 21.
+         */
         System.out.println("Task 18");
 
         int apple = 40;
         int student = 6;
+        int resultDiv = apple / student;
+        int resultRemain = apple % student;
+        String text0 = "If ";
+        String text3 = " apples are divided by ";
+        String text4 = " students, then each student";
+        String text5 = " will receive ";
+        String text6 = " apples, and ";
+        String text7 = " apples will remain for the teacher.";
+        String textAll = text0 + apple + text3 + student + text4 + text5 + resultDiv + text6 + resultRemain + text7;
 
-        System.out.println("If " + apple + " apples are divided by " + student + " students, then each student " +
-                "will receive " + (apple / student) + " apples, and " + (apple % student) + " apples will remain for the teacher.");
+        System.out.println(textAll);
+        apple = 100;
+        student = 21;
+        resultDiv = apple / student;
+        resultRemain = apple % student;
 
-        int apple2 = 100;
-        int student2 = 21;
-
-        System.out.println("If " + apple2 + " apples are divided by " + student2 + " students, then each student " +
-                "will receive " + apple2 / student2 + " apples, and " + (apple2 % student2) + " apples will " +
-                "remain for the teacher.");
+        System.out.println(text0 + apple + text3 + student + text4 + text5 + resultDiv + text6 + resultRemain + text7);
         System.out.println(line);
 
-        //Task 19 Распечатать вычисления и итоговый результат:
-        //Сумма чисел k, l, m++ и sumKLM-- = …, а разность m++ и  sumLKM = …
+        /**Task 19
+         * Print calculations and final result:
+         * Sum of variables k, l, m++ and sumKLM-- = …, but the difference between m++ and sumLKM = ...
+         */
         System.out.println("Task 19");
-
-        int sumKLM = k + l + m;
         int sumLKM = l + k + m;
-        sumKLM--;
+        int sumKLM  = k + l + m;
         m++;
+        sumKLM--;
+        int sumx = k + l + m + sumKLM;
 
-        System.out.println("Sum of k, l, m++ and sumKLM-- = " + (k + l + m + sumKLM) + "," + " but the difference " +
-                        "between m++ and sumLKM = " + (m - sumLKM) + ".");
+        int subx = m - sumLKM;
+
+        System.out.println(sumKLM);
+        System.out.println(sumLKM);
+        System.out.println("Sum of variables k, l, m++ and sumKLM-- = " + sumx + ","
+                + " but the difference between m++ and sumLKM = " + subx + ".");
         System.out.println(line);
 
         //Task 20 Показать, что число 48 кратно 8, и что оба этих числа - четные. А числа 47 и 49 - нечетные.
