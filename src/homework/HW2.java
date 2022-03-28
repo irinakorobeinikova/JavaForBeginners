@@ -129,29 +129,47 @@ public class HW2 {
                 + " but the difference between m++ and sumLKM = " + subx + ".");
         System.out.println(line);
 
-        //Task 20 Показать, что число 48 кратно 8, и что оба этих числа - четные. А числа 47 и 49 - нечетные.
+        /**Task 20
+         * Show that the number 48 is a multiple of 8 and that both numbers were even. The number 47 and 49 are odd.
+         */
         System.out.println("Task 20");
 
-        System.out.println(48 % 8);
-        System.out.println(48 % 2);
-        System.out.println(8 % 2);
+        System.out.println("48 % 8 = " + 48 % 8 + " multiple");
+        System.out.println("48 % 2 = " + 48 % 2 + " even");
+        System.out.println("8 % 2 = " + 8 % 2 + " even");
 
-        System.out.println(47 % 2);
-        System.out.println(49 % 2);
+        System.out.println("47 % 2 = " + 47 % 2 + " odd" );
+        System.out.println("49 % 2 = " + 49 % 2 + " odd");
         System.out.println(line);
 
-        //Task 21
         System.out.println("Task 21");
 
-//        int x = 2;
-//        int y = 3;
-//        //int a = k;
-//        //int b = l;
-//        //int c = m;
-//        int d = y - x;
+        int x = 2;
+        int y = 3;
+        int a = k;
+        int b = l;
+        int c = m;
+        int d = y - x;
+
+        int result21 = (x + 3) * (x + 3);
+
+        System.out.println(result21);
+        System.out.println(line);
+
+        System.out.println("Task 22");
+
+        int result22 = ((3 + 4 * x) / 5) - (10 * (y - 5) * (a + b + c)) / x
+                + 9 * (4 / x + (9 + x) / y);
+
+        System.out.println(result22);
+        System.out.println(line);
+
+        System.out.println("Task 23");
+
+//        int result23 = ((5 * x + 7 * y) / (8 * x + 10 * y)) / ((3 * x - y) / (x + y));
 //
-//        System.out.println((x + 3) * (x + 3));
-//
+//        System.out.println(result23);
+//        System.out.println(line);
 
 
 
