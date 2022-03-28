@@ -170,12 +170,5 @@ public class HW2 {
 //
 //        System.out.println(result23);
 //        System.out.println(line);
-
-
-
-
-
-
-
     }
 }
