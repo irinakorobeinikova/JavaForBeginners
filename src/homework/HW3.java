@@ -194,15 +194,23 @@ public class HW3 {
 
         System.out.println("Task 17");
 
-        float weight1 = 150.18F;
-        float weight2 = 175.55F;
-        weight1 = (int) weight1;
-        weight2 = (int) weight2;
+        Float w1 = 150.18F;
+        Float w2 = 175.55F;
 
-       // System.out.println(Integer.sum(weight1, weight2));
+        System.out.println(Integer.sum(w1.intValue(), w2.intValue()));
         System.out.println(line);
 
+        System.out.println("Task 18");
 
+        Short short1 = 12000;
+        Short short2 = 12300;
+
+        System.out.println("12000 - 12300 = " + Short.compareUnsigned(short1, short2));
+
+        short1 = 12500;
+
+        System.out.println("12500 - 12300 = " + Short.compare(short1, short2));
+        System.out.println(line);
 
 
 
