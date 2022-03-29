@@ -184,6 +184,13 @@ public class HW3 {
         System.out.println("Converting float to int using rounding = " + Math.round(x));
         System.out.println(line);
 
+        System.out.println("Task 16");
+
+        double sum1 = 12;
+        double sum2 = 38;
+
+        System.out.println(Double.sum(sum1, sum2));
+        System.out.println(line);
 
 
 
