@@ -174,7 +174,15 @@ public class HW3 {
 
         System.out.println("If number1 > number2, then the result of the method.compare = "
                 + Integer.compare(number1,number2));
+        System.out.println(line);
 
+        System.out.println("Task 15");
+
+        float x = 234.9999F;
+
+        System.out.println("Converting float to int using down-casting = " + (int) x);
+        System.out.println("Converting float to int using rounding = " + Math.round(x));
+        System.out.println(line);
 
 
 
