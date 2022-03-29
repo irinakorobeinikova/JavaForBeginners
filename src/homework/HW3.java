@@ -186,12 +186,21 @@ public class HW3 {
 
         System.out.println("Task 16");
 
-        double sum1 = 12;
-        double sum2 = 38;
+        double sum1 = 12.369;
+        double sum2 = 38.258;
 
         System.out.println(Double.sum(sum1, sum2));
         System.out.println(line);
 
+        System.out.println("Task 17");
+
+        float weight1 = 150.18F;
+        float weight2 = 175.55F;
+        weight1 = (int) weight1;
+        weight2 = (int) weight2;
+
+       // System.out.println(Integer.sum(weight1, weight2));
+        System.out.println(line);
 
 
 
