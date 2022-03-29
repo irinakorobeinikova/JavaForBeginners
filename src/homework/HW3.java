@@ -70,6 +70,9 @@ public class HW3 {
 
         double result = 10 / 3;
 
+        System.out.println(result);
+        System.out.println(line);
+
         System.out.println("Task 9");
 
         double sum = f + d;
@@ -77,6 +80,10 @@ public class HW3 {
         double quotient = f / d;
         double remainder = f % d;
 
+        System.out.println(sum);
+        System.out.println(product);
+        System.out.println(quotient);
+        System.out.println(remainder);
         System.out.println(line);
 
         System.out.println("Task 10");
