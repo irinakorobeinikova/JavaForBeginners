@@ -141,8 +141,44 @@ public class HW3 {
         System.out.println("| " + Double.TYPE + " |      " + Double.SIZE + "     |       " + Double.MIN_VALUE
                 + "       | " + Double.MAX_VALUE + " |");
         System.out.println("________________________________________________________________________");
+        System.out.println(line);
 
         System.out.println("Task 13");
+
+        Integer num1 = 45;
+        Integer num2 = 45;
+
+        System.out.println("If num1 = num2, then the result of the method.equals = " + num1.equals(num2));
+
+        num1 = 35;
+
+        System.out.println("If num1 != num2, then the result of the method.equals = " + num1.equals(num2));
+        System.out.println(line);
+
+        System.out.println("Task 14");
+
+        int number1 = 20;
+        int number2 = 20;
+
+        System.out.println("If number1 = number2, then the result of the method.compare = "
+                + Integer.compare(number1,number2));
+
+        number1 = 15;
+        number2 = 25;
+
+        System.out.println("If number1 < number2, then the result of the method.compare = "
+                + Integer.compare(number1,number2));
+
+        number1 = 40;
+        number2 = 35;
+
+        System.out.println("If number1 > number2, then the result of the method.compare = "
+                + Integer.compare(number1,number2));
+
+
+
+
+
 
 
 
