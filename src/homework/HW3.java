@@ -10,7 +10,7 @@ public class HW3 {
 
         byte a = 25;
         byte b = 100;
-        String line = "___________________________________________________________________________________________";
+        String line = "**********************************************************************************************";
 
         System.out.println(a);
         System.out.println(b);
@@ -29,15 +29,18 @@ public class HW3 {
 
         int min = Integer.MIN_VALUE;
         int max = Integer.MAX_VALUE;
-        System.out.println("______________________________________");
-        System.out.println("I    int min    I    " +  min + "    I");
-        System.out.println("______________________________________");
-        System.out.println("I    int max    I    " +  max + "    I");
-        System.out.println("______________________________________");
+        System.out.println("_______________________________");
+        System.out.println("|    int min    | " +  min + " |");
+        System.out.println("_______________________________");
+        System.out.println("|    int max    |  " +  max + " |");
+        System.out.println("_______________________________");
         System.out.println(line);
 
        System.out.println("Task 5");
+
        String phoneNumber = "18009998877";
+
+       System.out.println(phoneNumber);
        System.out.println(line);
 
        System.out.println("Task 6");
@@ -45,9 +48,9 @@ public class HW3 {
        double d = 100.101101;
 
         System.out.println("____________________________________");
-        System.out.println("I    float f     I    " + f + "    I");
+        System.out.println("|    float f     |    " + f + "    |");
         System.out.println("____________________________________");
-        System.out.println("I    double d    I    " + d + "    I");
+        System.out.println("|    double d    |    " + d + "    |");
         System.out.println("____________________________________");
         System.out.println(line);
 
@@ -56,11 +59,11 @@ public class HW3 {
         Double dd = 10.09999 + 20.099999;
         Float ff = 10.09999F + 20.099999F;
 
-        System.out.println("____________________________________");
-        System.out.println("I   Double dd    I   " + dd + "    I");
-        System.out.println("____________________________________");
-        System.out.println("I    Float ff    I   " + ff + "    I");
-        System.out.println("____________________________________");
+        System.out.println("_______________________________________");
+        System.out.println("|   Double dd    | " + dd + " |");
+        System.out.println("_______________________________________");
+        System.out.println("|    Float ff    |     " + ff + "       |");
+        System.out.println("_______________________________________");
         System.out.println(line);
 
         System.out.println("Task 8");
@@ -78,11 +81,11 @@ public class HW3 {
 
         System.out.println("Task 10");
 
-        System.out.println(".  .  ....  .    .      ....");
-        System.out.println(".  .  .     .    .      .  .");
-        System.out.println("....  ....  .    .      .  .");
-        System.out.println(".  .  .     .    .      .  .");
-        System.out.println(".  .  ....  ....  ....  ....");
+        System.out.println(".  .  ....  .    .      .. ");
+        System.out.println(".  .  .     .    .     .  .");
+        System.out.println("....  ....  .    .     .  .");
+        System.out.println(".  .  .     .    .     .  .");
+        System.out.println(".  .  ....  .... ....   .. ");
         System.out.println(line);
 
         System.out.println("Task 11");
@@ -107,6 +110,36 @@ public class HW3 {
         System.out.println("t8 = " + t8);
         System.out.println("t9 = " + t9);
         System.out.println(line);
+
+        System.out.println("Task 12");
+
+        System.out.println("________________________________________________________________________");
+        System.out.println("| Type   |" + "Size in bits |          " + "min         |          " + "max           |");
+        System.out.println("________________________________________________________________________");
+        System.out.println("| " + Byte.TYPE + "   |       " + Byte.SIZE + "     |         " + Byte.MIN_VALUE
+                + "         |          " + Byte.MAX_VALUE + "           |");
+        System.out.println("________________________________________________________________________");
+        System.out.println("| " + Short.TYPE + "  |       " + Short.SIZE + "    |        " + Short.MIN_VALUE
+                + "        |         " + Short.MAX_VALUE + "          |");
+        System.out.println("________________________________________________________________________");
+        System.out.println("| " + Integer.TYPE + "    |       " + Integer.SIZE + "    |      " + Integer.MIN_VALUE
+                + "     |       " + Integer.MAX_VALUE + "       |");
+        System.out.println("________________________________________________________________________");
+        System.out.println("| " + Long.TYPE + "   |      " + Long.SIZE + "     | " + Long.MIN_VALUE + " |   "
+                + Long.MAX_VALUE + "  |");
+        System.out.println("________________________________________________________________________");
+        System.out.println("| " + Float.TYPE + "  |      " + Float.SIZE + "     |       " + Float.MIN_VALUE
+                + "        |      " + Float.MAX_VALUE + "      |");
+        System.out.println("________________________________________________________________________");
+        System.out.println("| " + Double.TYPE + " |      " + Double.SIZE + "     |       " + Double.MIN_VALUE
+                + "       | " + Double.MAX_VALUE + " |");
+        System.out.println("________________________________________________________________________");
+
+
+
+
+
+
 
 
 
