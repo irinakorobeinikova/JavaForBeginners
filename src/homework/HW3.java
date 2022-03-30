@@ -36,16 +36,16 @@ public class HW3 {
         System.out.println("_______________________________");
         System.out.println(line);
 
-       System.out.println("Task 5");
+        System.out.println("Task 5");
 
-       long phoneNumber = 18009998877L;
+        long phoneNumber = 18009998877L;
 
-       System.out.println(phoneNumber);
-       System.out.println(line);
+        System.out.println(phoneNumber);
+        System.out.println(line);
 
-       System.out.println("Task 6");
-       float f = 100.101101F;
-       double d = 100.101101;
+        System.out.println("Task 6");
+        float f = 100.101101F;
+        double d = 100.101101;
 
         System.out.println("____________________________________");
         System.out.println("|    float f     |    " + f + "    |");
@@ -241,11 +241,24 @@ public class HW3 {
         Float tempCat = 37.3F;
         Float average = tempCat / 2;
         tempCat = 35.6F;
-        average = tempCat / 2;
+        average = average + tempCat / 2;
 
-        System.out.println(Math.round(average));
+        System.out.println("The average temperature =" + Math.round(average));
         System.out.println(line);
 
+        System.out.println("Task 21");
+
+        Number n = Long.MAX_VALUE;
+        n = 10;
+        n = 10.999999999;
+
+        System.out.println("The variable n can take on the following values: "
+             + "n = " + Long.MAX_VALUE + ";"
+             + "n = " + n.intValue() + ";"
+             + "n = " + n + ";"
+             + "This is possible because class Number is the superclass of platform classes representing numeric "
+             + "values that are convertible to primitive types of byte, short, integer, long, float and double.");
+        System.out.println(line);
 
 
     }
