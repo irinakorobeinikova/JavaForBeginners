@@ -18,17 +18,17 @@ public class HW3 {
 
         System.out.println("Task 3");
 
-        short s = -30000;
-        short t = 30000;
+        short s = Short.MAX_VALUE;
+        short t = Short.MAX_VALUE - 60000;
 
-        System.out.println(s);
-        System.out.println(t);
+        System.out.println(s + "\n" + t);
         System.out.println(line);
 
         System.out.println("Task 4");
 
         int min = Integer.MIN_VALUE;
         int max = Integer.MAX_VALUE;
+
         System.out.println("_______________________________");
         System.out.println("|    int min    | " +  min + " |");
         System.out.println("_______________________________");
@@ -38,7 +38,7 @@ public class HW3 {
 
        System.out.println("Task 5");
 
-       String phoneNumber = "18009998877";
+       long phoneNumber = 18009998877L;
 
        System.out.println(phoneNumber);
        System.out.println(line);
@@ -60,6 +60,10 @@ public class HW3 {
         Float ff = 10.09999F + 20.099999F;
 
         System.out.println("_______________________________________");
+        System.out.println("|    float f     |     " + f + "     |");
+        System.out.println("_______________________________________");
+        System.out.println("|    double d    |     " + d + "     |");
+        System.out.println("_______________________________________");
         System.out.println("|   Double dd    | " + dd + " |");
         System.out.println("_______________________________________");
         System.out.println("|    Float ff    |     " + ff + "       |");
@@ -68,7 +72,7 @@ public class HW3 {
 
         System.out.println("Task 8");
 
-        double result = 10 / 3;
+        double result = 10.0 / 3;
 
         System.out.println(result);
         System.out.println(line);
@@ -88,6 +92,14 @@ public class HW3 {
 
         System.out.println("Task 10");
 
+        String hello1 = "*  *  ****  *    *      ** ";
+        String hello2 = "*  *  *     *    *     *  *";
+        String hello3 = "****  ****  *    *     *  *";
+        String hello4 = "*  *  ****  **** ****   ** ";
+
+        System.out.println(hello1 + "\n" + hello2 + "\n" + hello3 + "\n" + hello2 + "\n" + hello4);
+        System.out.println(line);
+
         System.out.println(".  .  ....  .    .      .. ");
         System.out.println(".  .  .     .    .     .  .");
         System.out.println("....  ....  .    .     .  .");
@@ -100,10 +112,10 @@ public class HW3 {
         byte t1 = 0;
         short t2 = 150;
         byte t3 = -120;
-        double t4 = - 505.505;
+        float t4 = - 505.505F;
         int t5 = 100100;
         long t6 = 100010001000L;
-        float t7 = 2.66666666666666F;
+        double t7 = 2.66666666666666;
         double t8 = - 1000000.001;
         int t9 = 1010;
 
@@ -212,23 +224,17 @@ public class HW3 {
         System.out.println("12500 - 12300 = " + Short.compare(short1, short2));
         System.out.println(line);
 
+        System.out.println("Task 19");
 
+        String str1 = "123.56";
+        String str2 = "123.55";
+        Double doub1 = 123.56;
+        Double doub2 = 123.55;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        System.out.println(doub1 - doub2);
+        System.out.println(Double.parseDouble(str1) - Double.parseDouble(str2));
+        System.out.println(Double.valueOf(str1) - Double.valueOf(str2));
+        System.out.println(line);
 
 
     }
