@@ -236,6 +236,17 @@ public class HW3 {
         System.out.println(Double.valueOf(str1) - Double.valueOf(str2));
         System.out.println(line);
 
+        System.out.println("Task 20");
+
+        Float tempCat = 37.3F;
+        Float average = tempCat / 2;
+        tempCat = 35.6F;
+        average = tempCat / 2;
+
+        System.out.println(Math.round(average));
+        System.out.println(line);
+
+
 
     }
 }
