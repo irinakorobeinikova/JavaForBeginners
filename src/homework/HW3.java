@@ -261,5 +261,15 @@ public class HW3 {
         System.out.println(line);
 
 
+        System.out.println("Task 22");
+
+        Integer numberInteger = 100;
+        String number = numberInteger.toString();
+
+        System.out.println(numberInteger.getClass());
+        System.out.println(number.getClass());
+        System.out.println(line);
+
+
     }
 }
