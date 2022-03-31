@@ -272,10 +272,14 @@ public class HW3 {
 
         System.out.println("Task 23");
 
-        Float tempC = 36.6F;
-        Float oneKgLb = 2.2046F;
-        Float lb = 50.0F;
-        Float kg = 50.0F;
+        double tempC = 36.6;
+        double oneKgLb = 2.2046;
+        double lb = 50.0;
+        double kg = 50.0;
+
+        System.out.println("36.6 degrees Celsius = " + ((tempC * 9 / 5) + 32) + " degrees Fahrenheit.");
+        System.out.println("50 kilogram = " + (kg * oneKgLb) + " lbs" + "," + " 50 lb = " + (lb / oneKgLb) +" kg.");
+        System.out.println(line);
 
 
     }
