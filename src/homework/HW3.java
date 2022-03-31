@@ -270,6 +270,13 @@ public class HW3 {
         System.out.println(number.getClass());
         System.out.println(line);
 
+        System.out.println("Task 23");
+
+        Float tempC = 36.6F;
+        Float oneKgLb = 2.2046F;
+        Float lb = 50.0F;
+        Float kg = 50.0F;
+
 
     }
 }
