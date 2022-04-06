@@ -11,6 +11,10 @@ public class Lesson4_1 {
         System.out.println(sum);
     }
 
+    public static void m1(int a, String s) {
+        System.out.println(a + s);
+    }
+
     public static void m1(int a, int b, int c) {
         int division = a / b;
         System.out.println(division);
@@ -23,9 +27,8 @@ public class Lesson4_1 {
         System.out.println(sum);
     }
 
-    public static void printTaskTitle() {
-        int a = 0;
-        a ++;
+    public static void printTaskTitle(int a) {
+//        a ++;
         System.out.println("Task " + a);
         System.out.println("=================================");
     }
@@ -42,10 +45,12 @@ public class Lesson4_1 {
 
     public static void main(String[] args) {
         m();
-        m1(2, 3);
+        m1(5, 7);
+        m1(2, "Hello");
         m1(8, 2, 3);
         m2();
-        printTaskTitle();
+        printTaskTitle(1);
+        printTaskTitle(2);
 
         mPrint(10);
         mPrint("Hello");
