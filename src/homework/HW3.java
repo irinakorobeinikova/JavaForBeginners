@@ -281,6 +281,5 @@ public class HW3 {
         System.out.println("50 kilogram = " + (kg * oneKgLb) + " lbs" + "," + " 50 lb = " + (lb / oneKgLb) +" kg.");
         System.out.println(line);
 
-
     }
 }

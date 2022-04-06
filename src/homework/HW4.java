@@ -6,15 +6,19 @@ public class HW4 {
 
     public static void numberTask() {
 
-        System.out.println("Task " + number);
-        System.out.println("**********************************************");
+        System.out.println("\u001B[33m" + "*****************" + "\u001B[35m" + "Task "
+                + number + "\u001B[33m" + "*****************" + "\u001B[0m");
+
         number++;
+        System.out.println();
     }
 
     public static void main(String[] args){
 
         numberTask();
+
         numberTask();
+
 
 
 
