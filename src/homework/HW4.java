@@ -65,6 +65,14 @@ public class HW4 {
         System.out.println(!(28 > 7) && !(300 / 5 == 60));
         space();
 
+        String tv = "electrical appliance";
+        String glass = "Glass";
+        String wood = "wood";
+
+        System.out.println("(\"TV - electrical appliance\") AND (\"Glass - wood\");");
+        System.out.println((tv.equals("electrical appliance")) && (glass == wood));
+        space();
+
 
 
 
