@@ -79,6 +79,13 @@ public class HW4 {
         }
         space();
 
+        System.out.println("(75 < 81) → (88 = 88)");
+        if (75 < 81) {
+            System.out.println(88 == 88);
+        }
+        space();
+
+
 
 
 
