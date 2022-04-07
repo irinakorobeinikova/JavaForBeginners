@@ -24,9 +24,6 @@ public class HW4 {
         numberTask();
         numberTask();
 
-        String exression1 = "(Eyes are given to see)";
-        String exression2 = "(Under the third floor is the second floor)";
-
         System.out.println("(2 = 2) AND (7 = 7)");
         System.out.println((2 == 2) && (7 == 7));
         space();
@@ -42,8 +39,14 @@ public class HW4 {
         System.out.println("(NOT(15 < 3)) AND (10 > 20)");
         System.out.println((!(15 < 3)) && (10 > 20));
         space();
+
+        String eyes = "to see";
+
+        int floor2 = 2;
+        int floor3 = 3;
+
         System.out.println("(Eyes are given to see)" + " AND " + "(Under the third floor is the second floor)");
-        System.out.println(exression1 == exression2 && exression2 == exression1);
+        System.out.println((eyes.equals("to see")) && (floor2 == floor3 - 1));
         space();
         System.out.println("(6 / 2 = 3) OR (7 * 5 = 20)");
         System.out.println((6 / 2 == 3) || (7 * 5 == 20));
