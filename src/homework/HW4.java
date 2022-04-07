@@ -59,6 +59,16 @@ public class HW4 {
         String watchTime = "time";
         System.out.println("(\"There are 70 seconds in a minute\") OR (\"The working clock shows the time\")");
         System.out.println(sec == param || watchTime.equals("time"));
+        space();
+
+        System.out.println("!(28 > 7) И !(300/5 = 60)");
+        System.out.println(!(28 > 7) && !(300 / 5 == 60));
+        space();
+
+
+
+
+
 
 
 
