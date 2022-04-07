@@ -21,7 +21,7 @@ public class HW4 {
     public static void main(String[] args){
 
         numberTask();
-
+        numberTask();
         numberTask();
 
         String exression1 = "(Eyes are given to see)";
@@ -48,6 +48,9 @@ public class HW4 {
         System.out.println("(6 / 2 = 3) OR (7 * 5 = 20)");
         System.out.println((6 / 2 == 3) || (7 * 5 == 20));
         space();
+
+        numberTask();
+
 
 
 
