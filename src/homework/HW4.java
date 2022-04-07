@@ -73,6 +73,11 @@ public class HW4 {
         System.out.println((tv.equals("electrical appliance")) && (glass == wood));
         space();
 
+        System.out.println("Not((300 < 100)) → (\"Thirst can be quenched with water\")");
+        if (!(300 < 100)) {
+            System.out.println("(\"Thirst can be quenched with water\")");
+        }
+        space();
 
 
 
