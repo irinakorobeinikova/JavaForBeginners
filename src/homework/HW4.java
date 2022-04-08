@@ -85,6 +85,33 @@ public class HW4 {
         }
         space();
 
+        numberTask();
+
+        int ageSvetlana = 22;
+        int ageAndrey = 38;
+        int ageNata = 47;
+
+        if ((ageAndrey > ageSvetlana) && (ageNata > ageSvetlana)) {
+            System.out.println("Andrey is older than Svetlana. Nata is older than Svetlana.");
+        }
+        space();
+
+        String shelf = "books";
+        String table = "catalogs";
+
+        if (shelf.equals("books")) {
+            System.out.println("There are textbooks on the shelf,");
+        }
+
+        if (table.equals("catalogs")) {
+            System.out.println("there are catalogs on the table.");
+        }
+        space();
+
+
+
+
+
 
 
 
