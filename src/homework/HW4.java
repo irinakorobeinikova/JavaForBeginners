@@ -108,6 +108,19 @@ public class HW4 {
         }
         space();
 
+        int all = 100;
+        int girls = 72;
+        int boys = all - girls;
+
+        if (all / 2 < girls && boys < girls && (boys + girls) == all) {
+            System.out.println("Most of the children are girls. The rest are boys.");
+        } else {
+            System.out.println("false");
+        }
+
+
+
+
 
 
 
