@@ -156,6 +156,30 @@ public class HW4 {
 
         numberTask();
 
+        System.out.println("Write expressions as if-else conditions:"
+                + "\"If you are over 18, then you are an adult. Otherwise, you are a child.\"");
+
+        int yourAge = 18;
+
+        if (yourAge >= 18) {
+            System.out.println("You are an adult");
+        } else {
+            System.out.println("You are a child");
+        }
+        space();
+
+        System.out.println("Write expressions as if-else conditions:"
+                + "\"If the ground is dry, then there is no rain. If the ground is wet, then it is raining.\"");
+
+        String groundDry = "dry";
+
+        if (groundDry.equals("dry")) {
+            System.out.println("There is no rain");
+        } else {
+            System.out.println("It is raining");
+        }
+        space();
+
 
 
 
