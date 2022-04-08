@@ -125,8 +125,7 @@ public class HW4 {
 
         if (ageDrive >= 16 && ageDrive < 150) {
             System.out.println("\"You can only get a driver's license when you turn 16.\"");
-        }
-        else {
+        } else {
             System.out.println("false");
         }
         space();
@@ -138,12 +137,25 @@ public class HW4 {
         boolean lookPeter = false;
         if (ridePeter && (readPeter || lookPeter)) {
             System.out.println("false");
-        }
-        else  {
+        } else  {
             System.out.println("\"Peter does not ride the bus, but at the same time "
                     + "he reads a book or does not look out the window\"");
         }
         space();
+
+        numberTask();
+
+        String friends = "friend";
+
+        if (friends.equals("friend")) {
+            System.out.println("\"If you are with a friend, it's good\"");
+        } else {
+            System.out.println("\"but when it's the other way around, it's bad.\"");
+        }
+        space();
+
+        numberTask();
+
 
 
 
