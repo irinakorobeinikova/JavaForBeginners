@@ -117,6 +117,18 @@ public class HW4 {
         } else {
             System.out.println("false");
         }
+        space();
+
+        numberTask();
+
+        int ageDrive = 16;
+
+        if (ageDrive == 16) {
+            System.out.println("\"You can only get a driver's license when you turn 16.\"");
+        }
+        else {
+            System.out.println("false");
+        }
 
 
 
