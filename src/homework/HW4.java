@@ -123,12 +123,30 @@ public class HW4 {
 
         int ageDrive = 16;
 
-        if (ageDrive == 16) {
+        if (ageDrive >= 16 && ageDrive < 150) {
             System.out.println("\"You can only get a driver's license when you turn 16.\"");
         }
         else {
             System.out.println("false");
         }
+        space();
+
+        numberTask();
+
+        boolean ridePeter = false;
+        boolean readPeter = true;
+        boolean lookPeter = false;
+        if (ridePeter && (readPeter || lookPeter)) {
+            System.out.println("false");
+        }
+        else  {
+            System.out.println("\"Peter does not ride the bus, but at the same time "
+                    + "he reads a book or does not look out the window\"");
+        }
+        space();
+
+
+
 
 
 
