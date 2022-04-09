@@ -180,6 +180,21 @@ public class HW4 {
         }
         space();
 
+        System.out.println("Write expressions as if-else conditions:"
+                + "\"If the ground is dry, then there is no rain. If the ground is wet, then it is raining."
+                + " Otherwise it's snowing.\"");
+
+        String groundWet = "wet";
+
+        if (groundDry.equals("dry")) {
+            System.out.println("There is no rain");
+        }
+        if (groundWet.equals("wet")) {
+            System.out.println("It is raining");
+        } else {
+            System.out.println("It's snowing");
+        }
+        space();
 
 
 
