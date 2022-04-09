@@ -1,5 +1,7 @@
 package homework;
 
+import java.util.SortedMap;
+
 public class HW4 {
 
     public static int number = 1;
@@ -156,7 +158,7 @@ public class HW4 {
 
         numberTask();
 
-        System.out.println("Write expressions as if-else conditions:"
+        System.out.println("# 1. Write expressions as if-else conditions: "
                 + "\"If you are over 18, then you are an adult. Otherwise, you are a child.\"");
 
         int yourAge = 18;
@@ -168,7 +170,7 @@ public class HW4 {
         }
         space();
 
-        System.out.println("Write expressions as if-else conditions:"
+        System.out.println("# 2. Write expressions as if-else conditions: "
                 + "\"If the ground is dry, then there is no rain. If the ground is wet, then it is raining.\"");
 
         String groundDry = "dry";
@@ -180,7 +182,7 @@ public class HW4 {
         }
         space();
 
-        System.out.println("Write expressions as if-else conditions:"
+        System.out.println("# 3. Write expressions as if-else conditions: "
                 + "\"If the ground is dry, then there is no rain. If the ground is wet, then it is raining."
                 + " Otherwise it's snowing.\"");
 
@@ -195,6 +197,38 @@ public class HW4 {
             System.out.println("It's snowing");
         }
         space();
+
+        System.out.println("# 4. Write expressions as if-else conditions: "
+                + "\"If there are clouds in the sky, it is raining, otherwise it is “blind” rain.\"");
+
+        String sky = "clouds";
+
+        if (sky.equals("clouds")) {
+            System.out.println("It is raining");
+        } else {
+            System.out.println("It is “blind” rain");
+        }
+        space();
+
+        System.out.println("# 5. Write expressions as if-else conditions: "
+                + "\"If today is Saturday, then tomorrow is Sunday. "
+                + "If today is Friday, then yesterday was Thursday. "
+                + "Otherwise, yesterday was not Thursday, and tomorrow is not Sunday.\"");
+
+        String dayOfWeek1 = "Saturday";
+        String dayOfWeek2 = "Friday";
+
+        if (dayOfWeek1.equals("Saturday")) {
+            System.out.println("Tomorrow is Sunday");
+        }
+        if (dayOfWeek2.equals("Friday")) {
+            System.out.println("Yesterday was Thursday");
+        } else {
+            System.out.println("Yesterday was not Thursday, and tomorrow is not Sunday");
+        }
+        space();
+
+
 
 
 
