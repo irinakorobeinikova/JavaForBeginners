@@ -302,9 +302,17 @@ public class HW4 {
         if (driveAge >= 16) {
             System.out.println("You can drive");
         }
-        if (schoolAge >= 5) {
+        if (schoolAge >= 5 && schoolAge <= 21) {
             System.out.println("You can go to school");
         }
+
+        space();
+
+
+
+
+
+
 
 
 
