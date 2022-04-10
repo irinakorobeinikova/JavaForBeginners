@@ -308,6 +308,28 @@ public class HW4 {
 
         space();
 
+        numberTask();
+
+        System.out.println("Check a student's grade and performs the following actions:\n" +
+                "5 - issue a commendable letter and go to the next class\n" +
+                "4 - go to the next class\n" +
+                "3 - give a task for the summer and go to the next class\n" +
+                "2 - call parents and leave in the current class for the second year");
+
+        int grade = 4;
+
+        if (grade == 5) {
+            System.out.println("Issue a commendable letter and go to the next class");
+        } else if (grade == 4) {
+            System.out.println("Go to the next class");
+        } else if (grade == 3) {
+            System.out.println("Give a task for the summer and go to the next class");
+        } else if (grade == 2) {
+            System.out.println("Call parents and leave in the current class for the second year");
+        }
+
+        space();
+
 
 
 
