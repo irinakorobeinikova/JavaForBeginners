@@ -147,9 +147,9 @@ public class HW4 {
 
         numberTask();
 
-        String friends = "friend";
+        String friends = "with friend";
 
-        if (friends.equals("friend")) {
+        if (friends.equals("with friend")) {
             System.out.println("\"If you are with a friend, it's good\"");
         } else {
             System.out.println("\"but when it's the other way around, it's bad.\"");
@@ -163,7 +163,7 @@ public class HW4 {
 
         int yourAge = 18;
 
-        if (yourAge >= 18) {
+        if (yourAge > 18 && yourAge < 120) {
             System.out.println("You are an adult");
         } else {
             System.out.println("You are a child");
@@ -199,14 +199,14 @@ public class HW4 {
         space();
 
         System.out.println("# 4. Write expressions as if-else conditions: "
-                + "\"If there are clouds in the sky, it is raining, otherwise it is “blind” rain.\"");
+                + "\"If there are clouds in the sky, it is raining, otherwise it is “ a monkey's wedding”.\"");
 
         String sky = "clouds";
 
         if (sky.equals("clouds")) {
             System.out.println("It is raining");
         } else {
-            System.out.println("It is “blind” rain");
+            System.out.println("It is “a monkey's wedding\"");
         }
         space();
 
@@ -227,6 +227,36 @@ public class HW4 {
             System.out.println("Yesterday was not Thursday, and tomorrow is not Sunday");
         }
         space();
+
+        System.out.println("# 6. Write expressions as if-else conditions: "
+                + "\"If a crab whistled on the mountain, then eternity has passed, "
+                + "otherwise you should wait farther.\"");
+
+        String crab = "whistle";
+
+        if (crab.equals("whistle")) {
+            System.out.println("Eternity has passed");
+        } else {
+            System.out.println("Wait farther");
+        }
+        space();
+
+        System.out.println("# 7. Write expressions as if-else conditions: "
+                + "\"If you are 18 or you have finished school, then you do not have to live with your parents, "
+                + "otherwise live with your parents.\"");
+
+        int ageTeenager = 18;
+        String school = "finished";
+
+        if (ageTeenager == 18 || school.equals("finished")) {
+            System.out.println("You do not have to live with your parents");
+        } else {
+            System.out.println("Live with your parents");
+        }
+
+
+
+
 
 
 
