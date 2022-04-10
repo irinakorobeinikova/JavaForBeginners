@@ -20,6 +20,15 @@ public class HW4 {
         System.out.println();
     }
 
+    public static int subItem = 1;
+
+    public static void subItemTask() {
+
+        System.out.println("\u001B[34m" + "# " + subItem + " Write expressions as if-else conditions:" + "\u001B[0m");
+
+        subItem++;
+    }
+
     public static void main(String[] args){
 
         numberTask();
@@ -157,9 +166,9 @@ public class HW4 {
         space();
 
         numberTask();
+        subItemTask();
 
-        System.out.println("# 1. Write expressions as if-else conditions: "
-                + "\"If you are over 18, then you are an adult. Otherwise, you are a child.\"");
+        System.out.println("\"If you are over 18, then you are an adult. Otherwise, you are a child.\"");
 
         int yourAge = 18;
 
@@ -170,8 +179,10 @@ public class HW4 {
         }
         space();
 
-        System.out.println("# 2. Write expressions as if-else conditions: "
-                + "\"If the ground is dry, then there is no rain. If the ground is wet, then it is raining.\"");
+        subItemTask();
+
+        System.out.println("\"If the ground is dry, then there is no rain. "
+                + "If the ground is wet, then it is raining.\"");
 
         String groundDry = "dry";
 
@@ -182,8 +193,9 @@ public class HW4 {
         }
         space();
 
-        System.out.println("# 3. Write expressions as if-else conditions: "
-                + "\"If the ground is dry, then there is no rain. If the ground is wet, then it is raining."
+        subItemTask();
+
+        System.out.println("\"If the ground is dry, then there is no rain. If the ground is wet, then it is raining."
                 + " Otherwise it's snowing.\"");
 
         String groundWet = "wet";
@@ -198,8 +210,9 @@ public class HW4 {
         }
         space();
 
-        System.out.println("# 4. Write expressions as if-else conditions: "
-                + "\"If there are clouds in the sky, it is raining, otherwise it is “ a monkey's wedding”.\"");
+        subItemTask();
+
+        System.out.println("\"If there are clouds in the sky, it is raining, otherwise it is “ a monkey's wedding”.\"");
 
         String sky = "clouds";
 
@@ -210,8 +223,9 @@ public class HW4 {
         }
         space();
 
-        System.out.println("# 5. Write expressions as if-else conditions: "
-                + "\"If today is Saturday, then tomorrow is Sunday. "
+        subItemTask();
+
+        System.out.println("\"If today is Saturday, then tomorrow is Sunday. "
                 + "If today is Friday, then yesterday was Thursday. "
                 + "Otherwise, yesterday was not Thursday, and tomorrow is not Sunday.\"");
 
@@ -228,8 +242,9 @@ public class HW4 {
         }
         space();
 
-        System.out.println("# 6. Write expressions as if-else conditions: "
-                + "\"If a crab whistled on the mountain, then eternity has passed, "
+        subItemTask();
+
+        System.out.println("\"If a crab whistled on the mountain, then eternity has passed, "
                 + "otherwise you should wait farther.\"");
 
         String crab = "whistle";
@@ -241,9 +256,10 @@ public class HW4 {
         }
         space();
 
-        System.out.println("# 7. Write expressions as if-else conditions: "
-                + "\"If you are 18 or you have finished school, then you do not have to live with your parents, "
-                + "otherwise live with your parents.\"");
+        subItemTask();
+
+        System.out.println("\"If you are 18 or you have finished school, "
+                + "then you do not have to live with your parents, " + "otherwise live with your parents.\"");
 
         int ageTeenager = 18;
         String school = "finished";
@@ -252,6 +268,42 @@ public class HW4 {
             System.out.println("You do not have to live with your parents");
         } else {
             System.out.println("Live with your parents");
+        }
+        space();
+
+        numberTask();
+
+        System.out.println("Check the number for evenness. "
+                + "If the number is even, double that number, otherwise square the number.");
+
+        int checkNumber = 32;
+
+        if (checkNumber % 2 == 0) {
+            System.out.println(checkNumber * 2);
+        } else {
+            System.out.println(checkNumber * checkNumber);
+        }
+        space();
+
+        numberTask();
+
+        System.out.println("Write an algorithm for checking the age for compliance with the conditions (if-else):\n"
+                + "You can vote from the age of 18\n"
+                + "You can drive a car from the age of 16\n"
+                + "You can go to school from the age of 5");
+
+        int voteAge = 18;
+        int driveAge = 16;
+        int schoolAge = 5;
+
+        if (voteAge >= 18) {
+            System.out.println("You can vote");
+        }
+        if (driveAge >= 16) {
+            System.out.println("You can drive");
+        }
+        if (schoolAge >= 5) {
+            System.out.println("You can go to school");
         }
 
 
