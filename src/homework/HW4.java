@@ -330,6 +330,34 @@ public class HW4 {
 
         space();
 
+        numberTask();
+
+        System.out.println("Write an algorithm for a program that checks 2 numbers. "
+                        + "The program adds numbers that are divisible by 3 without a remainder, "
+                        + "and subtracts numbers that are divisible by 5 without a remainder. "
+                        + "The program multiplies numbers that are divisible by 2 without a remainder, "
+                        + "but if at least one number is negative, the program multiplies the result of "
+                        + "the previous action by (-1). If the numbers have not passed any checks, "
+                        + "the program prints an error about the impossibility to perform actions.");
+
+        int digit1 = 15;
+        int digit2 = 15;
+
+        if (digit1 % 3 == 0 && digit2 % 3 == 0) {
+            System.out.println("digit1 + digit2 = " + (digit1 + digit2));
+        }
+        if (digit1 % 5 == 0 && digit2 % 5 == 0) {
+            System.out.println("digit1 - digit2 = " + (digit1 - digit2));
+        }
+        if (digit1 % 2 == 0 && digit2 % 2 == 0 && digit1 >= 0 && digit2 >= 0) {
+            System.out.println("digit1 * digit2 = " + (digit1 * digit2));
+            if (digit1 % 2 == 0 && digit2 % 2 == 0 && digit1 < 0 || digit2 < 0) {
+                System.out.println("digit1 * digit2 = " + ((digit1 * digit2) * (-1)));
+            }
+        } else if (!(digit1 % 3 == 0 && digit2 % 3 == 0) && (!(digit1 % 5 == 0 && digit2 % 5 == 0))
+                && (!(digit1 % 2 == 0 && digit2 % 2 == 0))) {
+                System.out.println("Impossible to perform actions");
+        }
 
 
 
