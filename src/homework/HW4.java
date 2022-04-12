@@ -30,23 +30,14 @@ public class HW4 {
 
     public static void compareMethod(int firstNum, int secondNum) {
 
-        devResult = firstNum / secondNum;
-        devBack = firstNum % secondNum;
-
         System.out.println("The result of dividing " + firstNum + " by " + secondNum + " = "
-        + devResult + " and the remainder of the division = " + devBack);
+        + (firstNum / secondNum) + " and the remainder of the division = " + (firstNum % secondNum));
     }
-
-    public static int devApples;
-    public static int remainOfApples;
 
     public static void taskApples(int num1, int num2) {
 
-        devApples = num1 / num2;
-        remainOfApples = num1 % num2;
-
         System.out.println("If " + num1 + " apples are divided by " + num2 + " students, then each student will receive "
-                + devApples + " apples, and " + remainOfApples + " apples will remain with the teacher.");
+                + (num1 / num2) + " apples, and " + (num1 % num2) + " apples will remain with the teacher.");
 
     }
 
