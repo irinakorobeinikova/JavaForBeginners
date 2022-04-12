@@ -16,12 +16,6 @@ public class HW4 {
         System.out.println();
     }
 
-    public static void space() {
-
-        System.out.println();
-        System.out.println("\u001B[33m" + "***********************************************************" + "\u001B[0m");
-    }
-
     public static int subItem = 1;
 
     public static void subItemTask() {
@@ -41,6 +35,19 @@ public class HW4 {
 
         System.out.println("The result of dividing " + firstNum + " by " + secondNum + " = "
         + devResult + " and the remainder of the division = " + devBack);
+    }
+
+    public static int devApples;
+    public static int remainOfApples;
+
+    public static void taskApples(int num1, int num2) {
+
+        devApples = num1 / num2;
+        remainOfApples = num1 % num2;
+
+        System.out.println("If " + num1 + " apples are divided by " + num2 + " students, then each student will receive "
+                + devApples + " apples, and " + remainOfApples + " apples will remain with the teacher.");
+
     }
 
     public static void main(String[] args){
@@ -365,7 +372,26 @@ public class HW4 {
         compareMethod(k, m);
         compareMethod(l, m);
         compareMethod(m, k);
-        space();
+
+        numberTask();
+        /**Use the method and parameters.
+         * Create the variables apple and student and assign them the values 40 and 6 respectively.
+         * Print expression:
+         * If ... apples(s) are divided by ... students, then each student will receive ... apples(a),
+         * and ... apples(s) will remain with the teacher.
+         * Print the same expression with the values 100 and 21.
+         */
+
+        int apples = 40;
+        int students = 60;
+        apples = 100;
+        students = 120;
+
+        taskApples(apples, students);
+
+        numberTask();
+
+
 
 
 
