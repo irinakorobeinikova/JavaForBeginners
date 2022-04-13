@@ -81,6 +81,30 @@ public class HW4 {
         System.out.println("Temperature Celsius = " + tC + " or in Fahrenheit = " + ((tC * 9 / 5) + 32));
     }
 
+    public static int getMinValue(int i) {
+
+        int aMin = Integer.MIN_VALUE;
+
+        return aMin;
+    }
+
+    public static int getMaxValue(int i) {
+
+        int aMax = Integer.MAX_VALUE;
+
+        return aMax;
+    }
+
+    public static double getPowValue(int i) {
+
+        double a2 = 2;
+        a2 = Math.pow(i, a2);
+
+        return a2;
+    }
+
+
+
     public static void main(String[] args){
 
         numberTask();
@@ -438,6 +462,16 @@ public class HW4 {
 
         tempCF(36.6);
         tempCF(37);
+
+        numberTask();
+
+        System.out.println("_________________________");
+        System.out.println("| " + "int min " + "| " + getMinValue(24) + " |");
+        System.out.println("| " + "int max " + "| " + getMaxValue(24) + "  |");
+        System.out.println("| " + "i ^ 2   "  + "| " + getPowValue(24) + "       |");
+        System.out.println("_________________________");
+
+        numberTask();
 
 
 
