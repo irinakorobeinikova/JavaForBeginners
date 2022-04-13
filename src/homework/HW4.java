@@ -1,7 +1,5 @@
 package homework;
 
-import java.util.SortedMap;
-
 public class HW4 {
 
     public static int number = 1;
@@ -25,20 +23,50 @@ public class HW4 {
         subItem++;
     }
 
-    public static int devResult;
-    public static int devBack;
+    public static void taskApples(int ap, int st) {
+
+        System.out.println("If " + ap + " apples are divided by " + st + " students, then each student will receive "
+                + (ap / st) + " apples, and " + (ap % st) + " apples will remain with the teacher.");
+    }
 
     public static void compareMethod(int firstNum, int secondNum) {
 
         System.out.println("The result of dividing " + firstNum + " by " + secondNum + " = "
-        + (firstNum / secondNum) + " and the remainder of the division = " + (firstNum % secondNum));
+                + (firstNum / secondNum) + " and the remainder of the division = " + (firstNum % secondNum));
     }
 
-    public static void taskApples(int num1, int num2) {
+    public static String applesDev(int a) {
 
-        System.out.println("If " + num1 + " apples are divided by " + num2 + " students, then each student will receive "
-                + (num1 / num2) + " apples, and " + (num1 % num2) + " apples will remain with the teacher.");
+        int appleLastNum = a;
+        String app = "";
 
+        if (appleLastNum == 1) {
+            app = "apple";
+        } else if (appleLastNum > 1  || appleLastNum == 0) {
+            app = "apples";
+        }
+        return app;
+    }
+
+    public static String studentsDev(int s) {
+
+        int studentsLastNum = s;
+        String stud = " ";
+
+        if (studentsLastNum == 1) {
+            stud = "student";
+        } else if (studentsLastNum > 1 || studentsLastNum == 0) {
+            stud = "students";
+        }
+        return stud;
+    }
+
+    public static String countResult(int numOFApples, int numOfStudents) {
+        System.out.println("If " + numOFApples + " " + applesDev(numOFApples) + " are divided by " + numOfStudents
+                + " " + studentsDev(numOfStudents) + " then each student will receive " + (numOFApples / numOfStudents)
+                + " " + applesDev(numOFApples / numOfStudents) + " and " + (numOFApples % numOfStudents) + " "
+                + applesDev(numOFApples % numOfStudents) + " will remain with the teacher.");
+        return null;
     }
 
     public static void main(String[] args){
@@ -373,14 +401,27 @@ public class HW4 {
          * Print the same expression with the values 100 and 21.
          */
 
-        int apples = 40;
-        int students = 60;
-        apples = 100;
-        students = 120;
+        int apple = 100;
+        int student = 21;
 
-        taskApples(apples, students);
+        taskApples(apple, student);
 
         numberTask();
+        /**Write a method so that the correct declensions of words (apple or apples) are printed automatically,
+         * depending on the parameter values.
+         * Print expression with parameters:
+         * apple = 42, 55, 1
+         * student = 42, 5, 2
+         */
+
+        countResult(42, 42);
+        countResult(55, 5);
+        countResult(1, 2);
+
+
+
+
+
 
 
 
