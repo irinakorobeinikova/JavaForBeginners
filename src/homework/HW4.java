@@ -55,18 +55,30 @@ public class HW4 {
 
         if (studentsLastNum == 1) {
             stud = "student";
-        } else if (studentsLastNum > 1 || studentsLastNum == 0) {
+        } else if (studentsLastNum > 1 ) {
             stud = "students";
         }
         return stud;
     }
 
     public static String countResult(int numOFApples, int numOfStudents) {
-        System.out.println("If " + numOFApples + " " + applesDev(numOFApples) + " are divided by " + numOfStudents
-                + " " + studentsDev(numOfStudents) + " then each student will receive " + (numOFApples / numOfStudents)
-                + " " + applesDev(numOFApples / numOfStudents) + " and " + (numOFApples % numOfStudents) + " "
-                + applesDev(numOFApples % numOfStudents) + " will remain with the teacher.");
+
+        if (numOfStudents != 0) {
+
+            System.out.println("If " + numOFApples + " " + applesDev(numOFApples) + " are divided by " + numOfStudents
+                    + " " + studentsDev(numOfStudents) + " then each student will receive " + (numOFApples / numOfStudents)
+                    + " " + applesDev(numOFApples / numOfStudents) + " and " + (numOFApples % numOfStudents) + " "
+                    + applesDev(numOFApples % numOfStudents) + " will remain with the teacher.");
+        } else {
+
+            System.out.println("The number of students should be more than 0");
+        }
+
         return null;
+    }
+
+    public static void tempCF(double tC) {
+        System.out.println("Temperature Celsius = " + tC + " or in Fahrenheit = " + ((tC * 9 / 5) + 32));
     }
 
     public static void main(String[] args){
@@ -410,13 +422,24 @@ public class HW4 {
         /**Write a method so that the correct declensions of words (apple or apples) are printed automatically,
          * depending on the parameter values.
          * Print expression with parameters:
-         * apple = 42, 55, 1
-         * student = 42, 5, 2
+         * apple = 42, 55, 1, 10
+         * student = 42, 5, 2, 0
          */
 
         countResult(42, 42);
         countResult(55, 5);
         countResult(1, 2);
+        countResult(13, 0);
+
+        numberTask();
+        /**Write a method that takes a temperature parameter in Celsius
+         * and prints out the temperature result in Celsius and Fahrenheit.
+         */
+
+        tempCF(36.6);
+        tempCF(37);
+
+
 
 
 
