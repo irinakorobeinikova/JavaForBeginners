@@ -103,17 +103,33 @@ public class HW4 {
         return a2;
     }
 
-    public static int task10Validate(int v) {
-        int validateNum = v;
+    public static void task10Validate(int v) {
+        int test = v;
 
-        if (validateNum % 2 == 0) {
-            System.out.println(validateNum * 2);
+        if (test % 2 == 0) {
+            System.out.println(test * 2);
         } else {
-            System.out.println(validateNum * validateNum);
+            System.out.println(test * test);
         }
-
-        return validateNum;
     }
+
+    public static void assertIntegerResult(int expectedResult, int actualResult) {
+
+        if (actualResult == expectedResult) {
+            System.out.println("\u001B[32m" + "Pass" + "\u001B[0m");
+        } else {
+            System.out.println("\u001B[31m" + "Fail" + "\u001B[0m");
+        }
+    }
+
+//    public static void assertStringResult(String expectResult, String actualResult) {
+//
+//        if (expectResult.equals(actualResult)) {
+//            System.out.println("Pass");
+//        } else {
+//            System.out.println("Fail");
+//        }
+//    }
 
     public static void main(String[] args){
 
@@ -487,11 +503,22 @@ public class HW4 {
          * Test data - 2, 5, 0.
          */
 
-        task10Validate(2);
+        task10Validate(-2);
+        assertIntegerResult(-4, -4);
         task10Validate(5);
+        assertIntegerResult(25, 25);
         task10Validate(0);
+        assertIntegerResult(0, 0);
 
+        numberTask();
+        /**Write a test that validates your code from task #11.
+         *
+         */
 
+        assertIntegerResult(3,15);
+        assertIntegerResult(20,20);
+        assertIntegerResult(38,138);
+        assertIntegerResult(35, 35);
 
 
 
