@@ -51,7 +51,7 @@ public class HW4 {
     public static String studentsDev(int s) {
 
         int studentsLastNum = s;
-        String stud = " ";
+        String stud = "";
 
         if (studentsLastNum == 1) {
             stud = "student";
@@ -103,7 +103,7 @@ public class HW4 {
         return a2;
     }
 
-    public static void task10Validate(int v) {
+    public static int task10Validate(int v) {
         int test = v;
 
         if (test % 2 == 0) {
@@ -111,6 +111,7 @@ public class HW4 {
         } else {
             System.out.println(test * test);
         }
+        return test;
     }
 
     public static void assertIntegerResult(int expectedResult, int actualResult) {
@@ -122,14 +123,35 @@ public class HW4 {
         }
     }
 
-//    public static void assertStringResult(String expectResult, String actualResult) {
-//
-//        if (expectResult.equals(actualResult)) {
-//            System.out.println("Pass");
-//        } else {
-//            System.out.println("Fail");
-//        }
-//    }
+    public static void assertStringResult(String expectResult, String actualResult) {
+
+        if (expectResult.equals(actualResult)) {
+            System.out.println("\u001B[32m" + "Pass" + "\u001B[0m");
+        } else {
+            System.out.println("\u001B[31m" + "Fail" + "\u001B[0m");
+        }
+    }
+
+    public static String checkAge(int age) {
+        String youCan = "";
+        boolean voteAge = age >= 18;
+        boolean driveAge = age >= 16;
+        boolean schoolAge = age >= 5;
+
+        if (voteAge) {
+            youCan = "You can vote\n";
+        }
+        if (driveAge) {
+            youCan = youCan + "You can drive\n";
+        }
+        if (schoolAge) {
+            youCan = youCan + "You can go to school\n";
+        }
+        if (age < 5) {
+            youCan = "You are too small\n";
+        }
+        return youCan;
+    }
 
     public static void main(String[] args){
 
@@ -514,13 +536,15 @@ public class HW4 {
         /**Write a test that validates your code from task #11.
          *
          */
+        System.out.println(checkAge(7));
+        System.out.println(checkAge(4));
 
-        assertIntegerResult(3,15);
-        assertIntegerResult(20,20);
-        assertIntegerResult(38,138);
-        assertIntegerResult(35, 35);
+        String vote1 = "You can vote";
+        String drive1 = "You can drive";
+        String school1 = "You can go to school";
 
-
+        assertStringResult("You can go to school","You can go to school");
+        assertStringResult("You can vote", "You can drive" );
 
 
 
