@@ -103,7 +103,17 @@ public class HW4 {
         return a2;
     }
 
+    public static int task10Validate(int v) {
+        int validateNum = v;
 
+        if (validateNum % 2 == 0) {
+            System.out.println(validateNum * 2);
+        } else {
+            System.out.println(validateNum * validateNum);
+        }
+
+        return validateNum;
+    }
 
     public static void main(String[] args){
 
@@ -473,6 +483,13 @@ public class HW4 {
 
         numberTask();
 
+        /**Write a test that validates (verifies that it works) your code from task #10.
+         * Test data - 2, 5, 0.
+         */
+
+        task10Validate(2);
+        task10Validate(5);
+        task10Validate(0);
 
 
 
