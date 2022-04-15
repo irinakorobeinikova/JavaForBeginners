@@ -4,7 +4,7 @@ public class HW4 {
 
     public static int number = 1;
 
-    public static void numberTask() {
+    public static void numberTask() {  //  Method (Task #2)
 
         System.out.println();
         System.out.println("\u001B[33m" + "**************************" + "\u001B[35m" + "Task "
@@ -23,19 +23,19 @@ public class HW4 {
         subItem++;
     }
 
-    public static void taskApples(int ap, int st) {
-
-        System.out.println("If " + ap + " apples are divided by " + st + " students, then each student will receive "
-                + (ap / st) + " apples, and " + (ap % st) + " apples will remain with the teacher.");
-    }
-
-    public static void compareMethod(int firstNum, int secondNum) {
+    public static void compareMethod(int firstNum, int secondNum) {     // Method (Task #14)
 
         System.out.println("The result of dividing " + firstNum + " by " + secondNum + " = "
                 + (firstNum / secondNum) + " and the remainder of the division = " + (firstNum % secondNum));
     }
 
-    public static String applesDev(int a) {
+    public static void taskApples(int ap, int st) {     // Method (Task #15)
+
+        System.out.println("If " + ap + " apples are divided by " + st + " students, then each student will receive "
+                + (ap / st) + " apples, and " + (ap % st) + " apples will remain with the teacher.");
+    }
+
+    public static String applesDev(int a) {     // Method (Task # 16)
 
         int appleLastNum = a;
         String app = "";
@@ -48,7 +48,7 @@ public class HW4 {
         return app;
     }
 
-    public static String studentsDev(int s) {
+    public static String studentsDev(int s) {     // Method (Task # 16)
 
         int studentsLastNum = s;
         String stud = "";
@@ -77,25 +77,25 @@ public class HW4 {
         return null;
     }
 
-    public static void tempCF(double tC) {
+    public static void tempCF(double tC) {     // Method (Task # 17)
         System.out.println("Temperature Celsius = " + tC + " or in Fahrenheit = " + ((tC * 9 / 5) + 32));
     }
 
-    public static int getMinValue(int i) {
+    public static int getMinValue(int i) {     // Method (Task# 18)
 
         int aMin = Integer.MIN_VALUE;
 
         return aMin;
     }
 
-    public static int getMaxValue(int i) {
+    public static int getMaxValue(int i) {     // Method (Task# 18)
 
         int aMax = Integer.MAX_VALUE;
 
         return aMax;
     }
 
-    public static double getPowValue(int i) {
+    public static double getPowValue(int i) {     // Method (Task# 18)
 
         double a2 = 2;
         a2 = Math.pow(i, a2);
@@ -103,57 +103,67 @@ public class HW4 {
         return a2;
     }
 
-    public static int task10Validate(int v) {
-        int test = v;
+    public static int task10Validate(int v) {     // Method (Task# 19)
+        int number = v;
 
-        if (test % 2 == 0) {
-            System.out.println(test * 2);
+        if (number % 2 == 0) {
+            return (number * 2);
         } else {
-            System.out.println(test * test);
+            return (number* number);
         }
-        return test;
     }
 
-    public static void assertIntegerResult(int expectedResult, int actualResult) {
+    public static String assertIntegerResult(int actualResult, int expectedResult) {     // Method (Task# 19)
+
+        String result = "";
 
         if (actualResult == expectedResult) {
-            System.out.println("\u001B[32m" + "Pass" + "\u001B[0m");
+            result = "\u001B[32m" + "Pass" + "\u001B[0m";
         } else {
-            System.out.println("\u001B[31m" + "Fail" + "\u001B[0m");
+            result = "\u001B[31m" + "Fail" + "\u001B[0m";
         }
+        System.out.println(result);
+
+        return result;
     }
 
-    public static void assertStringResult(String expectResult, String actualResult) {
-
-        if (expectResult.equals(actualResult)) {
-            System.out.println("\u001B[32m" + "Pass" + "\u001B[0m");
-        } else {
-            System.out.println("\u001B[31m" + "Fail" + "\u001B[0m");
-        }
-    }
-
-    public static String checkAge(int age) {
+    public static String checkAge(int age) {     // Method (Task# 20)
         String youCan = "";
         boolean voteAge = age >= 18;
         boolean driveAge = age >= 16;
         boolean schoolAge = age >= 5;
 
         if (voteAge) {
-            youCan = "You can vote\n";
+            youCan = "You can vote. ";
         }
         if (driveAge) {
-            youCan = youCan + "You can drive\n";
+            youCan = youCan + "You can drive. ";
         }
         if (schoolAge) {
-            youCan = youCan + "You can go to school\n";
+            youCan = youCan + "You can go to school. ";
         }
         if (age < 5) {
-            youCan = "You are too small\n";
+            youCan = "You are too small. ";
         }
+
         return youCan;
     }
 
-    public static void shortNumber(short x) {
+    public static String assertStringResult(String a, String e) {     // Method (Task# 20)
+
+        String result1 = "";
+
+        if (a.equals(e)) {
+            result1 = "\u001B[32m" + "Pass" + "\u001B[0m";
+        } else {
+            result1 = "\u001B[31m" + "Fail" + "\u001B[0m";
+        }
+        System.out.println(result1);
+
+        return result1;
+    }
+
+    public static void shortNumber(short x) {     // Method (Task# 21)
 
         if (x / 10 == 0) {
             System.out.println("It’s a one-digit number.");
@@ -174,15 +184,15 @@ public class HW4 {
     public static void main(String[] args){
 
         numberTask();
-        /**In the package, create class HW4 homework, do all the work in this class
+        /**1. In the package, create class HW4 homework, do all the work in this class
          */
 
         numberTask();
-        /**Write a method that will print the task number before each answer. Come up with your own design.
+        /**2. Write a method that will print the task number before each answer. Come up with your own design.
          */
 
         numberTask();
-        /**Write the following logical expressions in code:
+        /**3. Write the following logical expressions in code:
          * (2 = 2) AND (7 = 7)
          * NOT(15 < 3)
          * ("Pine" = "Oak") OR ("Cherry" = "Maple")
@@ -205,7 +215,7 @@ public class HW4 {
         System.out.println((6 / 2 == 3) || (7 * 5 == 20));
 
         numberTask();
-        /**Write as code:
+        /**4. Write as code:
          * ("There are 70 seconds in a minute") OR ("The working clock shows the time")
          * "!(28 > 7) AND !(300/5 = 60)"
          * ("TV - electrical appliance") AND ("Glass - wood")
@@ -232,7 +242,7 @@ public class HW4 {
         }
 
         numberTask();
-        /**Write as code:
+        /**5. Write as code:
          * a) Andrei is older than Svetlana. Natasha is older than Svetlana.
          * b) There are textbooks on the shelf and catalogs on the table.
          * c) Most of the children are girls. The rest are boys.
@@ -268,7 +278,7 @@ public class HW4 {
         }
 
         numberTask();
-        /**Write as code:
+        /**6. Write as code:
          * "You can only get a driver's license when you turn 16"
          */
 
@@ -281,7 +291,7 @@ public class HW4 {
         }
 
         numberTask();
-        /**Write as code:
+        /**7. Write as code:
          * "Peter does not ride the bus, but at the same time he reads a book or does not look out of the window"
          */
 
@@ -297,7 +307,7 @@ public class HW4 {
         }
 
         numberTask();
-        /**Write as code:
+        /**8. Write as code:
          * "If you are with a friend, it's good, but when it's the other way around, it's bad."
          */
 
@@ -310,7 +320,7 @@ public class HW4 {
         }
 
         numberTask();
-        /**Write expressions as if-else conditions:
+        /**9. Write expressions as if-else conditions:
          * "If you are over 18, then you are an adult. Otherwise, you are a child."
          * "If the ground is dry, then there is no rain. If the ground is wet, then it is raining."
          * "If the ground is dry, then there is no rain. If the ground is wet, then it is raining.
@@ -401,7 +411,7 @@ public class HW4 {
         }
 
         numberTask();
-        /**Check the number for evenness. If the number is even, double the number, otherwise square the number.
+        /**10. Check the number for evenness. If the number is even, double the number, otherwise square the number.
          *
          */
 
@@ -414,7 +424,7 @@ public class HW4 {
         }
 
         numberTask();
-        /**Write an algorithm for checking the age for compliance with the conditions (if-else):
+        /**11. Write an algorithm for checking the age for compliance with the conditions (if-else):
          * "You can vote from the age of 18"
          * "You can drive a car from the age of 16"
          * "You can go to school from the age of 5"
@@ -435,7 +445,7 @@ public class HW4 {
         }
 
         numberTask();
-        /**"Check a student's grade and performs the following actions:
+        /**12. "Check a student's grade and performs the following actions:
          * 5 - issue a commendable letter and go to the next class
          * 4 - go to the next class
          * 3 - give a task for the summer and go to the next class
@@ -455,7 +465,7 @@ public class HW4 {
         }
 
         numberTask();
-        /**Write an algorithm for a program that checks 2 numbers.
+        /**13. Write an algorithm for a program that checks 2 numbers.
          * The program adds numbers that are divisible by 3 without a remainder,
          * and subtracts numbers that are divisible by 5 without a remainder.
          * The program multiplies numbers that are divisible by 2 without a remainder,
@@ -484,6 +494,12 @@ public class HW4 {
         }
 
         numberTask();
+        /**14. Print the following expressions:
+         * The result of dividing k by l = …, and the remainder of the division = …
+         * The result of dividing k by m = …, and the remainder of the division = …
+         * The result of dividing l by m = …, and the remainder of the division = …
+         * The result of dividing m by k = …, and the remainder of the division = …
+         */
 
         int k = 5;
         int l = 10;
@@ -495,7 +511,7 @@ public class HW4 {
         compareMethod(m, k);
 
         numberTask();
-        /**Use the method and parameters.
+        /**15. Use the method and parameters.
          * Create the variables apple and student and assign them the values 40 and 6 respectively.
          * Print expression:
          * If ... apples(s) are divided by ... students, then each student will receive ... apples(a),
@@ -509,7 +525,7 @@ public class HW4 {
         taskApples(apple, student);
 
         numberTask();
-        /**Write a method so that the correct declensions of words (apple or apples) are printed automatically,
+        /**16. Write a method so that the correct declensions of words (apple or apples) are printed automatically,
          * depending on the parameter values.
          * Print expression with parameters:
          * apple = 42, 55, 1, 10
@@ -522,7 +538,7 @@ public class HW4 {
         countResult(13, 0);
 
         numberTask();
-        /**Write a method that takes a temperature parameter in Celsius
+        /**17. Write a method that takes a temperature parameter in Celsius
          * and prints out the temperature result in Celsius and Fahrenheit.
          */
 
@@ -530,6 +546,9 @@ public class HW4 {
         tempCF(37);
 
         numberTask();
+        /**18. Create a method that will take the i parameter as input and print the table:
+         *
+         */
 
         System.out.println("_________________________");
         System.out.println("| " + "int min " + "| " + getMinValue(24) + " |");
@@ -538,34 +557,32 @@ public class HW4 {
         System.out.println("_________________________");
 
         numberTask();
-
-        /**Write a test that validates (verifies that it works) your code from task #10.
+        /**19. bWrite a test that validates (verifies that it works) your code from task #10.
          * Test data - 2, 5, 0.
          */
 
-        task10Validate(-2);
-        assertIntegerResult(-4, -4);
-        task10Validate(5);
-        assertIntegerResult(25, 25);
-        task10Validate(0);
-        assertIntegerResult(0, 0);
+        assertIntegerResult(task10Validate(-2), -4);
+        assertIntegerResult(task10Validate(5), 25);
+        assertIntegerResult(task10Validate(0), 0);
 
         numberTask();
-        /**Write a test that validates your code from task #11.
+        /**20. Write a test that validates your code from task #11.
          *
          */
         System.out.println(checkAge(7));
-        System.out.println(checkAge(4));
+        System.out.println(checkAge(18));
 
         String vote1 = "You can vote";
         String drive1 = "You can drive";
         String school1 = "You can go to school";
 
-        assertStringResult("You can go to school","You can go to school");
-        assertStringResult("You can vote", "You can drive" );
+        assertStringResult(checkAge(7), "You can go to school. "); // Method
+        assertStringResult(checkAge(18), "You can vote. You can drive. You can go to school. ");
+        assertStringResult(drive1, "You can drive" ); // Variable
+
 
         numberTask();
-        /**Write a program algorithm that checks a number of type short for the number of digits
+        /**21. Write a program algorithm that checks a number of type short for the number of digits
          * and displays the result of the check.
          * (For example, “It’s a two-digit number.”, “It’s a five-digit number.”, etc.)
          */
@@ -573,45 +590,6 @@ public class HW4 {
         short x = -327;
 
         shortNumber(x);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 }
