@@ -153,6 +153,24 @@ public class HW4 {
         return youCan;
     }
 
+    public static void shortNumber(short x) {
+
+        if (x / 10 == 0) {
+            System.out.println("It’s a one-digit number.");
+        } else if (x / 100 == 0) {
+            System.out.println("It’s a two-digit number.");
+        } else if (x / 1000 == 0) {
+            System.out.println("It’s a three-digit number.");
+        } else if (x / 10000 == 0) {
+            System.out.println("It’s a four-digit number.");
+        } else if (x / 100000 == 0) {
+            System.out.println("It’s a five-digit number.");
+        } else {
+            System.out.println("It isn't a short type of the number.");
+        }
+
+    }
+
     public static void main(String[] args){
 
         numberTask();
@@ -545,6 +563,18 @@ public class HW4 {
 
         assertStringResult("You can go to school","You can go to school");
         assertStringResult("You can vote", "You can drive" );
+
+        numberTask();
+        /**Write a program algorithm that checks a number of type short for the number of digits
+         * and displays the result of the check.
+         * (For example, “It’s a two-digit number.”, “It’s a five-digit number.”, etc.)
+         */
+
+        short x = -327;
+
+        shortNumber(x);
+
+
 
 
 
