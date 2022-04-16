@@ -13,12 +13,17 @@ public class Lesson6 {
             System.out.println("Java for beginners");
         }
 
-/**2 Print for all numbers from 1 to 5 inclusive/
+/**2 Print all numbers from 1 to 5 inclusive.
  *
  */
-         for() {
-
+         for(int i = 1; i < 6; i++) {
+             System.out.println(i);
          }
+
+
+
+
+
 
     }
 }
