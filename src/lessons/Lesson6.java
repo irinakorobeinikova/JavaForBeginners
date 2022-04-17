@@ -19,7 +19,7 @@ public class Lesson6 {
 //        for(; ;) {
 //
 //        }
-        /**1 Print for all numbers from 1 to 5 inclusive.
+        /**1 Print all numbers from 1 to 5 inclusive.
          *
          */
         numberTask();
@@ -51,10 +51,18 @@ public class Lesson6 {
          */
         numberTask();
 
-        for (int i = 1; i < 11; i = i + 2) {
+        for (int i = 1; i < 11; i += 2) {
                 System.out.println(i);
         }
 
+        /**4 Print all numbers from 1 to 100 inclusive where the step is 10.
+         *
+         */
+        numberTask();
+
+        for(int i = 1; i < 101; i += 10) {
+            System.out.println(i);
+        }
 
 
 
