@@ -64,6 +64,14 @@ public class Lesson6 {
             System.out.println(i);
         }
 
+        /**5 Print all numbers from 0 to 100 that are divisible by 10.
+         *
+         */
+        numberTask();
+
+        for(int i = 0; i < 101; i += 10) {
+            System.out.println(i);
+        }
 
 
 
