@@ -33,6 +33,49 @@ public class HW5 {
         }
     }
 
+    //Task 3
+    public static String returnDayOfWeek(int num1) {
+
+        String dayOfWeek = "";
+
+        if (num1 <= 0 || num1 > 7) {
+            dayOfWeek = "Input the right number from 1 to 7";
+        }
+        if (num1 == 1) {
+            dayOfWeek = "Monday";
+        } else if (num1 == 2) {
+            dayOfWeek = "Tuesday";
+        } else if (num1 == 3) {
+            dayOfWeek = "Wednesday";
+        } else if (num1 == 4) {
+            dayOfWeek = "Thursday";
+        } else if (num1 == 5) {
+            dayOfWeek = "Friday";
+        } else if (num1 == 6) {
+            dayOfWeek = "Saturday";
+        } else if (num1 == 7) {
+            dayOfWeek ="Sunday";
+        }
+        return dayOfWeek;
+    }
+
+    public static void main(String[] args) {
+
+        numberTask();
+        /**2 Write a method that takes a number from 1 to 7 as input and returns the day of the week.
+         *
+         */
+
+//        returnDayOfWeek(9);
+//        returnDayOfWeek(4);
+//        returnDayOfWeek(1);
+
+        verifyEquals("Sunday", returnDayOfWeek(7));
+        verifyEquals("Monday", returnDayOfWeek(1));
+        verifyEquals("Input the right number from 1 to 7", returnDayOfWeek(8));
+        verifyEquals("Input the right number from 1 to 7", returnDayOfWeek(0));
+
+
 
 
 
