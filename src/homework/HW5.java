@@ -159,6 +159,15 @@ public class HW5 {
         verifyEquals(39, returnSmallestValue(42, 39, 58));     // Test
         verifyEquals(0, returnSmallestValue(2, 0, 23));     // Test
 
+        numberTask();
+        /**5 Write an algorithm for calculating the average value
+         * of 5 indicators of the cat's body temperature.
+         */
+
+        System.out.println(averageTempOfTheCat(35.6, 37.2, 38.1, 36.2, 39.5));
+        verifyEquals(37.32000000000001, averageTempOfTheCat(35.6, 37.2, 38.1, 36.2, 39.5));    // Test
+
+
 
 
 
