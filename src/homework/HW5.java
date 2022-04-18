@@ -59,6 +59,31 @@ public class HW5 {
         return dayOfWeek;
     }
 
+    // Task 3 (1 version)
+    public static int returnLargeOfThree(int x, int y, int z) {
+
+        int large;
+
+        if (x > y) {
+            large = x;
+        } else {
+            large = y;
+        }
+        if (large < z) {
+            large = z;
+        }
+
+        return large;
+    }
+
+    // Task 3 (2 version)
+    public static int returnLargeWithMath(int x, int y, int z) {
+
+        int max1 = Math.max(Math.max(x, y), z);
+
+        return max1;
+    }
+
     public static void main(String[] args) {
 
         numberTask();
@@ -74,6 +99,18 @@ public class HW5 {
         verifyEquals("Monday", returnDayOfWeek(1));
         verifyEquals("Input the right number from 1 to 7", returnDayOfWeek(8));
         verifyEquals("Input the right number from 1 to 7", returnDayOfWeek(0));
+
+        numberTask();
+        /**3 Given three numbers, x, y, z.
+         * Determine the largest value and assign this value to the variable largest.
+         */
+
+        int x = 15;
+        int y = 8;
+        int z = 35;
+
+        System.out.println(returnLargeOfThree(x, y, z));     // 1-th Method
+        System.out.println(returnLargeWithMath(x, y, z));    // 2-th Method
 
 
 
