@@ -33,6 +33,15 @@ public class HW5 {
         }
     }
 
+    public static void verifyEquals(double expectedResult, double actualResult) {
+
+        if (expectedResult ==actualResult) {
+            System.out.println("\u001B[32m" + "Pass" + "\u001B[0m");
+        } else {
+            System.out.println("\u001B[31m" + "Fail" + "\u001B[0m");
+        }
+    }
+
     //Task 3
     public static String returnDayOfWeek(int num1) {
 
@@ -84,6 +93,31 @@ public class HW5 {
         return max1;
     }
 
+
+    // Task 4
+    public static int returnSmallestValue(int a, int b, int c) {
+        int small;
+
+        if (a < b) {
+            small = a;
+        } else {
+            small = b;
+        }
+        if (small > c) {
+            small = c;
+        }
+
+        return small;
+    }
+
+    // Task 5
+    public static double averageTempOfTheCat(double t1, double t2, double t3, double t4, double t5) {
+
+        double averageTemp = (t1 + t2 + t3 + t4 + t5) / 5;
+
+        return averageTemp;
+    }
+
     public static void main(String[] args) {
 
         numberTask();
@@ -111,6 +145,19 @@ public class HW5 {
 
         System.out.println(returnLargeOfThree(x, y, z));     // 1-th Method
         System.out.println(returnLargeWithMath(x, y, z));    // 2-th Method
+
+        verifyEquals(48, returnLargeOfThree(12, 48,17));     // Test (1-th Method)
+        verifyEquals(24, returnLargeWithMath(24, 5,11));     // Test (2-th Method)
+
+        numberTask();
+        /**4 Using nested if statements, write a fragment of code that prints the smallest value
+         * contained in the variables a, b, c.
+         */
+
+        System.out.println(returnSmallestValue(5, 1, 29));
+
+        verifyEquals(39, returnSmallestValue(42, 39, 58));     // Test
+        verifyEquals(0, returnSmallestValue(2, 0, 23));     // Test
 
 
 
