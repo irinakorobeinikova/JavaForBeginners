@@ -119,51 +119,66 @@ public class HW5 {
     }
 
     // Task 6
-    public static void printDollarsAndCents(double price) {
+    public static String printDollarsAndCents(double price) {
+        String DollarsAndCents = "";
+
         int dollars = (int) price;
         double cents = price * 100 - dollars * 100;
         int cents1 = (int) cents;
 
         if (dollars < 10 && cents1 > 10) {
-            System.out.println("0" + dollars + " dollars " + cents1 + " cents");
+            DollarsAndCents = "0" + dollars + " dollars " + cents1 + " cents";
         } else if (dollars > 10 && cents1 < 10) {
-            System.out.println(dollars + " dollars " + "0" + cents1 + " cents");
+            DollarsAndCents = dollars + " dollars " + "0" + cents1 + " cents";
         } else if (dollars < 10 && cents1 < 10) {
-            System.out.println("0" + dollars + " dollars " + "0" + cents1 + " cents");
+            DollarsAndCents = "0" + dollars + " dollars " + "0" + cents1 + " cents";
         } else {
-            System.out.println(dollars + " dollars " + cents1 + " cents");
+            DollarsAndCents = dollars + " dollars " + cents1 + " cents";
         }
+
+        return DollarsAndCents;
     }
 
     // Task 7
-    public static void printKgAndGr(double weight) {
+    public static String printKgAndGr(double weight) {
+        String KgAndGr = "";
+
         int kg = (int) weight;
         double gr = weight * 1000 - kg * 1000;
         int gr1 = (int) gr;
 
         if (kg < 10 && gr1 > 10) {
-            System.out.println("00" + kg + " kg " + gr1 + " gr");
+            KgAndGr = "00" + kg + " kg " + gr1 + " gr";
         } else if (kg > 10 && gr1 < 10) {
-            System.out.println(kg + " kg " + "00" + gr1 + " gr");
+            KgAndGr = kg + " kg " + "00" + gr1 + " gr";
         } else if (kg < 10 && gr1 < 10) {
-            System.out.println("00" + kg + " kg " + "00" + gr1 + " gr");
+            KgAndGr = "00" + kg + " kg " + "00" + gr1 + " gr";
         } else if (kg < 100 && gr1 > 10) {
-            System.out.println("0" + kg + " kg " + gr1 + " gr");
+            KgAndGr = "0" + kg + " kg " + gr1 + " gr";
         } else if (kg > 10 && gr1 < 100) {
-            System.out.println(kg + " kg " + "0" + gr1 + " gr");
+            KgAndGr = kg + " kg " + "0" + gr1 + " gr";
         } else if (kg < 100 && gr1 < 100) {
-            System.out.println("0" + kg + " kg " + "0" + gr1 + " gr");
+            KgAndGr = "0" + kg + " kg " + "0" + gr1 + " gr";
         } else if (kg < 10 && gr1 < 100) {
-            System.out.println("00" + kg + " kg " + "0" + gr1 +" gr");
+            KgAndGr = "00" + kg + " kg " + "0" + gr1 +" gr";
         } else if (kg < 100 && gr1 < 100) {
-            System.out.println("0" + kg + " kg " + "0" + gr1 + " gr");
+            KgAndGr = "0" + kg + " kg " + "0" + gr1 + " gr";
         } else if (kg > 100 && gr1 < 100) {
-            System.out.println(kg + " kg " + "0" + gr1 + " gr");
+            KgAndGr = kg + " kg " + "0" + gr1 + " gr";
         } else if (kg < 100 && gr1 > 100) {
-            System.out.println("0" + kg + " kg " + gr1 + " gr");
+            KgAndGr = "0" + kg + " kg " + gr1 + " gr";
         } else {
-            System.out.println(kg + " kg " + gr1 + " gr");
+            KgAndGr = kg + " kg " + gr1 + " gr";
         }
+
+        return KgAndGr;
+    }
+
+    // Task 8
+    public static String sumOfPurchase(double price, double weight) {
+        double sum = price * weight;
+
+        return printDollarsAndCents(sum);
     }
 
 
@@ -173,10 +188,6 @@ public class HW5 {
         /**2 Write a method that input a number from 1 to 7 and returns the day of the week.
          *
          */
-
-//        returnDayOfWeek(9);
-//        returnDayOfWeek(4);
-//        returnDayOfWeek(1);
 
         verifyEquals("Sunday", returnDayOfWeek(7));
         verifyEquals("Monday", returnDayOfWeek(1));
@@ -221,17 +232,34 @@ public class HW5 {
          *  and returns the string “10 dollars 75 cents”.
          */
 
-        printDollarsAndCents(10.75);
-        printDollarsAndCents(5.03);
+        System.out.println(printDollarsAndCents(10.75));
+        System.out.println(printDollarsAndCents(5.03));
+        verifyEquals(printDollarsAndCents(10.75), "10 dollars 75 cents");     // Test
+        verifyEquals(printDollarsAndCents(5.03), "05 dollars 03 cents");     // Test
+
+
+
 
         numberTask();
-            /**7 Write a method that inputs a decimal number
-             * and returns the string "10 kg 75 gr".
-             */
-            printKgAndGr(10.75);
-            printKgAndGr(5.005);
+        /**7 Write a method that inputs a decimal number
+         * and returns the string "10 kg 75 gr".
+         */
 
+        System.out.println(printKgAndGr(10.75));
+        System.out.println(printKgAndGr(5.005));
+        verifyEquals(printKgAndGr(10.75), "010 kg 750 gr" );     // Test
+        verifyEquals(printKgAndGr(5.005), "005 kg 005 gr" );     // Test
 
+        numberTask();
+        /**8 Write a method that inputs 2 parameters - the price and the quantity of the goods
+         * (it may be the weight of the goods, or the quantity in pieces).
+         * Algorithm for the sum of purchases as the decimal numbers.
+         */
+
+        System.out.println(sumOfPurchase(102.2, 3.2));
+        System.out.println(sumOfPurchase(25.20, 2.3));
+        verifyEquals(sumOfPurchase(102.2, 3.2), "327 dollars 04 cents");     // Test
+        verifyEquals(sumOfPurchase(25.2, 2.3), "57 dollars 95 cents");     //Test
 
 
 
