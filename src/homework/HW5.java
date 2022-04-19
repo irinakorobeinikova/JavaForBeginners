@@ -118,10 +118,28 @@ public class HW5 {
         return averageTemp;
     }
 
-    public static void main(String[] args) {
+    // Task 6
+    public static void printDollarsAndCents(double price) {
+        int dollars = (int) price;
+        double cents = price * 100 - dollars * 100;
+        int cents1 = (int) cents;
+
+
+        if (dollars < 10 && cents1 > 10) {
+            System.out.println("0" + dollars + " dollars " + cents1 + " cents");
+        } else if (dollars > 10 && cents1 < 10) {
+            System.out.println(dollars + " dollars " + "0" + cents1 + " cents");
+        } else if (dollars < 10 && cents1 < 10) {
+            System.out.println("0" + dollars + " dollars " + "0" + cents1 + " cents");
+        } else {
+            System.out.println(dollars + " dollars " + cents1 + " cents");
+        }
+    }
+
+        public static void main(String[] args) {
 
         numberTask();
-        /**2 Write a method that takes a number from 1 to 7 as input and returns the day of the week.
+        /**2 Write a method that input a number from 1 to 7 and returns the day of the week.
          *
          */
 
@@ -167,7 +185,13 @@ public class HW5 {
         System.out.println(averageTempOfTheCat(35.6, 37.2, 38.1, 36.2, 39.5));
         verifyEquals(37.32000000000001, averageTempOfTheCat(35.6, 37.2, 38.1, 36.2, 39.5));    // Test
 
+        numberTask();
+        /**6 Write a method that input a decimal number (for example, 10.75)
+         *  and returns the string “10 dollars 75 cents”.
+         */
 
+        printDollarsAndCents(10.75);
+        printDollarsAndCents(5.03);
 
 
 
