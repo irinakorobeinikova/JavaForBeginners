@@ -124,7 +124,6 @@ public class HW5 {
         double cents = price * 100 - dollars * 100;
         int cents1 = (int) cents;
 
-
         if (dollars < 10 && cents1 > 10) {
             System.out.println("0" + dollars + " dollars " + cents1 + " cents");
         } else if (dollars > 10 && cents1 < 10) {
@@ -136,7 +135,39 @@ public class HW5 {
         }
     }
 
-        public static void main(String[] args) {
+    // Task 7
+    public static void printKgAndGr(double weight) {
+        int kg = (int) weight;
+        double gr = weight * 1000 - kg * 1000;
+        int gr1 = (int) gr;
+
+        if (kg < 10 && gr1 > 10) {
+            System.out.println("00" + kg + " kg " + gr1 + " gr");
+        } else if (kg > 10 && gr1 < 10) {
+            System.out.println(kg + " kg " + "00" + gr1 + " gr");
+        } else if (kg < 10 && gr1 < 10) {
+            System.out.println("00" + kg + " kg " + "00" + gr1 + " gr");
+        } else if (kg < 100 && gr1 > 10) {
+            System.out.println("0" + kg + " kg " + gr1 + " gr");
+        } else if (kg > 10 && gr1 < 100) {
+            System.out.println(kg + " kg " + "0" + gr1 + " gr");
+        } else if (kg < 100 && gr1 < 100) {
+            System.out.println("0" + kg + " kg " + "0" + gr1 + " gr");
+        } else if (kg < 10 && gr1 < 100) {
+            System.out.println("00" + kg + " kg " + "0" + gr1 +" gr");
+        } else if (kg < 100 && gr1 < 100) {
+            System.out.println("0" + kg + " kg " + "0" + gr1 + " gr");
+        } else if (kg > 100 && gr1 < 100) {
+            System.out.println(kg + " kg " + "0" + gr1 + " gr");
+        } else if (kg < 100 && gr1 > 100) {
+            System.out.println("0" + kg + " kg " + gr1 + " gr");
+        } else {
+            System.out.println(kg + " kg " + gr1 + " gr");
+        }
+    }
+
+
+    public static void main(String[] args) {
 
         numberTask();
         /**2 Write a method that input a number from 1 to 7 and returns the day of the week.
@@ -186,12 +217,19 @@ public class HW5 {
         verifyEquals(37.32000000000001, averageTempOfTheCat(35.6, 37.2, 38.1, 36.2, 39.5));    // Test
 
         numberTask();
-        /**6 Write a method that input a decimal number (for example, 10.75)
+        /**6 Write a method that inputs a decimal number (for example, 10.75)
          *  and returns the string “10 dollars 75 cents”.
          */
 
         printDollarsAndCents(10.75);
         printDollarsAndCents(5.03);
+
+        numberTask();
+            /**7 Write a method that inputs a decimal number
+             * and returns the string "10 kg 75 gr".
+             */
+            printKgAndGr(10.75);
+            printKgAndGr(5.005);
 
 
 
