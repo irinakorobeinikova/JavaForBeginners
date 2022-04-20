@@ -176,10 +176,9 @@ public class HW5 {
     }
 
     // Task 9.1
-    public static void printReceipt(double price, double weight) {
+    public static void printReceipt(String goods, double price, double weight) {
 
         double sum = price * weight;
-        String goods = "Apples";
         String priceCheck = "Price per 1 kg";
         String priceSum = printDollarsAndCents(price);
         String weightCheck = "Weight";
@@ -198,11 +197,10 @@ public class HW5 {
     }
 
     // Task 9.2
-    public static void printReceiptBread(double price, double quantity) {
+    public static void printReceiptBread(String goods, double price, double quantity) {
 
         double sum1 = price * quantity;
-        String goods1 = "Bread";
-        String priceCheck1 = "Price per 1 loaf";
+        String priceCheck1 = "Price per 1 item";
         String priceSum1 = printDollarsAndCents(price);
         String weightCheck1 = "Quantity";
         String weightSum1 = printQuantity(quantity);
@@ -210,7 +208,7 @@ public class HW5 {
         String total1 = "Total ";
         String receiptTotal1 = printDollarsAndCents(sum1);
 
-        System.out.println(goods1);
+        System.out.println(goods);
         System.out.println(priceCheck1 + "        " + priceSum1);
         System.out.println(weightCheck1 + "                 " + weightSum1);
         System.out.println(printLine1);
@@ -219,7 +217,17 @@ public class HW5 {
 
     }
 
+    // Task 10
+    public static String countSalary(double workHours, double payHours) {
+        String salaryPerMonth = "";
 
+        int salary = (int) (workHours * payHours * 21);
+        double salary1 = workHours * payHours * 21;
+        int coins = (int) ((salary1 - salary) * 100);
+        salaryPerMonth = salary + " dollars " + coins + " cents";
+
+        return salaryPerMonth;
+    }
 
 
     public static void main(String[] args) {
@@ -314,8 +322,16 @@ public class HW5 {
          * Total		            $17.50
          */
 
-        printReceipt(5.13, 3.400);
-        printReceiptBread(3.5, 5);
+        printReceipt("Apples",5.13, 3.400);
+        printReceiptBread("Bread", 3.5, 5);
+
+        numberTask();
+        /**10 Write a method that takes as input the number of hours of work per day and the cost of one hour of work,
+         * and returns the salary per month.
+         */
+
+        System.out.println(countSalary(8, 40));
+        System.out.println(countSalary(6.5, 23));
 
 
 
