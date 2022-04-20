@@ -193,8 +193,32 @@ public class HW5 {
         System.out.println(weightCheck + "             " + weightSum);
         System.out.println(printLine);
         System.out.println(total + "                 " + receiptTotal);
+        System.out.println();
 
     }
+
+    // Task 9.2
+    public static void printReceiptBread(double price, double quantity) {
+
+        double sum1 = price * quantity;
+        String goods1 = "Bread";
+        String priceCheck1 = "Price per 1 loaf";
+        String priceSum1 = printDollarsAndCents(price);
+        String weightCheck1 = "Quantity";
+        String weightSum1 = printQuantity(quantity);
+        String printLine1 = "_______________________________________";
+        String total1 = "Total ";
+        String receiptTotal1 = printDollarsAndCents(sum1);
+
+        System.out.println(goods1);
+        System.out.println(priceCheck1 + "        " + priceSum1);
+        System.out.println(weightCheck1 + "                 " + weightSum1);
+        System.out.println(printLine1);
+        System.out.println(total1 + "                 " + receiptTotal1);
+        System.out.println();
+
+    }
+
 
 
 
@@ -291,7 +315,7 @@ public class HW5 {
          */
 
         printReceipt(5.13, 3.400);
-//        printReceiptBread(3.5, 5);
+        printReceiptBread(3.5, 5);
 
 
 
