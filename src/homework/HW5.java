@@ -126,20 +126,16 @@ public class HW5 {
         double cents = price * 100 - dollars * 100;
         int cents1 = (int) cents;
 
-        if (dollars < 10 && cents1 > 10) {
-            DollarsAndCents = "0" + dollars + " dollars " + cents1 + " cents";
-        } else if (dollars > 10 && cents1 < 10) {
-            DollarsAndCents = dollars + " dollars " + "0" + cents1 + " cents";
-        } else if (dollars < 10 && cents1 < 10) {
-            DollarsAndCents = "0" + dollars + " dollars " + "0" + cents1 + " cents";
+        if (dollars >= 0 && cents1 < 10) {
+            DollarsAndCents = "$" + dollars + "." + "0" + cents1;
         } else {
-            DollarsAndCents = dollars + " dollars " + cents1 + " cents";
+            DollarsAndCents = "$" + dollars + "." + cents1;
         }
 
         return DollarsAndCents;
     }
 
-    // Task 7
+    // Task 7.1
     public static String printKgAndGr(double weight) {
         String KgAndGr = "";
 
@@ -147,39 +143,59 @@ public class HW5 {
         double gr = weight * 1000 - kg * 1000;
         int gr1 = (int) gr;
 
-        if (kg < 10 && gr1 > 10) {
-            KgAndGr = "00" + kg + " kg " + gr1 + " gr";
-        } else if (kg > 10 && gr1 < 10) {
-            KgAndGr = kg + " kg " + "00" + gr1 + " gr";
-        } else if (kg < 10 && gr1 < 10) {
-            KgAndGr = "00" + kg + " kg " + "00" + gr1 + " gr";
-        } else if (kg < 100 && gr1 > 10) {
-            KgAndGr = "0" + kg + " kg " + gr1 + " gr";
-        } else if (kg > 10 && gr1 < 100) {
-            KgAndGr = kg + " kg " + "0" + gr1 + " gr";
-        } else if (kg < 100 && gr1 < 100) {
-            KgAndGr = "0" + kg + " kg " + "0" + gr1 + " gr";
-        } else if (kg < 10 && gr1 < 100) {
-            KgAndGr = "00" + kg + " kg " + "0" + gr1 +" gr";
-        } else if (kg < 100 && gr1 < 100) {
-            KgAndGr = "0" + kg + " kg " + "0" + gr1 + " gr";
-        } else if (kg > 100 && gr1 < 100) {
-            KgAndGr = kg + " kg " + "0" + gr1 + " gr";
-        } else if (kg < 100 && gr1 > 100) {
-            KgAndGr = "0" + kg + " kg " + gr1 + " gr";
+        if (kg >= 0 && gr1 < 10) {
+            KgAndGr = kg + " kg " + "00" + gr1 + " g";
+        } else if (kg >= 0 && gr1 < 100) {
+            KgAndGr = kg + " kg " + "0" + gr1 + " g";
         } else {
-            KgAndGr = kg + " kg " + gr1 + " gr";
+            KgAndGr = kg + " kg " + gr1 + " g";
         }
 
         return KgAndGr;
     }
 
+    // Task 7.2
+    public static String printQuantity(double quantity) {
+        String quantity1 = "";
+
+        int loaf = (int) quantity;
+
+        if (loaf >= 1) {
+            quantity1 = loaf +",00";
+        }
+
+        return quantity1;
+    }
+
     // Task 8
     public static String sumOfPurchase(double price, double weight) {
+
         double sum = price * weight;
 
         return printDollarsAndCents(sum);
     }
+
+    // Task 9.1
+    public static void printReceipt(double price, double weight) {
+
+        double sum = price * weight;
+        String goods = "Apples";
+        String priceCheck = "Price per 1 kg";
+        String priceSum = printDollarsAndCents(price);
+        String weightCheck = "Weight";
+        String weightSum = printKgAndGr(weight);
+        String printLine = "_______________________________________";
+        String total = "Total ";
+        String receiptTotal = printDollarsAndCents(sum);
+
+        System.out.println(goods);
+        System.out.println(priceCheck + "          " + priceSum);
+        System.out.println(weightCheck + "             " + weightSum);
+        System.out.println(printLine);
+        System.out.println(total + "                 " + receiptTotal);
+
+    }
+
 
 
     public static void main(String[] args) {
@@ -229,26 +245,23 @@ public class HW5 {
 
         numberTask();
         /**6 Write a method that inputs a decimal number (for example, 10.75)
-         *  and returns the string “10 dollars 75 cents”.
+         *  and returns the string "$10.75".
          */
 
         System.out.println(printDollarsAndCents(10.75));
         System.out.println(printDollarsAndCents(5.03));
-        verifyEquals(printDollarsAndCents(10.75), "10 dollars 75 cents");     // Test
-        verifyEquals(printDollarsAndCents(5.03), "05 dollars 03 cents");     // Test
-
-
-
+        verifyEquals(printDollarsAndCents(10.75), "$10.75");     // Test
+        verifyEquals(printDollarsAndCents(5.03), "$5.03");     // Test
 
         numberTask();
         /**7 Write a method that inputs a decimal number
-         * and returns the string "10 kg 75 gr".
+         * and returns the string "10 kg 75 g".
          */
 
         System.out.println(printKgAndGr(10.75));
         System.out.println(printKgAndGr(5.005));
-        verifyEquals(printKgAndGr(10.75), "010 kg 750 gr" );     // Test
-        verifyEquals(printKgAndGr(5.005), "005 kg 005 gr" );     // Test
+        verifyEquals(printKgAndGr(10.75), "010 kg 750 g" );     // Test
+        verifyEquals(printKgAndGr(5.005), "005 kg 005 g" );     // Test
 
         numberTask();
         /**8 Write a method that inputs 2 parameters - the price and the quantity of the goods
@@ -258,8 +271,27 @@ public class HW5 {
 
         System.out.println(sumOfPurchase(102.2, 3.2));
         System.out.println(sumOfPurchase(25.20, 2.3));
-        verifyEquals(sumOfPurchase(102.2, 3.2), "327 dollars 04 cents");     // Test
-        verifyEquals(sumOfPurchase(25.2, 2.3), "57 dollars 95 cents");     //Test
+        verifyEquals(sumOfPurchase(102.2, 3.2), "$327.04");     // Test
+        verifyEquals(sumOfPurchase(25.2, 2.3), "$57.95");     //Test
+
+        numberTask();
+        /**9 Write a method that accepts certain inputs and prints out a receipt.
+         * For example:
+         * Apples
+         * Price per 1 kg		     $5.13
+         * Weight           	3 kg 400 g
+         * _______________________________________
+         * Total		            $17.44
+         * or
+         * Bread
+         * Price per 1 loaf		     $3.50
+         * Quantity           	      5.00
+         * _______________________________________
+         * Total		            $17.50
+         */
+
+        printReceipt(5.13, 3.400);
+//        printReceiptBread(3.5, 5);
 
 
 
