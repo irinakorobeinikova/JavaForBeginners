@@ -264,6 +264,27 @@ public class HW5 {
         return null;
     }
 
+    // Task 11.2
+    public static String nameEmploy(String name) {
+
+        if (name == "Tom Smith") {
+            return (name + "\t\t\t" + countSalary(8, 30));
+        }
+        if (name == "Sara Conor") {
+            return (name + "\t\t\t " + countSalary(4, 25));
+        }
+        if (name == "Samanta Gilbert") {
+            return (name +"\t\t\t" + countSalary(6, 35));
+        }
+
+        return "The name is not found";
+
+    }
+
+    // Task 11.3
+    public static void payrollSheet(String month, String name, double salary) {
+
+    }
 
 
 
