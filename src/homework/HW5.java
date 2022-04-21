@@ -35,7 +35,7 @@ public class HW5 {
 
     public static void verifyEquals(double expectedResult, double actualResult) {
 
-        if (expectedResult ==actualResult) {
+        if (expectedResult == actualResult) {
             System.out.println("\u001B[32m" + "Pass" + "\u001B[0m");
         } else {
             System.out.println("\u001B[31m" + "Fail" + "\u001B[0m");
@@ -63,7 +63,7 @@ public class HW5 {
         } else if (num1 == 6) {
             dayOfWeek = "Saturday";
         } else if (num1 == 7) {
-            dayOfWeek ="Sunday";
+            dayOfWeek = "Sunday";
         }
         return dayOfWeek;
     }
@@ -161,7 +161,7 @@ public class HW5 {
         int loaf = (int) quantity;
 
         if (loaf >= 1) {
-            quantity1 = loaf +",00";
+            quantity1 = loaf + ",00";
         }
 
         return quantity1;
@@ -217,17 +217,54 @@ public class HW5 {
 
     }
 
-    // Task 10
+    // Task 10.1
     public static String countSalary(double workHours, double payHours) {
         String salaryPerMonth = "";
 
         int salary = (int) (workHours * payHours * 21);
         double salary1 = workHours * payHours * 21;
-        int coins = (int) ((salary1 - salary) * 100);
+        int coins = (int) (Math.floor((salary1 - salary) * 100));     // Method Math.floor(double a) or:
+        // int coins = (int) ((salary1 - salary) * 100);
         salaryPerMonth = salary + " dollars " + coins + " cents";
 
         return salaryPerMonth;
     }
+
+    // Task 11.1
+    public static String returnMonth(int month) {
+
+        if (month > 12 || month <= 0) {
+            return "Wrong number of the month";
+        }
+        if (month == 1) {
+            return "January";
+        } else if (month == 2) {
+            return "February";
+        } else if (month == 3) {
+            return "March";
+        } else if (month == 4) {
+            return "April";
+        } else if (month == 5) {
+            return "May";
+        } else if (month == 6) {
+            return "June";
+        } else if (month == 7) {
+            return "July";
+        } else if (month == 8) {
+            return "August";
+        } else if (month == 9) {
+            return "September";
+        } else if (month == 10) {
+            return "October";
+        } else if (month == 11) {
+            return "November";
+        } else if (month == 12) {
+            return "December";
+        }
+        return null;
+    }
+
+
 
 
     public static void main(String[] args) {
@@ -333,7 +370,22 @@ public class HW5 {
         System.out.println(countSalary(8, 40));
         System.out.println(countSalary(6.5, 23));
 
+        verifyEquals(countSalary(8, 40), "6720 dollars 0 cents");     // Test
+        verifyEquals(countSalary(6.5, 23), "3139 dollars 50 cents");     // Test
 
+        numberTask();
+        /**11 Write a method that takes the necessary parameters as input
+         * and prints a line of the payroll sheet for employees.
+         */
+
+        System.out.println(returnMonth(6));
+        System.out.println(returnMonth(01));
+        System.out.println(returnMonth(13));
+        System.out.println(returnMonth(0));
+        System.out.println(returnMonth(-2));
+
+        System.out.println(nameEmploy("Tom Smith"));
+        System.out.println(nameEmploy("Sara"));
 
 
     }
