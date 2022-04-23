@@ -14,6 +14,11 @@ public class HW5 {
         System.out.println();
     }
 
+    public static void printLine() {
+
+        System.out.println("******************************************************************************" + "\n");
+    }
+
     //Task 2
     public static void verifyEquals(int expectedResult, int actualResult) {
 
@@ -261,16 +266,17 @@ public class HW5 {
         } else if (month == 12) {
             return "December";
         }
+
         return null;
     }
 
     // Task 11.2
-    public static String nameEmploy(String name) {
+    public static String nameEmploySalary(String name) {
 
         if (name == "Tom Smith") {
             return (name + "\t\t\t" + countSalary(8, 30));
         }
-        if (name == "Sara Conor") {
+        if (name == "Sara Toner") {
             return (name + "\t\t\t " + countSalary(4, 25));
         }
         if (name == "Samanta Gilbert") {
@@ -282,8 +288,47 @@ public class HW5 {
     }
 
     // Task 11.3
-    public static void payrollSheet(String month, String name, double salary) {
+    public static String payrollSheet(int month, String name) {
 
+        return (returnMonth(month) + "\n" + nameEmploySalary(name) + "\n");
+    }
+
+    // Task 12
+    public static String checkX(int x) {
+        if (x < 0) {
+            return x + ":" + " x is negative";
+        } else if (x > 0) {
+            return  x + ":" + " x is positive";
+        } else {
+            return x + ":" + " x is zero";
+        }
+    }
+
+    // Task 13
+    public static String luckyNumber(int year) {
+
+        int digit1 = year / 1000;
+        int digit2 = year / 100 % 10;
+        int digit3 = year % 100 / 10;
+        int digit4 = year % 10;
+        int sumOfDigits = digit1 + digit2 + digit3 + digit4;
+
+        if (sumOfDigits <= 9 && sumOfDigits >= 0) {
+            return "Your lucky number is " + sumOfDigits;
+        } else if (sumOfDigits > 9 && sumOfDigits <= 99) {
+            int digit5 = sumOfDigits % 100 / 10;
+            int digit6 = sumOfDigits % 10;
+            int sumOfDigits1 = digit5 + digit6;
+            if (sumOfDigits1 <= 9 && sumOfDigits1 >= 0) {
+                return "Your lucky number is " + sumOfDigits1;
+            } else if (sumOfDigits1 > 9 && sumOfDigits1 <= 99) {
+                int digit7 = sumOfDigits1 % 100 / 10;
+                int digit8 = sumOfDigits1 % 10;
+                int sumOfDigits2 = digit7 + digit8;
+                return "Your lucky number is " + sumOfDigits2;
+            }
+        }
+        return null;
     }
 
 
@@ -404,10 +449,56 @@ public class HW5 {
         System.out.println(returnMonth(13));
         System.out.println(returnMonth(0));
         System.out.println(returnMonth(-2));
+        printLine();
 
-        System.out.println(nameEmploy("Tom Smith"));
-        System.out.println(nameEmploy("Sara"));
+        System.out.println(nameEmploySalary("Tom Smith"));
+        System.out.println(nameEmploySalary("Sara"));
+        printLine();
+
+        System.out.println(payrollSheet(2, "Samanta Gilbert"));
+        System.out.println(payrollSheet(4, "Sara Toner"));
+        System.out.println(payrollSheet(12, "Tom Smith"));
+
+        numberTask();
+        /**12 Write as a method the given scheme.
+         *
+         */
+
+        System.out.println(checkX(25));
+        System.out.println(checkX(-5));
+        System.out.println(checkX(0));
+
+        verifyEquals(checkX(25), "25: x is positive");
+        verifyEquals(checkX(-5), "-5: x is negative");
+        verifyEquals(checkX(0), "0: x is zero");
+
+        numberTask();
+        /**13 Write a method that takes a year of birth as input and returns your lucky number.
+         * The lucky number is calculated by the formula: the sum of all numbers,
+         * if the result is greater than 9,
+         * sum all numbers again.
+         */
+
+        System.out.println(luckyNumber(1981));
+        System.out.println(luckyNumber(2022));
+        System.out.println(luckyNumber(2055));
+        System.out.println(luckyNumber(9999));
+        System.out.println(luckyNumber(999));
+        System.out.println(luckyNumber(0));
+
+        verifyEquals(luckyNumber(1981), "Your lucky number is 1");
+        verifyEquals(luckyNumber(2022), "Your lucky number is 6");
+        verifyEquals(luckyNumber(2055), "Your lucky number is 3");
+        verifyEquals(luckyNumber(9999), "Your lucky number is 9");
+        verifyEquals(luckyNumber(999), "Your lucky number is 9");
+        verifyEquals(luckyNumber(0), "Your lucky number is 0");
+
+
+
+
+
 
 
     }
+
 }
