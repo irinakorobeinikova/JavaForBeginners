@@ -331,9 +331,41 @@ public class HW5 {
         return null;
     }
 
+    // Task 14.1
+    public static String differAverageMedian(int a, int b, int c) {
+
+        int average = (a + b + c) / 3;
+        int median;
+        String message = "";
+
+        if ((a > b && a < c) || (a < b && a > c)) {
+            median = a;
+        } else if ((b > a && b < c) || (b < a && b > c)) {
+            median = b;
+        } else {
+            median = c;
+        }
+
+        int difference = average - median;
+
+        if (difference < 0) {
+            difference = difference * (-1);
+        }
+
+        if (difference > 2) {
+            message = "The average value " + average + " differs from the median "
+                    + median +  " by " + difference + ".";
+        } else {
+            message = "The average value = " + average + ", " + "median = " + median + ".";
+        }
+
+        return message;
+    }
 
 
-    public static void main(String[] args) {
+
+
+        public static void main(String[] args) {
 
         numberTask();
         /**2 Write a method that input a number from 1 to 7 and returns the day of the week.
@@ -492,6 +524,17 @@ public class HW5 {
         verifyEquals(luckyNumber(9999), "Your lucky number is 9");
         verifyEquals(luckyNumber(999), "Your lucky number is 9");
         verifyEquals(luckyNumber(0), "Your lucky number is 0");
+
+        numberTask();
+        /**14.1 3 numbers are given.
+         * It is necessary to calculate the difference between the average value and the median value.
+         * If the difference is greater than 2,
+         * a message should be displayed: “The mean value… differs from the median… by…”.
+         * Otherwise, show the message: “Mean = …, median = …”.
+         */
+
+
+
 
 
 
