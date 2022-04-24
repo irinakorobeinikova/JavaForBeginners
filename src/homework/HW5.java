@@ -356,13 +356,32 @@ public class HW5 {
             message = "The average value " + average + " differs from the median "
                     + median +  " by " + difference + ".";
         } else {
-            message = "The average value = " + average + ", " + "median = " + median + ".";
+            message = "The average value = " + average + ", " + "median = " + median;
         }
 
         return message;
     }
 
+    // Task 14.2
+    public static String differAverageMedianMath(int a, int b, int c) {
 
+        String message1 = "";
+        int sum = a + b + c;
+        int average1 = sum / 3;
+        int minX = Math.min(Math.min(a, b), c);
+        int maxX = Math.max(Math.max(a, b), c);
+        int median1 = sum - minX - maxX;
+        int difference1 = average1 - median1;
+
+        if (difference1 > 2) {
+            message1 = "The average value " + average1 + " differs from the median "
+                    + median1 +  " by " + difference1 + ".";
+        } else {
+            message1 = "The average value = " + average1 + ", " + "median = " + median1;
+        }
+
+        return message1;
+    }
 
 
         public static void main(String[] args) {
@@ -529,11 +548,18 @@ public class HW5 {
         /**14.1 3 numbers are given.
          * It is necessary to calculate the difference between the average value and the median value.
          * If the difference is greater than 2,
-         * a message should be displayed: “The mean value… differs from the median… by…”.
-         * Otherwise, show the message: “Mean = …, median = …”.
+         * a message should be displayed: “The average value… differs from the median… by…”.
+         * Otherwise, show the message: “The average value = …, median = …”
          */
 
+            System.out.println(differAverageMedian(16, 9, 4));
+            verifyEquals(differAverageMedian(16, 9, 4), "The average value = 9, median = 9");
 
+         /**14.2 Calculate all the same using the methods of the Math class, where possible to use them/
+          *
+          */
+            System.out.println(differAverageMedianMath(25, 3, 10));
+            verifyEquals(differAverageMedian(25, 3, 10), "The average value = 12, median = 10");
 
 
 
