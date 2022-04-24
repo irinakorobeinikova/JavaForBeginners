@@ -372,6 +372,7 @@ public class HW5 {
         int maxX = Math.max(Math.max(a, b), c);
         int median1 = sum - minX - maxX;
         int difference1 = average1 - median1;
+        Math.abs(difference1);
 
         if (difference1 > 2) {
             message1 = "The average value " + average1 + " differs from the median "
@@ -382,6 +383,17 @@ public class HW5 {
 
         return message1;
     }
+
+    // Task 15.1
+    public static String roundSumOfMoney(double s) {
+
+        double returnMoney = Math.floor(s);
+        String payment = "$" + returnMoney + "0";
+
+        return payment;
+    }
+
+
 
 
         public static void main(String[] args) {
@@ -560,6 +572,15 @@ public class HW5 {
           */
             System.out.println(differAverageMedianMath(25, 3, 10));
             verifyEquals(differAverageMedian(25, 3, 10), "The average value = 12, median = 10");
+
+          numberTask();
+            /**15 Create a method using the Math class.
+             * Input some amount of money (for example, 10.75) and round it in favor of the customer.
+             * The method returns a new sum of money as a string, for example, “$10.00”.
+             */
+
+            System.out.println(roundSumOfMoney(10.75));
+            verifyEquals(roundSumOfMoney(10.75), "$10.00");
 
 
 
