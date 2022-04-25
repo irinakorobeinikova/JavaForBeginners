@@ -393,6 +393,17 @@ public class HW5 {
         return payment;
     }
 
+    //Task 16
+    public static double solveExpression(double a, double b, double c) {
+        double exponent = Math.pow(a, b);
+        double sqrt = Math.sqrt(a);
+
+
+        double result = (Math.sqrt((a * b + c) * exponent)) / Math.PI;
+
+        return Math.ceil(result);
+    }
+
 
 
 
@@ -582,6 +593,58 @@ public class HW5 {
             System.out.println(roundSumOfMoney(10.75));
             verifyEquals(roundSumOfMoney(10.75), "$10.00");
 
+            numberTask();
+            /**16 Create a method using the Math class.
+             * Return the value rounded up.
+             */
+
+            System.out.println(solveExpression(3, 4, 20));
+            verifyEquals(solveExpression(3, 4, 20), 17.0);
+
+            numberTask();
+            /**17.1 Write a Java statement that assigns 1 to x if y is greater than 0.
+             *
+             */
+
+
+            /**17.2 Suppose that score is a variable of type double.
+             * Write the Java statement that increases the score by 5 marks
+             * if score is between 80 and 90.
+             */
+
+            /**17.3 Rewrite in Java the following statement without using the NOT (!) operator:
+             * item = ! ( (i < 10) || (v >= 50))
+             */
+
+            /**17.4 Write a Java statement that prints true if x is an odd number and positive.
+             *
+             */
+
+            /**17.5 Write a Java statement that prints true if both x and y are positive numbers.
+             *
+             */
+
+            /**17.6 Write a Java statement that prints true if x and y have the same sign (-/+).
+             *
+             */
+
+            numberTask();
+            /**18 Write a method that, using the methods of the Math class,
+             * calculates any power of the generated random number.
+             * The method returns a mathematically rounded integer value
+             * and displays: “Number … to the power … = …”
+             *
+             * The number can be between 0 and 1 exclusively.
+             * The degree of the number can be from 0 to 10 inclusive
+             */
+
+            numberTask();
+            /**19 Write a method that returns a random number between 1 and 99 inclusive.
+             *
+             */
+
+            numberTask();
+            /**20
 
 
 
@@ -589,6 +652,9 @@ public class HW5 {
 
 
 
-    }
+
+
+
+        }
 
 }
