@@ -404,6 +404,20 @@ public class HW5 {
         return Math.ceil(result);
     }
 
+    // Task 17.1
+    public static int assignOne(int y) {
+        int x;
+
+        if (y > 0) {
+            x = 1;
+            System.out.println(x);
+        } else {
+
+        return x;
+    }
+
+
+
 
 
 
