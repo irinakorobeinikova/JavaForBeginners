@@ -405,23 +405,27 @@ public class HW5 {
     }
 
     // Task 17.1
-    public static int assignOne(int y) {
-        int x;
+    public static int assignOne(int x, int y) {
 
         if (y > 0) {
             x = 1;
             System.out.println(x);
-        } else {
-
+        }
         return x;
+    }
+
+    // Task 17.2
+    public static double increaseFive(double score) {
+
+        if (score >= 80 && score <= 90) {
+            score += 5;
+        }
+        return score;
     }
 
 
 
-
-
-
-        public static void main(String[] args) {
+    public static void main(String[] args) {
 
         numberTask();
         /**2 Write a method that input a number from 1 to 7 and returns the day of the week.
@@ -620,11 +624,16 @@ public class HW5 {
              *
              */
 
+            System.out.println(assignOne(3, 2));
+            verifyEquals(assignOne(3, 2), 1);
 
             /**17.2 Suppose that score is a variable of type double.
              * Write the Java statement that increases the score by 5 marks
              * if score is between 80 and 90.
              */
+
+            System.out.println(increaseFive(83.2));
+            verifyEquals(increaseFive(83.2), 88.2);
 
             /**17.3 Rewrite in Java the following statement without using the NOT (!) operator:
              * item = ! ( (i < 10) || (v >= 50))
@@ -658,7 +667,7 @@ public class HW5 {
              */
 
             numberTask();
-            /**20
+//            /**20
 
 
 
