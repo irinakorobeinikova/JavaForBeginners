@@ -439,6 +439,12 @@ public class HW5 {
         return item;
     }
 
+    // Task 17.4
+    public static boolean checkStatement(int x) {
+        boolean ans = (x >= 0) && (x % 2 == 0);
+        return ans;
+    }
+
 
 
     public static void main(String[] args) {
@@ -661,6 +667,13 @@ public class HW5 {
             /**17.4 Write a Java statement that prints true if x is an odd number and positive.
              *
              */
+
+            System.out.println(checkStatement(10));
+            verifyEquals(checkStatement(10), true);
+            System.out.println(checkStatement(0));
+            verifyEquals(checkStatement(0), true);
+            System.out.println(checkStatement(5));
+            verifyEquals(checkStatement(5), false);
 
             /**17.5 Write a Java statement that prints true if both x and y are positive numbers.
              *
