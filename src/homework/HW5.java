@@ -475,13 +475,23 @@ public class HW5 {
         return num;
     }
 
-    //Task 20
+    //Task 20.1
     public static boolean isLeapYear(int year) {
 
         if  (year % 100 == 0 & year % 400 == 0 || year % 4 == 0 && year % 100 > 0) {
             return true;
         } else {
             return false;
+        }
+    }
+
+    //Task 20.2
+    public static String returnLeapYear(int year) {
+
+        if  (true) {
+            return year + " is a leap year";
+        } else {
+            return year + " is not a leap year";
         }
     }
 
