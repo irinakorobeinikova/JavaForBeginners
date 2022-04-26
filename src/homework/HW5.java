@@ -434,7 +434,7 @@ public class HW5 {
 
     // Task 17.3
     public static boolean rewriteStatement(int i, int v) {
-        boolean item = (i >= 10) || (v < 50);
+        boolean item = (i >= 10) && (v < 50);
         //boolean item = !((i < 10) || (v >= 50));
         return item;
     }
@@ -455,6 +455,18 @@ public class HW5 {
     public static boolean statement(int x, int y) {
         boolean result = ((x >= 0) && (y >= 0)) || ((x < 0) && (y < 0));
         return result;
+    }
+
+    //Task 18
+    public static String randomDegree(int b) {
+        String res = "";
+        double a = Math.random();
+        if (b >= 0 && b <= 10) {
+            int result = (int) (Math.round(Math.pow(a, b)));
+            return "The number " + a + " in degree " + b + " = " + result + ".";
+        } else {
+            return "Input correct degree";
+        }
     }
 
 
@@ -627,104 +639,108 @@ public class HW5 {
          * Otherwise, show the message: “The average value = …, median = …”
          */
 
-            System.out.println(differAverageMedian(16, 9, 4));
-            verifyEquals(differAverageMedian(16, 9, 4), "The average value = 9, median = 9");
+        System.out.println(differAverageMedian(16, 9, 4));
+        verifyEquals(differAverageMedian(16, 9, 4), "The average value = 9, median = 9");
 
-         /**14.2 Calculate all the same using the methods of the Math class, where possible to use them/
+        /**14.2 Calculate all the same using the methods of the Math class, where possible to use them/
+         *
+         */
+         System.out.println(differAverageMedianMath(25, 3, 10));
+         verifyEquals(differAverageMedian(25, 3, 10), "The average value = 12, median = 10");
+
+         numberTask();
+         /**15 Create a method using the Math class.
+          * Input some amount of money (for example, 10.75) and round it in favor of the customer.
+          * The method returns a new sum of money as a string, for example, “$10.00”.
+          */
+
+         System.out.println(roundSumOfMoney(10.75));
+         verifyEquals(roundSumOfMoney(10.75), "$10.00");
+
+         numberTask();
+         /**16 Create a method using the Math class.
+          * Return the value rounded up.
+          */
+
+         System.out.println(solveExpression(3, 4, 20));
+         verifyEquals(solveExpression(3, 4, 20), 17.0);
+
+         numberTask();
+         /**17.1 Write a Java statement that assigns 1 to x if y is greater than 0.
           *
           */
-            System.out.println(differAverageMedianMath(25, 3, 10));
-            verifyEquals(differAverageMedian(25, 3, 10), "The average value = 12, median = 10");
 
-          numberTask();
-            /**15 Create a method using the Math class.
-             * Input some amount of money (for example, 10.75) and round it in favor of the customer.
-             * The method returns a new sum of money as a string, for example, “$10.00”.
-             */
+         System.out.println(assignOne(3, 2));
+         verifyEquals(assignOne(3, 2), 1);
 
-            System.out.println(roundSumOfMoney(10.75));
-            verifyEquals(roundSumOfMoney(10.75), "$10.00");
+         /**17.2 Suppose that score is a variable of type double.
+          * Write the Java statement that increases the score by 5 marks
+          * if score is between 80 and 90.
+          */
 
-            numberTask();
-            /**16 Create a method using the Math class.
-             * Return the value rounded up.
-             */
+         System.out.println(increaseFive(83.2));
+         verifyEquals(increaseFive(83.2), 88.2);
 
-            System.out.println(solveExpression(3, 4, 20));
-            verifyEquals(solveExpression(3, 4, 20), 17.0);
+         /**17.3 Rewrite in Java the following statement without using the NOT (!) operator:
+          * item = ! ( (i < 10) || (v >= 50))
+          */
 
-            numberTask();
-            /**17.1 Write a Java statement that assigns 1 to x if y is greater than 0.
-             *
-             */
+         System.out.println(rewriteStatement(10, 50));
+         verifyEquals(rewriteStatement(10,50), true);
 
-            System.out.println(assignOne(3, 2));
-            verifyEquals(assignOne(3, 2), 1);
+         /**17.4 Write a Java statement that prints true if x is an odd number and positive.
+          *
+          */
 
-            /**17.2 Suppose that score is a variable of type double.
-             * Write the Java statement that increases the score by 5 marks
-             * if score is between 80 and 90.
-             */
+         System.out.println(checkStatement(10));
+         verifyEquals(checkStatement(10), true);
+         System.out.println(checkStatement(0));
+         verifyEquals(checkStatement(0), true);
+         System.out.println(checkStatement(5));
+         verifyEquals(checkStatement(5), false);
 
-            System.out.println(increaseFive(83.2));
-            verifyEquals(increaseFive(83.2), 88.2);
+         /**17.5 Write a Java statement that prints true if both x and y are positive numbers.
+          *
+          */
 
-            /**17.3 Rewrite in Java the following statement without using the NOT (!) operator:
-             * item = ! ( (i < 10) || (v >= 50))
-             */
+         System.out.println(printStatement(6, 8));
+         verifyEquals(printStatement(6, 8), true);
+         System.out.println(printStatement(9, 3));
+         verifyEquals(printStatement(9, 3), false);
 
-            System.out.println(rewriteStatement(10, 50));
-            verifyEquals(rewriteStatement(10,50), true);
+         /**17.6 Write a Java statement that prints true if x and y have the same sign (-/+).
+          *
+          */
 
-            /**17.4 Write a Java statement that prints true if x is an odd number and positive.
-             *
-             */
-
-            System.out.println(checkStatement(10));
-            verifyEquals(checkStatement(10), true);
-            System.out.println(checkStatement(0));
-            verifyEquals(checkStatement(0), true);
-            System.out.println(checkStatement(5));
-            verifyEquals(checkStatement(5), false);
-
-            /**17.5 Write a Java statement that prints true if both x and y are positive numbers.
-             *
-             */
-
-            System.out.println(printStatement(6, 8));
-            verifyEquals(printStatement(6, 8), true);
-            System.out.println(printStatement(9, 3));
-            verifyEquals(printStatement(9, 3), false);
-
-            /**17.6 Write a Java statement that prints true if x and y have the same sign (-/+).
-             *
-             */
-
-            System.out.println(statement(-1, -12));
-            verifyEquals(statement(-1, -12), true);
-            System.out.println(statement(5, 7));
-            verifyEquals(statement(5, 7), true);
-            System.out.println(statement(0, -8));
-            verifyEquals(statement(0, -8), false);
+         System.out.println(statement(-1, -12));
+         verifyEquals(statement(-1, -12), true);
+         System.out.println(statement(5, 7));
+         verifyEquals(statement(5, 7), true);
+         System.out.println(statement(0, -8));
+         verifyEquals(statement(0, -8), false);
 
 
-            numberTask();
-            /**18 Write a method that, using the methods of the Math class,
-             * calculates any power of the generated random number.
-             * The method returns a mathematically rounded integer value
-             * and displays: “Number … to the power … = …”
-             *
-             * The number can be between 0 and 1 exclusively.
-             * The degree of the number can be from 0 to 10 inclusive
-             */
+         numberTask();
+         /**18 Write a method that, using the methods of the Math class,
+          * calculates any power of the generated random number.
+          * The method returns a mathematically rounded integer value
+          * and displays: “Number … in degree … = …”
+          *
+          * The number can be between 0 and 1 exclusively.
+          * The degree of the number can be from 0 to 10 inclusive
+          */
 
-            numberTask();
-            /**19 Write a method that returns a random number between 1 and 99 inclusive.
-             *
-             */
+         System.out.println(randomDegree(9));
+         System.out.println(randomDegree(11));
 
-            numberTask();
-//            /**20
+
+         numberTask();
+         /**19 Write a method that returns a random number between 1 and 99 inclusive.
+          *
+          */
+
+         numberTask();
+//           /**20
 
 
 
