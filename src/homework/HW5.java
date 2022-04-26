@@ -451,6 +451,12 @@ public class HW5 {
         return result;
     }
 
+    // Task 17.6
+    public static boolean statement(int x, int y) {
+        boolean result = ((x >= 0) && (y >= 0)) || ((x < 0) && (y < 0));
+        return result;
+    }
+
 
 
     public static void main(String[] args) {
@@ -693,6 +699,14 @@ public class HW5 {
             /**17.6 Write a Java statement that prints true if x and y have the same sign (-/+).
              *
              */
+
+            System.out.println(statement(-1, -12));
+            verifyEquals(statement(-1, -12), true);
+            System.out.println(statement(5, 7));
+            verifyEquals(statement(5, 7), true);
+            System.out.println(statement(0, -8));
+            verifyEquals(statement(0, -8), false);
+
 
             numberTask();
             /**18 Write a method that, using the methods of the Math class,
