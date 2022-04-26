@@ -469,6 +469,22 @@ public class HW5 {
         }
     }
 
+    //Task 19
+    public static int randomFrom1To99() {
+        int num = (int) (Math.random() *99) + 1;
+        return num;
+    }
+
+    //Task 20
+    public static boolean isLeapYear(int year) {
+
+        if  (year % 100 == 0 & year % 400 == 0 || year % 4 == 0 && year % 100 > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 
 
     public static void main(String[] args) {
@@ -645,14 +661,14 @@ public class HW5 {
         /**14.2 Calculate all the same using the methods of the Math class, where possible to use them/
          *
          */
-         System.out.println(differAverageMedianMath(25, 3, 10));
-         verifyEquals(differAverageMedian(25, 3, 10), "The average value = 12, median = 10");
+        System.out.println(differAverageMedianMath(25, 3, 10));
+        verifyEquals(differAverageMedian(25, 3, 10), "The average value = 12, median = 10");
 
-         numberTask();
-         /**15 Create a method using the Math class.
-          * Input some amount of money (for example, 10.75) and round it in favor of the customer.
-          * The method returns a new sum of money as a string, for example, “$10.00”.
-          */
+        numberTask();
+        /**15 Create a method using the Math class.
+         * Input some amount of money (for example, 10.75) and round it in favor of the customer.
+         * The method returns a new sum of money as a string, for example, “$10.00”.
+         */
 
          System.out.println(roundSumOfMoney(10.75));
          verifyEquals(roundSumOfMoney(10.75), "$10.00");
@@ -719,7 +735,6 @@ public class HW5 {
          System.out.println(statement(0, -8));
          verifyEquals(statement(0, -8), false);
 
-
          numberTask();
          /**18 Write a method that, using the methods of the Math class,
           * calculates any power of the generated random number.
@@ -739,18 +754,19 @@ public class HW5 {
           *
           */
 
+         System.out.println(randomFrom1To99());
+         System.out.println(randomFrom1To99());
+
          numberTask();
-//           /**20
+         /**20 Assume that the following declarations have been made:
+          * int year;
+          * boolean isLeapYear;
+          * Write a fragment that will assign IsLeapYear to true
+          * if year represents a leap year and false otherwise.
+          */
 
 
 
 
-
-
-
-
-
-
-        }
-
+    }
 }
