@@ -47,6 +47,15 @@ public class HW5 {
         }
     }
 
+    public static void verifyEquals(boolean expectedResult, boolean actualResult) {
+
+        if (expectedResult == actualResult) {
+            System.out.println("\u001B[32m" + "Pass" + "\u001B[0m");
+        } else {
+            System.out.println("\u001B[31m" + "Fail" + "\u001B[0m");
+        }
+    }
+
     //Task 3
     public static String returnDayOfWeek(int num1) {
 
@@ -423,6 +432,13 @@ public class HW5 {
         return score;
     }
 
+    // Task 17.3
+    public static boolean rewriteStatement(int i, int v) {
+        boolean item = (i >= 10) || (v < 50);
+        //boolean item = !((i < 10) || (v >= 50));
+        return item;
+    }
+
 
 
     public static void main(String[] args) {
@@ -638,6 +654,9 @@ public class HW5 {
             /**17.3 Rewrite in Java the following statement without using the NOT (!) operator:
              * item = ! ( (i < 10) || (v >= 50))
              */
+
+            System.out.println(rewriteStatement(10, 50));
+            verifyEquals(rewriteStatement(10,50), true);
 
             /**17.4 Write a Java statement that prints true if x is an odd number and positive.
              *
