@@ -445,6 +445,12 @@ public class HW5 {
         return ans;
     }
 
+    // Task 17.5
+    public static boolean printStatement(int x, int y) {
+        boolean result = (x >= 0) && (x % 2 == 0) && (y >= 0) && (y % 2 == 0);
+        return result;
+    }
+
 
 
     public static void main(String[] args) {
@@ -678,6 +684,11 @@ public class HW5 {
             /**17.5 Write a Java statement that prints true if both x and y are positive numbers.
              *
              */
+
+            System.out.println(printStatement(6, 8));
+            verifyEquals(printStatement(6, 8), true);
+            System.out.println(printStatement(9, 3));
+            verifyEquals(printStatement(9, 3), false);
 
             /**17.6 Write a Java statement that prints true if x and y have the same sign (-/+).
              *
