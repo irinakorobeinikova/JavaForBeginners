@@ -61,9 +61,19 @@ public class HW6 {
          * with a step of 0.1
          */
 
-        for (double i = 12; i < 13; i += 0.1) {
+        for (double i = 120; i < 131; i++) {
+            System.out.println(((double) i/10) + " ");
+        }
 
-            System.out.println(String.format("%.1f", i));
+        numberTask();
+        /**6 Print a sequence of even numbers from 215 to 237 inclusive
+         *
+         */
+
+        for (int i = 215; i < 238; i++) {
+            if (i % 2 == 0) {
+                System.out.println(i + " ");
+            }
         }
 
 
