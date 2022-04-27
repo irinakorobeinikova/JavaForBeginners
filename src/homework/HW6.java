@@ -76,6 +76,17 @@ public class HW6 {
             }
         }
 
+        numberTask();
+        /**7 Print a sequence of multiples of 7 ranging
+         * from 7 exclusively to 14 exclusively.
+         */
+
+        for (int i = 8; i < 14; i++) {
+            if (i % 7 == 0) {
+                System.out.println(i + " ");
+            }
+        }
+
 
 
 
