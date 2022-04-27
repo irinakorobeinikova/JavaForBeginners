@@ -488,13 +488,12 @@ public class HW5 {
     //Task 20.2
     public static String returnLeapYear(int year) {
 
-        if  (true) {
+        if (isLeapYear(year) == true) {
             return year + " is a leap year";
         } else {
             return year + " is not a leap year";
         }
     }
-
 
 
     public static void main(String[] args) {
@@ -774,6 +773,18 @@ public class HW5 {
           * Write a fragment that will assign IsLeapYear to true
           * if year represents a leap year and false otherwise.
           */
+
+        System.out.println(isLeapYear(2020));
+        verifyEquals(isLeapYear(2020), true);     //Test
+        System.out.println(returnLeapYear(2020));
+        verifyEquals(returnLeapYear(2020), "2020 is a leap year");     //Test
+
+        System.out.println(isLeapYear(1981));
+        verifyEquals(isLeapYear(1981), false);     //Test
+        System.out.println(returnLeapYear(1981));
+        verifyEquals(returnLeapYear(1981), "1981 is not a leap year");     //Test
+
+
 
 
 
