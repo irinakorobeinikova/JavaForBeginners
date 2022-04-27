@@ -44,6 +44,18 @@ public class HW6 {
             System.out.println(i);
         }
 
+        numberTask();
+        /**4 Print a sequence of multiples of 7 between (327, 300)
+         *
+         */
+
+        for (int i = 326; i > 300; i--) {
+
+            if (i % 7 == 0) {
+                System.out.println(i + "");
+            }
+        }
+
 
 
 
