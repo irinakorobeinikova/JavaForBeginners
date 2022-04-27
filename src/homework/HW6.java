@@ -52,8 +52,18 @@ public class HW6 {
         for (int i = 326; i > 300; i--) {
 
             if (i % 7 == 0) {
-                System.out.println(i + "");
+                System.out.println(i + " ");
             }
+        }
+
+        numberTask();
+        /**5 Print a sequence of numbers in the interval [12, 13]
+         * with a step of 0.1
+         */
+
+        for (double i = 12; i < 13; i += 0.1) {
+
+            System.out.println(String.format("%.1f", i));
         }
 
 
