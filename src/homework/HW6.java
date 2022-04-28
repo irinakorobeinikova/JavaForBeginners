@@ -45,6 +45,21 @@ public class HW6 {
         }
     }
 
+    // Task 13
+    public static void task13() {
+       String result = "";
+       String result2 = "";
+       String result3 = "";
+       String result4 = "";
+       for (int i = 0; i < 10; i++) {
+           result = result + i;
+           result2 = result2 + i + i;
+           result3 = result3 + i + i + i;
+           result4 = result4 + i + i + i + i;
+       }
+        System.out.println(result + result2 + result3 + result4);
+    }
+
 
     public static void main(String[] args) {
 
@@ -187,6 +202,13 @@ public class HW6 {
          */
 
         task12(8);
+
+        numberTask();
+        /**13 Output the sequence 012345678900112233445566778899000…
+         * up to and including the number 9999.
+         */
+
+        task13();
 
 
 
