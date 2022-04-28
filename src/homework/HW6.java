@@ -210,6 +210,16 @@ public class HW6 {
 
         task13();
 
+        numberTask();
+        /**14 Print out a sequence of numbers:
+         * 0, 1, -1, 2, -2, 3, -3, 4, -4, 5, -5
+         */
+        System.out.println(0);
+        for (int y = 1; y < 6; y++) {
+            System.out.println("," + y + "," + y*(-1) + ",");
+        }
+
+
 
 
 
