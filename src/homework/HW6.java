@@ -31,6 +31,13 @@ public class HW6 {
         }
     }
 
+    // Task 11
+    public static void task11(int l) {
+        for(int i = 0; i <= l; i += 2){
+            System.out.println(i);
+        }
+    }
+
 
     public static void main(String[] args) {
 
@@ -160,6 +167,17 @@ public class HW6 {
         seq10(0, 0, -1);
 
         numberTask();
+        /**11 Write a method that takes a parameter l
+         * and prints a sequence of even numbers from zero.
+         * Sequence length = l.
+         */
+
+        task11(10);
+        task11(25);
+
+
+
+
 
 
 
