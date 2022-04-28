@@ -38,6 +38,13 @@ public class HW6 {
         }
     }
 
+    // Task 12
+    public static void  task12(int n) {
+        for (int i = 1; i <= n; i ++) {
+            System.out.println(String.format("%2.0f", Math.pow(2, i)));
+        }
+    }
+
 
     public static void main(String[] args) {
 
@@ -173,7 +180,14 @@ public class HW6 {
          */
 
         task11(10);
-        task11(25);
+
+        numberTask();
+        /**12 Write a method that takes an integer n
+         * and prints all degrees of 2 from 1 to n inclusive.
+         */
+
+        task12(8);
+
 
 
 
