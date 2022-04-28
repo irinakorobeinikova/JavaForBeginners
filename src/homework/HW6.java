@@ -14,6 +14,23 @@ public class HW6 {
         System.out.println();
     }
 
+    // Task 10
+    public static void seq10(double start, double end, double step) {
+        //increasing start < end, step > 0
+        //decreasing start > end, step < 0
+        if (start < end && step > 0) {
+            for (start = start; start < end; start += step) {
+                System.out.println(start);
+            }
+        } else if (start > end && step < 0) {
+            for (start = start; start > end; start += step) {
+                System.out.println(start);
+            }
+        } else {
+            System.out.println("Invalid data");
+        }
+    }
+
 
     public static void main(String[] args) {
 
@@ -86,6 +103,45 @@ public class HW6 {
                 System.out.println(i + " ");
             }
         }
+
+        numberTask();
+        /**8 Print a sequence that starts with the minimum value of the data type short
+         * and ends with the maximum value of short.
+         * The numbers in the sequence must be a multiple of 15001.
+         */
+
+        for (short i = Short.MIN_VALUE; i < Short.MAX_VALUE; i++) {
+            if (i % 15001 == 0) {
+                System.out.println(i);
+            }
+
+        }
+
+        numberTask();
+        /**9 Print a sequence of numbers between -10 and 34 inclusive.
+         * Numbers divisible by 11 must be printed in blue.
+         * Numbers divisible by 12 should be printed in red.
+         * And zero must be printed with the word ZERO.
+         */
+
+        for (int i = -10; i < 35; i++) {
+
+            if (i == 0) {
+                System.out.println("ZERO");
+            } else if (i % 11 == 0) {
+                System.out.println("\u001B[34m" + i + "\u001B[0m");
+            } else if (i % 12 == 0) {
+                System.out.println("\u001B[31m" + i + "\u001B[0m");
+            }
+        }
+
+
+
+
+
+
+
+
 
 
 
