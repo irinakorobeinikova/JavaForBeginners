@@ -135,7 +135,31 @@ public class HW6 {
             }
         }
 
+        numberTask();
+        /**10 Write a method that accepts "start", "end", "step" parameters as input
+         * and prints a sequence of decimal numbers, starting from "start",
+         * where step is "step".
+         * The loop exit point is the number "end"/
+         */
 
+        //happy path
+        seq10(10.5, 20.75, 1.29);
+        System.out.println("---------------------------------------");
+        seq10(15.9, 0, -1.45);
+        System.out.println("---------------------------------------");
+
+        //negative
+        seq10(15.9, 0, 0);
+        System.out.println("---------------------------------------");
+        seq10(15.9, 0, 1);
+        System.out.println("---------------------------------------");
+        seq10(-15.9, 0, -1);
+        System.out.println("---------------------------------------");
+        seq10(0, 0, 1);
+        System.out.println("---------------------------------------");
+        seq10(0, 0, -1);
+
+        numberTask();
 
 
 
