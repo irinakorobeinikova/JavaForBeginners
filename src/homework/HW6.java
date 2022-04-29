@@ -60,6 +60,28 @@ public class HW6 {
         System.out.println(result + result2 + result3 + result4);
     }
 
+    // Task 16
+    public static void task16(double n, double m, double l) {
+
+        if (n < m && l > 0) {
+            for (n = n; n < m; n += l) {
+                if (n % 2 != 0) {
+                    System.out.println(n);
+                }
+            }
+        } else if (n > m && l < 0) {
+            for (n = n; n > m; n += l) {
+                if (n % 2 != 0) {
+                    System.out.println(n);
+                }
+            }
+        } else {
+            System.out.println("Invalid data");
+        }
+    }
+
+
+
 
     public static void main(String[] args) {
 
@@ -108,7 +130,7 @@ public class HW6 {
          */
 
         for (double i = 120; i < 131; i++) {
-            System.out.println(((double) i/10) + " ");
+            System.out.print(((double) i/10) + " ");
         }
 
         numberTask();
@@ -129,7 +151,7 @@ public class HW6 {
 
         for (int i = 8; i < 14; i++) {
             if (i % 7 == 0) {
-                System.out.println(i + " ");
+                System.out.print(i + " ");
             }
         }
 
@@ -230,6 +252,33 @@ public class HW6 {
                 System.out.print(", " + i);
             }
         }
+
+        numberTask();
+        /**16 Write a method that takes parameters n, m, l,
+         * and prints a sequence of odd numbers starting from number n,
+         * with step l,
+         * the length of the sequence is m.
+         */
+
+        //happy path
+        task16(10.2, 25.3, 3.4);
+        System.out.println("---------------------------------------");
+        task16(14.1, 0, -1.5);
+        System.out.println("---------------------------------------");
+
+        //negative
+        task16(17.3, 0, 0);
+        System.out.println("---------------------------------------");
+        task16(17.3, 0, 1);
+        System.out.println("---------------------------------------");
+        task16(-17.3, 0, -1);
+        System.out.println("---------------------------------------");
+        task16(0, 0, 1);
+        System.out.println("---------------------------------------");
+        task16(0, 0, -1);
+
+
+
 
 
 
