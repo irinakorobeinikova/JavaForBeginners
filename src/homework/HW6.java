@@ -214,10 +214,23 @@ public class HW6 {
         /**14 Print out a sequence of numbers:
          * 0, 1, -1, 2, -2, 3, -3, 4, -4, 5, -5
          */
-        System.out.println(0);
+        System.out.print(0);
         for (int y = 1; y < 6; y++) {
-            System.out.println("," + y + "," + y*(-1) + ",");
+            System.out.print(", " + y + ", " + y * (-1));
         }
+
+        numberTask();
+        /**15 Print a sequence of numbers:
+         * 0, 3, 5, 6, 9, 10, 12, 15, 18, 20, 21, 24, 25
+         */
+
+        System.out.print(0);
+        for (int i = 1; i < 26; i++) {
+            if (i % 3 == 0 || i % 5 == 0) {
+                System.out.print(", " + i);
+            }
+        }
+
 
 
 
