@@ -88,6 +88,19 @@ public class HW6 {
         }
     }
 
+    // Task 18
+    public static void seq18(int n, int l) {
+        if (n < l) {
+            System.out.println("[" + n + "]" + " = " + n);
+
+            for ( ; n < l; n++) {
+                System.out.println("[" + (n + 1) + "]" + " = " + (2 * n));
+            }
+
+        } else {
+            System.out.println("Invalid data");
+        }
+    }
 
 
 
@@ -296,6 +309,19 @@ public class HW6 {
         seq17(2);
         System.out.println("---------------------------------------");
         seq17(3);
+
+        numberTask();
+        /**18
+         * Write a method that takes the value n,
+         * and calculates a sequence of numbers, starting with the number n,
+         * according to the formula for n + 1 terms in order:
+         * n + 1 = 2n
+         */
+
+        seq18(1, 10);
+
+
+
 
 
 
