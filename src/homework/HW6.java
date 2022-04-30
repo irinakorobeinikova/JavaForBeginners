@@ -102,6 +102,27 @@ public class HW6 {
         }
     }
 
+    // Task 19
+    public static void  seq19() {
+        for (int i = 10; i < 100; i++) {
+            if (Math.abs((i / 10) - (i % 10)) <= 3) {
+                System.out.println(i);
+            }
+        }
+    }
+
+    // Task 20
+    public static void seq20(double x) {
+        if (x > 1.5) {
+            System.out.println(2.5 * Math.pow(x, 3) + 6 * Math.pow(x, 2) - 30);
+        }
+        if (x <= 1.5 && x >= 0) {
+            System.out.println(x + 1);
+        } else if (x < 0) {
+            System.out.println(x);
+        }
+    }
+
 
 
 
@@ -316,9 +337,27 @@ public class HW6 {
          * and calculates a sequence of numbers, starting with the number n,
          * according to the formula for n + 1 terms in order:
          * n + 1 = 2n
+         * Sequence length = l.
          */
 
         seq18(1, 10);
+
+        numberTask();
+        /**19 Generate a sequence of positive two-digit integers
+         * where the difference between the first digit (tens)
+         * and the second digit (ones) does not exceed 3.
+         */
+        seq19();
+
+        numberTask();
+        /** Write a method that will calculate the value of a function:
+         *
+         */
+
+        seq20(2);
+        seq20(-2);
+
+
 
 
 
