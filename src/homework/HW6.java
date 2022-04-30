@@ -80,6 +80,15 @@ public class HW6 {
         }
     }
 
+    // Task 17
+    public static void seq17(int n) {
+        int l = n + 10;
+        for ( ; n < l; n++) {
+            System.out.println("[" + (n + 1) + "]" + " = " + (n + 2));
+        }
+    }
+
+
 
 
 
@@ -276,6 +285,19 @@ public class HW6 {
         task16(0, 0, 1);
         System.out.println("---------------------------------------");
         task16(0, 0, -1);
+
+        numberTask();
+        /**17 Generate and print out a sequence using the formula:
+         * n + 1 = n + 2
+         */
+
+        seq17(1);
+        System.out.println("---------------------------------------");
+        seq17(2);
+        System.out.println("---------------------------------------");
+        seq17(3);
+
+
 
 
 
