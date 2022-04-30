@@ -14,17 +14,25 @@ public class HW6 {
         System.out.println();
     }
 
+    // Task 10.1
+    public static double formatDouble(double number) {
+        int d = 2;
+        int num= (int) Math.round(number * Math.pow(10, d));
+        number = num / Math.pow(10, d);
+        return number;
+    }
+
     // Task 10
     public static void seq10(double start, double end, double step) {
         //increasing start < end, step > 0
         //decreasing start > end, step < 0
         if (start < end && step > 0) {
             for (start = start; start < end; start += step) {
-                System.out.println(start);
+                System.out.println(formatDouble(start));
             }
         } else if (start > end && step < 0) {
             for (start = start; start > end; start += step) {
-                System.out.println(start);
+                System.out.println(formatDouble(start));
             }
         } else {
             System.out.println("Invalid data");
@@ -34,7 +42,7 @@ public class HW6 {
     // Task 11
     public static void task11(int l) {
         for(int i = 0; i <= l; i += 2){
-            System.out.println(i);
+            System.out.print(i + " ");
         }
     }
 
@@ -106,7 +114,7 @@ public class HW6 {
     public static void  seq19() {
         for (int i = 10; i < 100; i++) {
             if (Math.abs((i / 10) - (i % 10)) <= 3) {
-                System.out.println(i);
+                System.out.print(i + " ");
             }
         }
     }
@@ -115,8 +123,7 @@ public class HW6 {
     public static void seq20(double x) {
         if (x > 1.5) {
             System.out.println(2.5 * Math.pow(x, 3) + 6 * Math.pow(x, 2) - 30);
-        }
-        if (x <= 1.5 && x >= 0) {
+        } else if (x <= 1.5 && x >= 0) {
             System.out.println(x + 1);
         } else if (x < 0) {
             System.out.println(x);
@@ -134,7 +141,7 @@ public class HW6 {
          */
 
         for (int i = 1; i < 10; i ++) {
-            System.out.println(i);
+            System.out.print(i + " ");
         }
 
         numberTask();
@@ -143,7 +150,7 @@ public class HW6 {
          */
 
         for (int i = 9; i >= 0; i--) {
-            System.out.println(i);
+            System.out.print(i + " ");
         }
 
         numberTask();
@@ -152,7 +159,7 @@ public class HW6 {
          */
 
         for (int i = 50; i <= 55; i += 2) {
-            System.out.println(i);
+            System.out.print(i + " ");
         }
 
         numberTask();
@@ -163,7 +170,7 @@ public class HW6 {
         for (int i = 326; i > 300; i--) {
 
             if (i % 7 == 0) {
-                System.out.println(i + " ");
+                System.out.print(i + " ");
             }
         }
 
@@ -183,7 +190,7 @@ public class HW6 {
 
         for (int i = 215; i < 238; i++) {
             if (i % 2 == 0) {
-                System.out.println(i + " ");
+                System.out.print(i + " ");
             }
         }
 
