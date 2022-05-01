@@ -44,6 +44,19 @@ public class HW7 {
         System.out.println(catsNames[4]);
         System.out.println(catsNames[1]);
 
+        numberTask(3);
+        /** Create an array of catsColors and fill it with values.
+         *
+         */
+
+        String[] catsColors = {"Blue", "Black", "Grey", "Cinnamon", "Red", "Grey", "Brown", "Grey"};
+
+        for (int i = 0; i < 8; i++) {
+            System.out.print(i + " ");
+        }
+
+
+
 
 
 
