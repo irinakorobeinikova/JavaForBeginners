@@ -21,17 +21,29 @@ public class HW7 {
 
         String[] catsNames = new String[8];
         catsNames[0] = "Kitty";
-        catsNames[1] = "Smokey";
+        catsNames[1] = "Lucky";
         catsNames[2] = "Whiskers";
         catsNames[3] = "Tiger";
-        catsNames[4] = "Lucky";
+        catsNames[4] = "Shadow";
         catsNames[5] = "Simba";
-        catsNames[6] = "Ginger";
+        catsNames[6] = "Fluffy";
         catsNames[7] = "Felix";
 
         System.out.println(catsNames[3]);
         System.out.println(catsNames[0]);
         System.out.println(catsNames[7]);
+
+        numberTask(2);
+        /** In the catsNames array, change the value of the element with index 4 to “Ginger”,
+         * and the value of the element with index 1 to “Smokey”.
+         */
+
+        catsNames[4] = "Ginger";
+        catsNames[1] = "Smokey";
+
+        System.out.println(catsNames[4]);
+        System.out.println(catsNames[1]);
+
 
 
 
