@@ -1,5 +1,7 @@
 package homework;
 
+import java.util.Arrays;
+
 public class HW7 {
 
     public static void numberTask(int number) {
@@ -54,6 +56,16 @@ public class HW7 {
         for (int i = 0; i < 8; i++) {
             System.out.print(i + " ");
         }
+
+        numberTask(4);
+        /** Create an array of catsAges and fill it with values.
+         *
+         */
+
+        int[] catsAges = {1, 5, 3, 2, 4, 6, 7, 8};
+
+        System.out.println(Arrays.toString(catsAges));
+
 
 
 
