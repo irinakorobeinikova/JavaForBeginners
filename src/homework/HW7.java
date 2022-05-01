@@ -14,6 +14,8 @@ public class HW7 {
         System.out.println();
     }
 
+
+
     public static void main(String[] args) {
 
         numberTask(1);
@@ -65,6 +67,27 @@ public class HW7 {
         int[] catsAges = {1, 5, 3, 2, 4, 6, 7, 8};
 
         System.out.println(Arrays.toString(catsAges));
+
+        numberTask(5);
+        /** Create an isCatRed array and surround it with acceptable values/
+         *
+         */
+
+        boolean isCatRed[] = new boolean[8];
+
+        for (int i = 0; i < 8; i++) {
+            if (catsColors[i].equals("Red")) {
+                System.out.println(true);
+            } else {
+                System.out.println(false);
+            }
+        }
+
+
+
+
+
+
 
 
 
