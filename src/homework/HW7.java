@@ -133,18 +133,16 @@ public class HW7 {
             }
         }
 
+        numberTask(7);
+        /** Print "Feed (the cat)!" for all gray cats/
+         *
+         */
 
-
-
-
-
-
-
-
-//        numberTask(7);
-//        /** Print "Feed the cat!" for all gray cats/
-//         *
-//         */
+        for (int i = 0; i < catsColors.length; i++) {
+            if (catsColors[i].equals("Grey")) {
+                System.out.println("Feed " + catsNames[i] + "!" );
+            }
+        }
 
 
 
