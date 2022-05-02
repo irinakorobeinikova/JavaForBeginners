@@ -1,6 +1,7 @@
 package homework;
 
 import java.util.Arrays;
+import java.util.SortedMap;
 
 public class HW7 {
 
@@ -9,6 +10,15 @@ public class HW7 {
         System.out.println();
         System.out.println("\u001B[33m" + "**************************" + "\u001B[35m" + "Task "
                 + number + "\u001B[33m" + "**************************" + "\u001B[0m");
+
+        number++;
+        System.out.println();
+    }
+
+    public static void numTask(double number) {
+
+        System.out.println("-------------------------------------------------------------------------");
+        System.out.println("\u001B[34m" + "Task " + number + "\u001B[0m");
 
         number++;
         System.out.println();
@@ -75,11 +85,51 @@ public class HW7 {
 
         boolean isCatRed[] = new boolean[8];
 
-        for (int i = 0; i < 8; i++) {
-            if (catsColors[i].equals("Red")) {
-                System.out.println(true);
-            } else {
-                System.out.println(false);
+        if (catsColors.length != isCatRed.length) {
+            System.out.println("Error");
+        } else {
+            for (int i = 0; i < 8; i++) {
+                System.out.println(catsColors[i].equals("Red"));
+            }
+        }
+
+        numberTask(6);
+        /** Print for catsNames and catsColors arrays:
+         * 1) the name of the cat in the box with the number 6,
+         * 2) names of cats from boxes with even indexes,
+         * 3) names of cats from boxes whose indices are multiples of 4,
+         * 4) color of cats from boxes with odd indices,
+         * 5) color of cats from boxes whose indices are multiples of 3.
+         */
+
+        numTask(6.1);
+        System.out.println(catsNames[6]);
+
+        numTask(6.2);
+        for (int i = 0; i < catsNames.length; i++) {
+            if (i % 2 == 0 && i > 0) {
+                System.out.println(i + " - " + catsNames[i]);
+            }
+        }
+
+        numTask(6.3);
+        for (int i = 0; i < catsNames.length; i++) {
+            if (i % 4 == 0) {
+                System.out.println(i + " - " + catsNames[i]);
+            }
+        }
+
+        numTask(6.4);
+        for (int i = 0; i < catsColors.length; i++) {
+            if (i % 2 != 0) {
+                System.out.println(i + " - " + catsColors[i]);
+            }
+        }
+
+        numTask(6.5);
+        for (int i = 0; i < catsColors.length; i++) {
+            if (i % 3 == 0) {
+                System.out.println(i + " -  " + catsColors[i]);
             }
         }
 
@@ -87,6 +137,14 @@ public class HW7 {
 
 
 
+
+
+
+
+//        numberTask(7);
+//        /** Print "Feed the cat!" for all gray cats/
+//         *
+//         */
 
 
 
