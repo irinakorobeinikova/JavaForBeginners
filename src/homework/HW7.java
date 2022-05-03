@@ -144,6 +144,19 @@ public class HW7 {
             }
         }
 
+        numberTask(8);
+        /** Print “Take (the cat) for a vaccination!”
+         * if the cat is less than 2 years old.
+         */
+
+        for (int i = 0; i < catsAges.length; i++) {
+            if (catsAges[i] <= 2) {
+                System.out.println("Take " + catsNames[i] + " for a vaccination!");
+            }
+        }
+
+
+
 
 
 
