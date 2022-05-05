@@ -150,10 +150,27 @@ public class HW7 {
          */
 
         for (int i = 0; i < catsAges.length; i++) {
-            if (catsAges[i] <= 2) {
+            if (catsAges[i] < 0 || catsAges[i] > 50) {
+                System.out.println("Error");
+            } else if (catsAges[i] <= 2) {
                 System.out.println("Take " + catsNames[i] + " for a vaccination!");
             }
         }
+
+
+        numberTask(9);
+        /** For the cat in the last box, print out the name, color, age.
+         *
+         */
+        if (catsNames.length == catsColors.length && catsNames.length == catsAges.length && catsNames.length != 0) {
+            System.out.println(catsNames[catsNames.length - 1] + " " + catsColors[catsColors.length - 1] + " "
+                    + catsAges[catsAges.length - 1]);
+        }
+
+
+
+
+
 
 
 
