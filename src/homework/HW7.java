@@ -200,6 +200,19 @@ public class HW7 {
         }
         System.out.println(sumOfAges / catsAges.length);
 
+        numberTask(13);
+        /** Print the age of the youngest cat
+         *
+         */
+
+        int minAge = 8;
+        for (int i = 0; i < catsAges.length; i++) {
+            if (minAge > catsAges[i]) {
+                minAge = catsAges[i];
+            }
+        }
+        System.out.println(minAge);
+
 
 
 
