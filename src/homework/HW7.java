@@ -190,7 +190,7 @@ public class HW7 {
         }
 
         numberTask(12);
-        /** Print the average age of cats from the catsAges array
+        /** Print the average age of cats from the catsAges array.
          *
          */
 
@@ -201,7 +201,7 @@ public class HW7 {
         System.out.println(sumOfAges / catsAges.length);
 
         numberTask(13);
-        /** Print the age of the youngest cat
+        /** Print the age of the youngest cat.
          *
          */
 
@@ -214,7 +214,7 @@ public class HW7 {
         System.out.println("minAge = " + minAge);
 
         numberTask(14);
-        /** Print the age of the oldest cat
+        /** Print the age of the oldest cat.
          *
          */
 
@@ -225,6 +225,19 @@ public class HW7 {
             }
         }
         System.out.println("maxAge = " + maxAge);
+
+        numberTask(15);
+        /** Print the number of gray cats.
+         *
+         */
+
+        int numOfGrayCats = 0;
+        for (int i = 0; i < catsColors.length; i++) {
+            if (catsColors[i].equals("Grey")) {
+                numOfGrayCats += 1;
+            }
+        }
+        System.out.println(numOfGrayCats);
 
 
 
