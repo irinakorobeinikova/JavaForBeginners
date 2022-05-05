@@ -167,6 +167,16 @@ public class HW7 {
                     + catsAges[catsAges.length - 1]);
         }
 
+        numberTask(10);
+        /** Print the names of all cats over 2 years old.
+         */
+
+        for (int i = 0; i < catsNames.length; i++) {
+            if (catsAges[i] > 2) {
+                System.out.println(catsNames[i] + " " + catsAges[i]);
+            }
+        }
+
 
 
 
