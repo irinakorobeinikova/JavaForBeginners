@@ -83,13 +83,12 @@ public class HW7 {
          *
          */
 
-        boolean isCatRed[] = new boolean[8];
+        boolean[] isCatRed1 = {false, false, false, false, true, false, false, false};
+        boolean[] isCatRed = new boolean[catsColors.length];
 
-        if (catsColors.length != isCatRed.length) {
-            System.out.println("Error");
-        } else {
-            for (int i = 0; i < 8; i++) {
-                System.out.println(catsColors[i].equals("Red"));
+        if (catsColors.length == isCatRed.length) {
+            for (int i = 0; i < catsColors.length; i++) {
+                System.out.print(catsColors[i].equals("Red") + " ");
             }
         }
 
@@ -177,6 +176,18 @@ public class HW7 {
             }
         }
 
+        numberTask(11);
+        /** Print "Feed (the cat)!" if the name of the cat is “Ginger”
+         * and the value isCatRed == true.
+         */
+
+        if (catsNames.length == isCatRed1.length && catsNames.length != 0) {
+            for (int i = 0; i < catsNames.length; i++) {
+                if (catsNames[i].equals("Ginger") && isCatRed1[i] == true) {
+                    System.out.println("Feed " + catsNames[i] + "!");
+                }
+            }
+        }
 
 
 
