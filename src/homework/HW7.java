@@ -189,6 +189,17 @@ public class HW7 {
             }
         }
 
+        numberTask(12);
+        /** Print the average age of cats from the catsAges array
+         *
+         */
+
+        int sumOfAges = 0;
+        for (int i = 0; i < catsAges.length; i++) {
+            sumOfAges = sumOfAges + catsAges[i];
+        }
+        System.out.println(sumOfAges / catsAges.length);
+
 
 
 
