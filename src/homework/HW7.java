@@ -205,13 +205,26 @@ public class HW7 {
          *
          */
 
-        int minAge = 8;
+        int minAge = Integer.MAX_VALUE;
         for (int i = 0; i < catsAges.length; i++) {
             if (minAge > catsAges[i]) {
                 minAge = catsAges[i];
             }
         }
-        System.out.println(minAge);
+        System.out.println("minAge = " + minAge);
+
+        numberTask(14);
+        /** Print the age of the oldest cat
+         *
+         */
+
+        int maxAge = Integer.MIN_VALUE;
+        for (int i = 0; i < catsAges.length; i++) {
+            if (maxAge < catsAges[i]) {
+                maxAge = catsAges[i];
+            }
+        }
+        System.out.println("maxAge = " + maxAge);
 
 
 
