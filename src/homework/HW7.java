@@ -24,6 +24,25 @@ public class HW7 {
         System.out.println();
     }
 
+    //Task 18.1
+    public static void test(double expectedResult, double actualResult) {
+        if (expectedResult == actualResult) {
+            System.out.println("\u001B[32m" + "Pass" + "\u001B[0m");
+        } else {
+            System.out.println("\u001B[31m" + "Fail" + "\u001B[0m");
+        }
+    }
+
+
+    // Task 18.2
+    public static double averageValue(int[] number) {
+        int sum = 0;
+        for (int i = 0; i < number.length; i++) {
+            sum += number[i];
+        }
+        return sum / number.length;
+    }
+
 
 
     public static void main(String[] args) {
@@ -269,6 +288,14 @@ public class HW7 {
             number += 2;
             System.out.print(array17[i] + " ");
         }
+
+        numberTask(18);
+        /** A written method that takes an array of input data and returns the average value.
+         * Check the operation of the method with a test, if - array parameter catAges.
+         */
+
+        System.out.println(averageValue(catsAges));
+        test(4.0, averageValue(catsAges));
 
 
 
