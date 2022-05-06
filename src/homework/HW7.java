@@ -231,13 +231,29 @@ public class HW7 {
          *
          */
 
-        int numOfGrayCats = 0;
+        int grayCats = 0;
         for (int i = 0; i < catsColors.length; i++) {
             if (catsColors[i].equals("Grey")) {
-                numOfGrayCats += 1;
+                grayCats ++;
             }
         }
-        System.out.println(numOfGrayCats);
+        System.out.println("The number of gray cats = " + grayCats);
+
+        numberTask(16);
+        /** Print the cat's name if the cat is in an even-numbered box
+         * and is less than 3 years old.
+         */
+        if (catsNames.length == catsAges.length && catsNames.length != 0) {
+            for (int i = 0; i < catsNames.length; i++) {
+                if (i % 2 == 0 && catsAges[i] < 3) {
+                    System.out.println(catsNames[i] + " is in the box # " + i + " and its age is " + catsAges[i]);
+                }
+            }
+        }
+
+
+
+
 
 
 
