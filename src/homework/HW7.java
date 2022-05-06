@@ -251,6 +251,24 @@ public class HW7 {
             }
         }
 
+        numberTask(17);
+        /** Create an array of even positive numbers whose values are not greater than 10.
+         *
+         */
+
+        int count = 0;
+        for (int i = 0; i <= 10; i += 2) {
+            count++;
+        }
+        System.out.println(count);
+
+        int[] array17 = new int[count];
+        int number = 0;
+        for (int i = 0; i < array17.length; i++) {
+            array17[i] = number;
+            number += 2;
+            System.out.print(array17[i] + " ");
+        }
 
 
 
