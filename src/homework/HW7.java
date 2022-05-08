@@ -347,6 +347,19 @@ public class HW7 {
 //        }
 //
 
+        numberTask(20);
+        /** Create an array of 10 random positive numbers
+         *
+         */
+
+        int[] array20 = new int[10];
+        for (int i = 0; i < array20.length; i++) {
+            array20[i] = ((int) (Math.random() * Integer.MAX_VALUE));
+            System.out.println(array20[i]);
+        }
+
+
+
 
 
 
