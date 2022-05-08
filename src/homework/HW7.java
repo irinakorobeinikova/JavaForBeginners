@@ -45,29 +45,23 @@ public class HW7 {
     // Task 21
     public static int[] getMinMaxAverage(int[] array) {
         int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
+        int average = 0;
+        int sum = 0;
+
         for (int i = 0; i < array.length; i++) {
             if (min > array[i]) {
                 min = array[i];
             }
-        }
-        int max = Integer.MIN_VALUE;
-        for (int i = 0; i < array.length; i++) {
             if (max < array[i]) {
                 max = array[i];
             }
-        }
-        int average = 0;
-        int sum = 0;
-        for (int i = 0; i < array.length; i++) {
-            sum = sum + array[i];
+            sum += array[i];
 
         }
         average = sum / array.length;
 
-        int[] result = new int[3];
-        result[0] = min;
-        result[1] = max;
-        result[2] = average;
+        int[] result = {min, max, average};
 
         return result;
     }
@@ -327,11 +321,11 @@ public class HW7 {
         System.out.println(averageValue(catsAges));
         test(4, averageValue(catsAges));
 
-        numberTask(19);
-        /** Create an array of odd negative numbers between -1000 and -900.
-         *
-         */
-
+//        numberTask(19);
+//        /** Create an array of odd negative numbers between -1000 and -900.
+//         *
+//         */
+//
 //        int counter = 0;
 //        for (int i = -1000 + 1; i < -900; i+=2 ) {
 //                counter++;
@@ -341,11 +335,13 @@ public class HW7 {
 //        int[] array19 = new int[counter];
 //        int number1 = 0;
 //        for (int i = -1000 + 1; i < array19.length; i++) {
-//            array19[i] = number1;
-//            number1 += 2;
-//            System.out.print(array19 + " ");
+//            if (number1 < array19.length) {
+//                array19[i] = number1;
+//                number1 += 2;
+//                System.out.print(Arrays.toString(array19));
+//            }
 //        }
-//
+
 
         numberTask(20);
         /** Create an array of 10 random positive numbers
@@ -368,6 +364,47 @@ public class HW7 {
         for (int i = 0; i < test2.length; i++) {
             System.out.println(test2[i] + " ");
         }
+
+        numberTask(22);
+        /** Create an array of even numbers and an array of odd numbers
+         * from the array elements from task 20.
+         */
+
+        int lengthEven = 0;
+        int lengthOdd = 0;
+
+        for (int i = 0; i < array20.length; i++) {
+            if (array20[i] % 2 == 0) {
+                lengthEven++;
+            } else {
+                lengthOdd++;
+            }
+        }
+//        System.out.println(counter2);
+//        System.out.println(counter3);
+
+        int[] evenNum = new int[lengthEven];
+        int[] oddNum = new int[lengthOdd];
+        int countEven = 0;
+        int countOdd = 0;
+
+        for (int i = 0; i < array20.length; i++) {
+            if (array20[i] % 2 == 0 && countEven < evenNum.length) {
+                evenNum[countEven] = array20[i];
+                countEven++;
+            } else if (countOdd < oddNum.length) {
+                oddNum[countOdd] = array20[i];
+                countOdd++;
+            }
+        }
+        System.out.println(Arrays.toString(evenNum));
+        System.out.println(Arrays.toString(oddNum));
+
+
+
+
+
+
 
 
 
