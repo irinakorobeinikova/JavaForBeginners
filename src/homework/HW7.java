@@ -25,7 +25,7 @@ public class HW7 {
     }
 
     //Task 18.1
-    public static void test(double expectedResult, double actualResult) {
+    public static void test(int expectedResult, int actualResult) {
         if (expectedResult == actualResult) {
             System.out.println("\u001B[32m" + "Pass" + "\u001B[0m");
         } else {
@@ -33,15 +33,45 @@ public class HW7 {
         }
     }
 
-
     // Task 18.2
-    public static double averageValue(int[] number) {
+    public static int averageValue(int[] array18) {
         int sum = 0;
-        for (int i = 0; i < number.length; i++) {
-            sum += number[i];
+        for (int i = 0; i < array18.length; i++) {
+            sum += array18[i];
         }
-        return sum / number.length;
+        return sum / array18.length;
     }
+
+    // Task 21
+    public static int[] getMinMaxAverage(int[] array) {
+        int min = Integer.MAX_VALUE;
+        for (int i = 0; i < array.length; i++) {
+            if (min > array[i]) {
+                min = array[i];
+            }
+        }
+        int max = Integer.MIN_VALUE;
+        for (int i = 0; i < array.length; i++) {
+            if (max < array[i]) {
+                max = array[i];
+            }
+        }
+        int average = 0;
+        int sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            sum = sum + array[i];
+
+        }
+        average = sum / array.length;
+
+        int[] result = new int[3];
+        result[0] = min;
+        result[1] = max;
+        result[2] = average;
+
+        return result;
+    }
+
 
 
 
@@ -290,12 +320,35 @@ public class HW7 {
         }
 
         numberTask(18);
-        /** A written method that takes an array of input data and returns the average value.
+        /** Write the method that takes an array of input data and returns the average value.
          * Check the operation of the method with a test, if - array parameter catAges.
          */
 
         System.out.println(averageValue(catsAges));
-        test(4.0, averageValue(catsAges));
+        test(4, averageValue(catsAges));
+
+        numberTask(19);
+        /** Create an array of odd negative numbers between -1000 and -900.
+         *
+         */
+
+//        int counter = 0;
+//        for (int i = -1000 + 1; i < -900; i+=2 ) {
+//                counter++;
+//        }
+//        System.out.println(counter);
+//
+//        int[] array19 = new int[counter];
+//        int number1 = 0;
+//        for (int i = -1000 + 1; i < array19.length; i++) {
+//            array19[i] = number1;
+//            number1 += 2;
+//            System.out.print(array19 + " ");
+//        }
+//
+
+
+
 
 
 
