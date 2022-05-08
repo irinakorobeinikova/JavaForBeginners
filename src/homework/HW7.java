@@ -358,7 +358,16 @@ public class HW7 {
             System.out.println(array20[i]);
         }
 
+        numberTask(21);
+        /** Create a method that takes an int array as input and returns the minimum value,
+         * maximum value, and average value of all numbers in the array.
+         * Check the operation of the method on the array from task 20.
+         */
 
+        int[] test2 = getMinMaxAverage(catsAges);
+        for (int i = 0; i < test2.length; i++) {
+            System.out.println(test2[i] + " ");
+        }
 
 
 
