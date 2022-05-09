@@ -321,10 +321,10 @@ public class HW7 {
         System.out.println(averageValue(catsAges));
         test(4, averageValue(catsAges));
 
-//        numberTask(19);
-//        /** Create an array of odd negative numbers between -1000 and -900.
-//         *
-//         */
+        numberTask(19);
+        /** Create an array of odd negative numbers between -1000 and -900.
+         *
+         */
 //
 //        int counter = 0;
 //        for (int i = -1000 + 1; i < -900; i+=2 ) {
@@ -380,8 +380,6 @@ public class HW7 {
                 lengthOdd++;
             }
         }
-//        System.out.println(counter2);
-//        System.out.println(counter3);
 
         int[] evenNum = new int[lengthEven];
         int[] oddNum = new int[lengthOdd];
@@ -399,6 +397,28 @@ public class HW7 {
         }
         System.out.println(Arrays.toString(evenNum));
         System.out.println(Arrays.toString(oddNum));
+
+        numberTask(23);
+        /** Create a two-dimensional array that consists of names, ages, colors of cats.
+         * Print all cat data in even-index boxes using a 2D array.
+         */
+
+        String[][] array23 = new String[3][8];
+        if (catsNames.length == array23[0].length
+                && catsAges.length == array23[0].length
+                && catsColors.length == array23[0].length) {
+            for (int i = 0; i < array23[0].length; i+=2) {
+                array23[0][i] = catsNames[i];
+                System.out.print(array23[0][i] + " ");
+                array23[1][i] = String.valueOf(catsAges[i]);
+                System.out.print(array23[1][i] + " ");
+                array23[2][i] = catsColors[i];
+                System.out.print(array23[2][i] + " ");
+                System.out.println();
+
+            }
+        }
+
 
 
 
