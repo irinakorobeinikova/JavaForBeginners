@@ -66,7 +66,22 @@ public class HW7 {
         return result;
     }
 
+    // Task 20
+    public static int randomInt(int upper, int lower) {
+        return (int) (Math.random() * (upper - lower)) + lower;
+    }
 
+    // Task 24
+    public static int[][] create2DArrayRandom(int row, int column, int upper, int lower) {
+        int[][] array = new int[row][column];
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                array[i][j] = randomInt(upper, lower);
+            }
+        }
+
+        return array;
+    }
 
 
     public static void main(String[] args) {
@@ -325,23 +340,21 @@ public class HW7 {
         /** Create an array of odd negative numbers between -1000 and -900.
          *
          */
-//
-//        int counter = 0;
-//        for (int i = -1000 + 1; i < -900; i+=2 ) {
-//                counter++;
-//        }
-//        System.out.println(counter);
-//
-//        int[] array19 = new int[counter];
-//        int number1 = 0;
-//        for (int i = -1000 + 1; i < array19.length; i++) {
-//            if (number1 < array19.length) {
-//                array19[i] = number1;
-//                number1 += 2;
-//                System.out.print(Arrays.toString(array19));
-//            }
-//        }
 
+        int counter = 0;
+        for (int i = -1000 + 1; i < -900; i+=2 ) {
+                counter++;
+        }
+        System.out.println(counter);
+
+        int[] array19 = new int[counter];
+        int number1 = -1000 + 1;
+        for (int i = 0; i < array19.length; i++) {
+                array19[i] = number1;
+                number1 ++;
+
+        }
+        System.out.print(Arrays.toString(array19));
 
         numberTask(20);
         /** Create an array of 10 random positive numbers
@@ -399,7 +412,7 @@ public class HW7 {
         System.out.println(Arrays.toString(oddNum));
 
         numberTask(23);
-        /** Create a two-dimensional array that consists of names, ages, colors of cats.
+        /** Create a 2D array that consists of names, ages, colors of cats.
          * Print all cat data in even-index boxes using a 2D array.
          */
 
@@ -415,9 +428,19 @@ public class HW7 {
                 array23[2][i] = catsColors[i];
                 System.out.print(array23[2][i] + " ");
                 System.out.println();
-
             }
         }
+
+        numberTask(24);
+        /** Create a 2D array of integer random numbers from 1 to 10 of dimension 4*8.
+         *
+         */
+
+        int[][] array24 = create2DArrayRandom(4,8,10,1);
+
+        System.out.println(Arrays.deepToString(array24));
+
+
 
 
 
