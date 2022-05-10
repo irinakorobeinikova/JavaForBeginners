@@ -83,7 +83,6 @@ public class HW7 {
         return array;
     }
 
-
     public static void main(String[] args) {
 
         numberTask(1);
@@ -440,43 +439,19 @@ public class HW7 {
 
         System.out.println(Arrays.deepToString(array24));
 
+        numberTask(25);
+        /** Print the sum of all even numbers in the array from the task 24.
+         *
+         */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+       int sum = 0;
+       for (int c = 0; c < array24[0].length; c ++) {
+           for (int r = 0; r < array24.length; r ++) {
+               if (array24[r][c] % 2 == 0) {
+                   sum += array24[r][c];
+               }
+           }
+       }
+        System.out.println("The sum of all even numbers = " + sum);
     }
 }
