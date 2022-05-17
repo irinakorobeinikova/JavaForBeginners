@@ -1,5 +1,7 @@
 package lessons.lesson8;
 
+import javax.swing.plaf.synth.SynthOptionPaneUI;
+
 public class Lesson8 {
 
     public static void main(String[] args) {
@@ -20,6 +22,7 @@ public class Lesson8 {
         double b = 5.5;
 
         Integer intReg = 4;
+        Integer intReg1 = 4;
         Double doubReg = 5.5;
 
         Integer intObject = new Integer(4);
@@ -27,7 +30,31 @@ public class Lesson8 {
 
         String str1 = "Hello";
         String str2 = "Hello";
-        System.out.println(str1 == str2);
+
+        String strObject = new String("Hello");
+
+        String cat1 = "Cat";
+        String cat2 = "Cat";
+        String cat3 = new String("Cat");
+        String cat4 = new String("Cat");
+
+//        System.out.println(str1 == str2);
+//        System.out.println(str1 == strObject);
+//
+//        System.out.println(cat3 == cat4);
+//        System.out.println(cat1 == Lesson8_1.cat1_1);
+
+        System.out.println(cat1.equals(cat2));
+        System.out.println(cat1.equals(cat3));
+        System.out.println(cat3.equals(cat4));
+//
+//        System.out.println("________________________________________________________________");
+//        System.out.println(intReg == intReg1);
+//        System.out.println(intReg == intObject);
+
+
+
+
 
 
 
