@@ -1,6 +1,11 @@
 package lessons.lesson8;
 
+import utils.Utils;
+
 import javax.swing.plaf.synth.SynthOptionPaneUI;
+
+import static utils.Utils.*;
+
 
 public class Lesson8 {
 
@@ -51,6 +56,10 @@ public class Lesson8 {
 //        System.out.println("________________________________________________________________");
 //        System.out.println(intReg == intReg1);
 //        System.out.println(intReg == intObject);
+
+        line();
+        ln();
+        line();
 
 
 

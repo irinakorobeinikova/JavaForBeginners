@@ -28,4 +28,5 @@ public class Teacher {
         System.out.println(subjectTeacherOfMath);
         System.out.println(line);
     }
+
 }
