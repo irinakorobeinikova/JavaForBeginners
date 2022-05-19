@@ -7,8 +7,22 @@ import static utils.Utils.*;
 public class HW8 {
 
     //Task7
-    public static int[] task7(int a, int b, int c, int d, int f) {
-        int[] arr = {a, b, c, d, f};
+    public static int[] createArrayOf5Numbers(int a, int b, int c, int d, int e) {
+        int[] arr = {a, b, c, d, e};
+
+        return arr;
+    }
+
+    //Task8
+    public static double[] createArrayOf5Double(double a, double b, double c, double d, double e) {
+        double[] arr = {a, b, c, d, e};
+
+        return arr;
+    }
+
+    //Task9
+    public static String[] createArrayOf5Words(String a, String b, String c, String d, String e) {
+        String[] arr = {a, b, c, d, e};
 
         return arr;
     }
@@ -57,7 +71,16 @@ public class HW8 {
          * and returns an array of the same numbers
          */
 
-        System.out.println(Arrays.toString(task7(2, 5, 7, 9, 1)));
+        System.out.println(Arrays.toString(createArrayOf5Numbers(2, 5, 7, 9, 1)));
+
+        numberTask(8);
+        /** Write a method that takes 5 doubles as input
+         * and returns an array of the same numbers
+         */
+
+        System.out.println(Arrays.toString(createArrayOf5Double(1.2, 5.3, 4.0, 8.0, 6.5)));
+
+
 
 
 
