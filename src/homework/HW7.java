@@ -68,6 +68,7 @@ public class HW7 {
 
     // Task 20
     public static int randomInt(int upper, int lower) {
+
         return (int) (Math.random() * (upper - lower)) + lower;
     }
 
