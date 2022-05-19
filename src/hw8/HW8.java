@@ -27,6 +27,12 @@ public class HW8 {
         return arr;
     }
 
+    //generic method
+    public static <T> T[] createArray(T a, T b, T c, T d, T e) {
+
+        return (T[]) new Object[]{a, b, c, d, e};
+    }
+
 
 
     public static void main(String[] args) {
@@ -87,6 +93,12 @@ public class HW8 {
 
         System.out.println(Arrays.toString(createArrayOf5Words("Pavel", "Irina", "Darya",
                 "Veronika", "Egor")));
+
+        line();
+        //generic
+        System.out.println(Arrays.toString(createArray(1,2,3,4,5)));
+        System.out.println(Arrays.toString(createArray(0.5, 5.2, 4.8, 5.0, 9.1)));
+        System.out.println(Arrays.toString(createArray("one", "two", "three", "four", "five")));
 
 
 
