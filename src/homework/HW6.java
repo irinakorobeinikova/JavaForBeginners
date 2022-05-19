@@ -131,8 +131,6 @@ public class HW6 {
     }
 
 
-
-
     public static void main(String[] args) {
 
         numberTask();
@@ -363,6 +361,9 @@ public class HW6 {
 
         seq20(2);
         seq20(-2);
+
+
+
 
 
 
