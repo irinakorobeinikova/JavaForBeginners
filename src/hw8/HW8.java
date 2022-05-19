@@ -80,7 +80,13 @@ public class HW8 {
 
         System.out.println(Arrays.toString(createArrayOf5Double(1.2, 5.3, 4.0, 8.0, 6.5)));
 
+        numberTask(9);
+        /** Write a method that takes 5 words as input
+         * and returns an array of these words
+         */
 
+        System.out.println(Arrays.toString(createArrayOf5Words("Pavel", "Irina", "Darya",
+                "Veronika", "Egor")));
 
 
 
