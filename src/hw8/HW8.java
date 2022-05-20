@@ -116,12 +116,16 @@ public class HW8 {
          */
 
         int[] array = {1, 2, 3};
+        
+        public static int[] multiplyTwoAndAHalf(int[] array){
+         int[] newArray = new int[array.length];
+         for (int i=0; i<array.length; i++){
+             newArray[i] = array[i] * 2.5;
+            }
+            return newArray;
+        }
 
-        System.out.println(Arrays.toString(multipleArray(array, 2.5)));
-
-
-
-
+        
 
     }
 }
