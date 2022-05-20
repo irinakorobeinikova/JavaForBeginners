@@ -6,21 +6,21 @@ import static utils.Utils.*;
 
 public class HW8 {
 
-    //Task7
+    //Task 7
     public static int[] createArrayOf5Numbers(int a, int b, int c, int d, int e) {
         int[] arr = {a, b, c, d, e};
 
         return arr;
     }
 
-    //Task8
+    //Task 8
     public static double[] createArrayOf5Double(double a, double b, double c, double d, double e) {
         double[] arr = {a, b, c, d, e};
 
         return arr;
     }
 
-    //Task9
+    //Task 9
     public static String[] createArrayOf5Words(String a, String b, String c, String d, String e) {
         String[] arr = {a, b, c, d, e};
 
@@ -31,6 +31,16 @@ public class HW8 {
     public static <T> T[] createArray(T a, T b, T c, T d, T e) {
 
         return (T[]) new Object[]{a, b, c, d, e};
+    }
+
+    //Task 10
+    public static double[] multipleArray(int[] array, double a) {
+        double[] newArray = new double[array.length];
+        for (int i = 0; i < array.length; i++) {
+            newArray[i] = array[i] * a;
+        }
+
+        return newArray;
     }
 
 
@@ -99,6 +109,15 @@ public class HW8 {
         System.out.println(Arrays.toString(createArray(1,2,3,4,5)));
         System.out.println(Arrays.toString(createArray(0.5, 5.2, 4.8, 5.0, 9.1)));
         System.out.println(Arrays.toString(createArray("one", "two", "three", "four", "five")));
+
+        numberTask(10);
+        /** Write a method that takes an array of integers as input
+         * and returns an array of the same numbers multiplied by 2.5
+         */
+
+        int[] array = {1, 2, 3};
+
+        System.out.println(Arrays.toString(multipleArray(array, 2.5)));
 
 
 
