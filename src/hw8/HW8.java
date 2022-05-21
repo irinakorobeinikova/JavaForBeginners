@@ -43,6 +43,34 @@ public class HW8 {
         return newArray;
     }
 
+    //Task 11
+    public static boolean containsNegativeNumbers(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < 0) {
+
+                return true;
+            }
+        }
+        return false;
+    }
+
+    //Task 11
+    public static int returnEvenNumIfNoNegatives(int[] array) {
+        if (!containsNegativeNumbers(array) && array.length != 0) {
+            int count = 0;
+            for (int i = 0; i < array.length; i++) {
+                if (array[i] % 2 == 0) {
+                    count ++;
+
+                }
+            }
+
+            return count;
+        }
+
+        return 0;
+    }
+
 
 
     public static void main(String[] args) {
@@ -118,6 +146,21 @@ public class HW8 {
         int[] array = {1, 2, 3};
 
         System.out.println(Arrays.toString(multipleArray(array, 2.5)));
+
+        numberTask(11);
+        /** Write a method that takes an array of positive integers as input
+         * and returns the number of even numbers in this array.
+         */
+
+        int[] array1 = {2, 4, 5, 15, 8, 20};
+        int[] array2 = {-2, -4, 5, -15, 8, 20};
+        int[] array3 = {};
+
+
+        System.out.println(returnEvenNumIfNoNegatives(array1));
+        System.out.println(returnEvenNumIfNoNegatives(array2));
+        System.out.println(returnEvenNumIfNoNegatives(array3));
+
 
 
 
