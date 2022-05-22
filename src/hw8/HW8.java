@@ -126,6 +126,18 @@ public class HW8 {
         return arrayString;
     }
 
+    //Task 15
+    public static int sumOfNumbersOfArray(int[] array) {
+        int sumOfNumbers = 0;
+        if (array.length > 0) {
+            for (int i = array.length/2 + 1; i < array.length; i++) {
+                sumOfNumbers += array[i];
+            }
+        }
+
+        return sumOfNumbers;
+    }
+
     public static void main(String[] args) {
 
         numberTask(5);
@@ -236,6 +248,14 @@ public class HW8 {
 
         String[] array5 = {"I", "like", "playing", "the", "guitar"};
         System.out.println(returnStringOfWords(array5));
+
+        numberTask(15);
+        /** Write a method that takes an array of integers
+         * and calculates the sum of the numbers in the second half of the array.
+         */
+
+        int[] array6 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        System.out.println(sumOfNumbersOfArray(array6));
 
 
     }
