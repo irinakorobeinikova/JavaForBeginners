@@ -68,10 +68,24 @@ public class HW8 {
             return count;
         }
 
+        return Integer.MIN_VALUE;
+    }
+
+    //Task 12
+    public static int returnArrayOfOddNumbers(int[] array) {
+        if (containsNegativeNumbers(array) && array.length != 0) {
+            int counter = 0;
+            for (int i = 0; i < array.length; i++) {
+                if (array[i] % 2 != 0) {
+                    counter ++;
+                }
+            }
+            return counter;
+        }
         return 0;
     }
 
-
+//    int[] arrayOfNegativeNum = new int[returnArrayOfOddNumbers(int[] array)];
 
     public static void main(String[] args) {
 
@@ -154,13 +168,14 @@ public class HW8 {
 
         int[] array1 = {2, 4, 5, 15, 8, 20};
         int[] array2 = {-2, -4, 5, -15, 8, 20};
-        int[] array3 = {};
-
 
         System.out.println(returnEvenNumIfNoNegatives(array1));
         System.out.println(returnEvenNumIfNoNegatives(array2));
-        System.out.println(returnEvenNumIfNoNegatives(array3));
 
+        numberTask(12);
+        /** Write a method that takes an array of positive integers as input
+         * and returns an array of odd numbers.
+         */
 
 
 
