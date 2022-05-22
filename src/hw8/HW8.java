@@ -60,7 +60,7 @@ public class HW8 {
             int count = 0;
             for (int i = 0; i < array.length; i++) {
                 if (array[i] % 2 == 0) {
-                    count ++;
+                    count++;
 
                 }
             }
@@ -72,20 +72,45 @@ public class HW8 {
     }
 
     //Task 12
-    public static int returnArrayOfOddNumbers(int[] array) {
-        if (containsNegativeNumbers(array) && array.length != 0) {
-            int counter = 0;
-            for (int i = 0; i < array.length; i++) {
-                if (array[i] % 2 != 0) {
-                    counter ++;
-                }
+    public static int countOdds(int[] array) {
+        int counter = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] % 2 != 0) {
+                counter++;
             }
-            return counter;
         }
-        return 0;
+        return counter;
     }
 
-//    int[] arrayOfNegativeNum = new int[returnArrayOfOddNumbers(int[] array)];
+    //Task12
+    public static int[] createArrayOfOdds(int[] array) {
+        int a = countOdds(array);
+        int[] oddsArray = new int[a];
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] % 2 != 0) {
+                oddsArray[oddsArray.length - a] = array[i];
+                a--;
+            }
+        }
+        return oddsArray;
+    }
+
+    //Task 13
+    public static boolean[] returnTrueOrFalseMore10(int[] array) {
+        boolean[] arrayBoolean = new boolean[array.length];
+        if (array == null || array.length == 0) {
+            return null;
+        }
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > 10) {
+                arrayBoolean[i] = true;
+            } else {
+                arrayBoolean[i] = false;
+            }
+        }
+
+        return arrayBoolean;
+    }
 
     public static void main(String[] args) {
 
@@ -115,13 +140,13 @@ public class HW8 {
         System.out.println("| HW8                     | " + "HW8_1                    | " + "areEquals |");
         line();
         System.out.println("| Integer regNum = " + regNum + "     | " + "Integer regNum1 = "
-                + HW8_1.regNum1 + "     | "  + regNum3 + "      |");
+                + HW8_1.regNum1 + "     | " + regNum3 + "      |");
         line();
         System.out.println("| Double regWeight = " + regWeight + " | " + "Double regWeight1 = "
-                + HW8_1.regWeight1 + " | "  + regWeight3 + "      |");
+                + HW8_1.regWeight1 + " | " + regWeight3 + "      |");
         line();
         System.out.println("| String regName = " + regName + "  | " + "String regName1 = "
-                + HW8_1.regName1 + "  | "  + regName3 + "      |");
+                + HW8_1.regName1 + "  | " + regName3 + "      |");
         line();
 
         numberTask(7);
@@ -148,7 +173,7 @@ public class HW8 {
 
         line();
         //generic
-        System.out.println(Arrays.toString(createArray(1,2,3,4,5)));
+        System.out.println(Arrays.toString(createArray(1, 2, 3, 4, 5)));
         System.out.println(Arrays.toString(createArray(0.5, 5.2, 4.8, 5.0, 9.1)));
         System.out.println(Arrays.toString(createArray("one", "two", "three", "four", "five")));
 
@@ -177,8 +202,18 @@ public class HW8 {
          * and returns an array of odd numbers.
          */
 
+        int[] array3 = {2, 4, 5, 15, 8, 20, 21, 43, 51};
 
+        System.out.println(countOdds(array3));
+        System.out.println(Arrays.toString(createArrayOfOdds(array3)));
 
+        numberTask(13);
+        /** Write a method that takes an array of integers as input
+         * and returns an array of values true or false if the numbers are greater than 10
+         */
+
+        int[] array4 = {12, 14, 5, 15, 8, 25, 1, 3, 51};
+        System.out.println(Arrays.toString(returnTrueOrFalseMore10(array4)));
 
 
     }
