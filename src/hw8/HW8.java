@@ -112,6 +112,20 @@ public class HW8 {
         return arrayBoolean;
     }
 
+    //Task 14
+    public static String returnStringOfWords(String[] array) {
+        String arrayString = "";
+        if (array == null || array.length == 0) {
+            return null;
+        }
+        for (int i = 0; i < array.length; i++) {
+            arrayString += array[i] + " ";
+
+        }
+
+        return arrayString;
+    }
+
     public static void main(String[] args) {
 
         numberTask(5);
@@ -214,6 +228,14 @@ public class HW8 {
 
         int[] array4 = {12, 14, 5, 15, 8, 25, 1, 3, 51};
         System.out.println(Arrays.toString(returnTrueOrFalseMore10(array4)));
+
+        numberTask(14);
+        /** Write a method that takes an array of words as input
+         * and returns a string consisting of these words.
+         */
+
+        String[] array5 = {"I", "like", "playing", "the", "guitar"};
+        System.out.println(returnStringOfWords(array5));
 
 
     }
