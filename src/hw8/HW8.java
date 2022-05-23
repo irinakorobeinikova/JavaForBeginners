@@ -130,12 +130,27 @@ public class HW8 {
     public static int sumOfNumbersOfArray(int[] array) {
         int sumOfNumbers = 0;
         if (array.length > 0) {
-            for (int i = array.length/2 + 1; i < array.length; i++) {
+            for (int i = array.length/2; i < array.length; i++) {
                 sumOfNumbers += array[i];
             }
         }
 
         return sumOfNumbers;
+    }
+
+    //Task 16
+    public static int[] returnMultiplicationTable(int num) {
+        int[] table = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        for (int i = 0; i < table.length; i++) {
+            if (num >= 1 && num < 10) {
+                table[i] = num * table[i];
+            } else {
+                return null;
+            }
+
+        }
+
+        return table;
     }
 
     public static void main(String[] args) {
@@ -256,6 +271,19 @@ public class HW8 {
 
         int[] array6 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
         System.out.println(sumOfNumbersOfArray(array6));
+
+        numberTask(16);
+        /** Write a method that takes as input a positive integer in the range from 1 to 10 exclusively,
+         * and returns the multiplication table for this number as an array.
+         */
+
+        System.out.println(Arrays.toString(returnMultiplicationTable(2)));
+        System.out.println(Arrays.toString(returnMultiplicationTable(-2)));
+
+
+
+
+
 
 
     }
