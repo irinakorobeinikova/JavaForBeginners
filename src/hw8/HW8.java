@@ -153,6 +153,42 @@ public class HW8 {
         return table;
     }
 
+    //Task 17
+    public static int countEven(int[] array) {
+        int counter = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] % 2 == 0) {
+                counter++;
+            }
+        }
+        return counter;
+    }
+
+    //Task17
+    public static int[] createArrayOfEven(int[] array) {
+        int a = countEven(array);
+        int[] evenArray = new int[a];
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] % 2 == 0) {
+                evenArray[evenArray.length - a] = array[i];
+                a--;
+            }
+        }
+        return evenArray;
+    }
+
+    //Task 17
+    public static int[] returnArrayOfOddOrEvenNum(int[] array) {
+        if (countOdds(array) > countEven(array)) {
+            return createArrayOfOdds(array);
+        } else if (countEven(array) > countOdds(array)){
+            return createArrayOfEven(array);
+        } else {
+            return null;
+        }
+    }
+
+
     public static void main(String[] args) {
 
         numberTask(5);
@@ -279,6 +315,18 @@ public class HW8 {
 
         System.out.println(Arrays.toString(returnMultiplicationTable(2)));
         System.out.println(Arrays.toString(returnMultiplicationTable(-2)));
+
+        numberTask(17);
+        /** Write a method that takes an array of integers
+         * and returns an array of even numbers if there are more even numbers,
+         * or an array of odd numbers if there are more odd numbers.
+         */
+
+        int[] array7 = {8, 14, 4, 30, 6, 15, 10, 13, 17};
+        int[] array8 = {7, 11, 5, 29, 8, 25, 32, 23, 21};
+
+        System.out.println(Arrays.toString(returnArrayOfOddOrEvenNum(array7)));
+        System.out.println(Arrays.toString(returnArrayOfOddOrEvenNum(array8)));
 
 
 
