@@ -188,6 +188,26 @@ public class HW8 {
         }
     }
 
+    //Task 18
+    public static int countLength(int[] array) {
+        int counter = 0;
+        for (int i = 0; i < array.length; i++) {
+                counter++;
+        }
+        return counter;
+    }
+
+    //Task18
+    public static int[] createRandomArray(int[] array) {
+        int arrayR = countLength(array);
+        int[] randomArray = new int[arrayR];
+        for (int i = 0; i < array.length; i++) {
+           randomArray[i] = (int) (Math.random() * 100) + 1;
+        }
+
+        return randomArray;
+    }
+
 
     public static void main(String[] args) {
 
@@ -327,6 +347,16 @@ public class HW8 {
 
         System.out.println(Arrays.toString(returnArrayOfOddOrEvenNum(array7)));
         System.out.println(Arrays.toString(returnArrayOfOddOrEvenNum(array8)));
+
+        numberTask(18);
+        /** Write a method that takes the length of an array as input
+         * and generates an array of random positive numbers from 0 to 100 exclusively.
+         */
+
+        int[] array9 = {70, 81, 5, 19, 18, 2, 34, 23};
+
+        System.out.println(countLength(array9));
+        System.out.println(Arrays.toString(createRandomArray(array9)));
 
 
 
