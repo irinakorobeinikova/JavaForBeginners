@@ -231,10 +231,34 @@ public class HW8 {
     public static int[] createRandomArrayLToD(int l, int d) {
         int[] array = new int[l];
         for (int i = 0; i < array.length; i++) {
-            array[i] = Utils.randomInt((int) Math.pow(10, d - 1) * 10, (int) Math.pow(10, d -1));
+            array[i] = Utils.randomInt((int) Math.pow(10, d - 1) * 10, (int) Math.pow(10, d - 1));
         }
 
         return array;
+    }
+
+    //Task 20
+    public static int[] createDoubleDigitArray(int[] array) {
+        if (array.length <= 0) {
+            return null;
+        }
+        int count = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > 9 & array[i] < 100) {
+                count++;
+            }
+        }
+
+        int[] newArray = new int[count];
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > 9 && array[i] < 100) {
+                newArray[newArray.length - count] = array[i];
+                count--;
+            }
+        }
+
+        return newArray;
     }
 
 
@@ -397,8 +421,17 @@ public class HW8 {
          * in which all numbers have the number of characters d.
          */
 
+        System.out.println(Arrays.toString(createRandomArrayLToD(7, 1)));
         System.out.println(Arrays.toString(createRandomArrayLToD(5, 2)));
         System.out.println(Arrays.toString(createRandomArrayLToD(8, 3)));
+
+        numberTask(20);
+        /** Write a method that takes an array of positive integers as input
+         * and returns an array of only two-digit numbers.
+         */
+
+        int[] array10 = {7, 10, 5, 9, 18, 2, 43, 123};
+        System.out.println(Arrays.toString(createDoubleDigitArray(array10)));
 
 
 

@@ -56,6 +56,15 @@ public class Utils {
         return (int) (Math.random() * (upper - lower)) + lower;
     }
 
+    public static int[] createRandomArrayLToD(int l, int d) {
+        int[] array = new int[l];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = randomInt((int) Math.pow(10, d - 1) * 10, (int) Math.pow(10, d - 1));
+        }
+
+        return array;
+    }
+
 
 
 
