@@ -1,5 +1,7 @@
 package hw8;
 
+import utils.Utils;
+
 import java.util.Arrays;
 
 import static utils.Utils.*;
@@ -197,16 +199,46 @@ public class HW8 {
         return counter;
     }
 
-    //Task18
-    public static int[] createRandomArray(int[] array) {
+    //Task 18
+    public static int[] createRandomArray1(int[] array) {
+        if (array.length <= 0) {
+            return null;
+        }
         int arrayR = countLength(array);
         int[] randomArray = new int[arrayR];
         for (int i = 0; i < array.length; i++) {
-           randomArray[i] = (int) (Math.random() * 100) + 1;
+           randomArray[i] = (int) (Math.random() * 99) + 1;
         }
 
         return randomArray;
     }
+
+    //Task 18.1
+    public static int[] createRandomArray2(int length, int from, int to) {
+        int[] array = new int[length];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = from + (int) (Math.random() * (to + 1));
+        }
+        return array;
+    }
+
+    //Task 19
+    public static int randomInt(int upper, int lower) {
+        return (int) (Math.random() * (upper - lower)) + lower;
+    }
+
+    //Task 19
+    public static int[] createRandomArrayLToD(int l, int d) {
+        int[] array = new int[l];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = Utils.randomInt((int) Math.pow(10, d - 1) * 10, (int) Math.pow(10, d -1));
+        }
+
+        return array;
+    }
+
+
+
 
 
     public static void main(String[] args) {
@@ -356,7 +388,19 @@ public class HW8 {
         int[] array9 = {70, 81, 5, 19, 18, 2, 34, 23};
 
         System.out.println(countLength(array9));
-        System.out.println(Arrays.toString(createRandomArray(array9)));
+        System.out.println(Arrays.toString(createRandomArray1(array9)));
+
+        numberTask(19);
+        /** Write a method that takes as input the length of the array l
+         * and the number of characters d (one-digit, two-digit, three-digit, etc. numbers),
+         * and generates an array of random positive integers of length l,
+         * in which all numbers have the number of characters d.
+         */
+
+        System.out.println(Arrays.toString(createRandomArrayLToD(5, 2)));
+        System.out.println(Arrays.toString(createRandomArrayLToD(8, 3)));
+
+
 
 
 

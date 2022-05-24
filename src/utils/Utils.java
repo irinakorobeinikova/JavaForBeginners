@@ -44,7 +44,17 @@ public class Utils {
         }
     }
 
-//    public static void printArray()
+    public static int[] createRandomArray2(int length, int from, int to) {
+        int[] array = new int[length];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = from + (int) (Math.random() * (to + 1));
+        }
+        return array;
+    }
+
+    public static int randomInt(int upper, int lower) {
+        return (int) (Math.random() * (upper - lower)) + lower;
+    }
 
 
 
