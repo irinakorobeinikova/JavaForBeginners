@@ -275,6 +275,42 @@ public class HW8 {
         return newArray;
     }
 
+    //Task 22
+    public static String selectCountry(int number) {
+        switch (number) {
+            case 1:
+                return "USA";
+            case 33:
+                return "France";
+            case 34:
+                return "Spain";
+            case 44:
+                return "United Kingdom";
+            default:
+                return "Unknown country";
+        }
+    }
+
+    //Task 22
+    public static String[] returnThePhone(int[] array) {
+        String phoneNumber = "";
+        String country = selectCountry(array[0]);
+        for (int i = 0; i < array.length; i++) {
+            if (i == 1) {
+                phoneNumber += "(" + array[i];
+            } else if (i == 3) {
+                phoneNumber += array[i] + ")";
+            } else if (i == 6) {
+                phoneNumber += array[i] + "-";
+            } else if (i == 8) {
+                phoneNumber += array[i] + "-";
+            } else  {
+                phoneNumber += array[i];
+            }
+        }
+
+        return new String[] {phoneNumber, country};
+    }
 
         public static void main (String[]args){
 
@@ -452,6 +488,24 @@ public class HW8 {
 
             int[] array11 = {17, 10, 54, 29, 17, 28, 43, 23};
             System.out.println(Arrays.toString(createDifferencesArray(array11)));
+
+            numberTask(22);
+            /** Write a method that takes an array of 11 positive integers from 0 to 9
+             * and returns an array that contains a phone number consisting of these numbers
+             * and the name of the country to which the number belongs.
+             */
+
+            int[] array12 = {1, 8, 0, 0, 1, 2, 3, 4, 5, 6, 7};
+            System.out.println(Arrays.toString(returnThePhone(array12)));
+
+
+
+
+
+
+
+
+
 
 
         }
