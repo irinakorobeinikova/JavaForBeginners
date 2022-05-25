@@ -132,7 +132,7 @@ public class HW8 {
     public static int sumOfNumbersOfArray(int[] array) {
         int sumOfNumbers = 0;
         if (array.length > 0) {
-            for (int i = array.length/2; i < array.length; i++) {
+            for (int i = array.length / 2; i < array.length; i++) {
                 sumOfNumbers += array[i];
             }
         }
@@ -183,7 +183,7 @@ public class HW8 {
     public static int[] returnArrayOfOddOrEvenNum(int[] array) {
         if (countOdds(array) > countEven(array)) {
             return createArrayOfOdds(array);
-        } else if (countEven(array) > countOdds(array)){
+        } else if (countEven(array) > countOdds(array)) {
             return createArrayOfEven(array);
         } else {
             return null;
@@ -194,7 +194,7 @@ public class HW8 {
     public static int countLength(int[] array) {
         int counter = 0;
         for (int i = 0; i < array.length; i++) {
-                counter++;
+            counter++;
         }
         return counter;
     }
@@ -207,7 +207,7 @@ public class HW8 {
         int arrayR = countLength(array);
         int[] randomArray = new int[arrayR];
         for (int i = 0; i < array.length; i++) {
-           randomArray[i] = (int) (Math.random() * 99) + 1;
+            randomArray[i] = (int) (Math.random() * 99) + 1;
         }
 
         return randomArray;
@@ -261,185 +261,198 @@ public class HW8 {
         return newArray;
     }
 
+    //Task 21
+    public static int[] createDifferencesArray(int[] array) {
+        if (array.length <= 0) {
+            return null;
+        }
+        int[] newArray = new int[array.length];
 
+        for (int i = 0; i < array.length; i++) {
+                newArray[i] = Math.abs(array[i] / 10 - array[i] % 10);
+        }
 
-
-
-    public static void main(String[] args) {
-
-        numberTask(5);
-        /** In class HW8_1:
-         * Create objects of type Integer, Double, String and assign any values to them.
-         */
-
-        Integer regNum = new Integer(45);
-        Double regWeight = new Double(60.5);
-        String regName = new String("Irina");
-
-        System.out.println("Integer regNum = 45");
-        System.out.println("Double regWeight = 60.5");
-        System.out.println("String regName = Irina");
-
-        numberTask(6);
-        /** Compare variables specific to HW8_1 and HW8 classes
-         * and print the comparison results in a table.
-         */
-
-        boolean regNum3 = regNum.equals(HW8_1.regNum1);
-        boolean regWeight3 = regWeight.equals(HW8_1.regWeight1);
-        boolean regName3 = regName.equals(HW8_1.regName1);
-
-        line();
-        System.out.println("| HW8                     | " + "HW8_1                    | " + "areEquals |");
-        line();
-        System.out.println("| Integer regNum = " + regNum + "     | " + "Integer regNum1 = "
-                + HW8_1.regNum1 + "     | " + regNum3 + "      |");
-        line();
-        System.out.println("| Double regWeight = " + regWeight + " | " + "Double regWeight1 = "
-                + HW8_1.regWeight1 + " | " + regWeight3 + "      |");
-        line();
-        System.out.println("| String regName = " + regName + "  | " + "String regName1 = "
-                + HW8_1.regName1 + "  | " + regName3 + "      |");
-        line();
-
-        numberTask(7);
-        /** Write a method that takes 5 integers as input
-         * and returns an array of the same numbers
-         */
-
-        System.out.println(Arrays.toString(createArrayOf5Numbers(2, 5, 7, 9, 1)));
-
-        numberTask(8);
-        /** Write a method that takes 5 doubles as input
-         * and returns an array of the same numbers
-         */
-
-        System.out.println(Arrays.toString(createArrayOf5Double(1.2, 5.3, 4.0, 8.0, 6.5)));
-
-        numberTask(9);
-        /** Write a method that takes 5 words as input
-         * and returns an array of these words
-         */
-
-        System.out.println(Arrays.toString(createArrayOf5Words("Pavel", "Irina", "Darya",
-                "Veronika", "Egor")));
-
-        line();
-        //generic
-        System.out.println(Arrays.toString(createArray(1, 2, 3, 4, 5)));
-        System.out.println(Arrays.toString(createArray(0.5, 5.2, 4.8, 5.0, 9.1)));
-        System.out.println(Arrays.toString(createArray("one", "two", "three", "four", "five")));
-
-        numberTask(10);
-        /** Write a method that takes an array of integers as input
-         * and returns an array of the same numbers multiplied by 2.5
-         */
-
-        int[] array = {1, 2, 3};
-
-        System.out.println(Arrays.toString(multipleArray(array, 2.5)));
-
-        numberTask(11);
-        /** Write a method that takes an array of positive integers as input
-         * and returns the number of even numbers in this array.
-         */
-
-        int[] array1 = {2, 4, 5, 15, 8, 20};
-        int[] array2 = {-2, -4, 5, -15, 8, 20};
-
-        System.out.println(returnEvenNumIfNoNegatives(array1));
-        System.out.println(returnEvenNumIfNoNegatives(array2));
-
-        numberTask(12);
-        /** Write a method that takes an array of positive integers as input
-         * and returns an array of odd numbers.
-         */
-
-        int[] array3 = {2, 4, 5, 15, 8, 20, 21, 43, 51};
-
-        System.out.println(countOdds(array3));
-        System.out.println(Arrays.toString(createArrayOfOdds(array3)));
-
-        numberTask(13);
-        /** Write a method that takes an array of integers as input
-         * and returns an array of values true or false if the numbers are greater than 10
-         */
-
-        int[] array4 = {12, 14, 5, 15, 8, 25, 1, 3, 51};
-        System.out.println(Arrays.toString(returnTrueOrFalseMore10(array4)));
-
-        numberTask(14);
-        /** Write a method that takes an array of words as input
-         * and returns a string consisting of these words.
-         */
-
-        String[] array5 = {"I", "like", "playing", "the", "guitar"};
-        System.out.println(returnStringOfWords(array5));
-
-        numberTask(15);
-        /** Write a method that takes an array of integers
-         * and calculates the sum of the numbers in the second half of the array.
-         */
-
-        int[] array6 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-        System.out.println(sumOfNumbersOfArray(array6));
-
-        numberTask(16);
-        /** Write a method that takes as input a positive integer in the range from 1 to 10 exclusively,
-         * and returns the multiplication table for this number as an array.
-         */
-
-        System.out.println(Arrays.toString(returnMultiplicationTable(2)));
-        System.out.println(Arrays.toString(returnMultiplicationTable(-2)));
-
-        numberTask(17);
-        /** Write a method that takes an array of integers
-         * and returns an array of even numbers if there are more even numbers,
-         * or an array of odd numbers if there are more odd numbers.
-         */
-
-        int[] array7 = {8, 14, 4, 30, 6, 15, 10, 13, 17};
-        int[] array8 = {7, 11, 5, 29, 8, 25, 32, 23, 21};
-
-        System.out.println(Arrays.toString(returnArrayOfOddOrEvenNum(array7)));
-        System.out.println(Arrays.toString(returnArrayOfOddOrEvenNum(array8)));
-
-        numberTask(18);
-        /** Write a method that takes the length of an array as input
-         * and generates an array of random positive numbers from 0 to 100 exclusively.
-         */
-
-        int[] array9 = {70, 81, 5, 19, 18, 2, 34, 23};
-
-        System.out.println(countLength(array9));
-        System.out.println(Arrays.toString(createRandomArray1(array9)));
-
-        numberTask(19);
-        /** Write a method that takes as input the length of the array l
-         * and the number of characters d (one-digit, two-digit, three-digit, etc. numbers),
-         * and generates an array of random positive integers of length l,
-         * in which all numbers have the number of characters d.
-         */
-
-        System.out.println(Arrays.toString(createRandomArrayLToD(7, 1)));
-        System.out.println(Arrays.toString(createRandomArrayLToD(5, 2)));
-        System.out.println(Arrays.toString(createRandomArrayLToD(8, 3)));
-
-        numberTask(20);
-        /** Write a method that takes an array of positive integers as input
-         * and returns an array of only two-digit numbers.
-         */
-
-        int[] array10 = {7, 10, 5, 9, 18, 2, 43, 123};
-        System.out.println(Arrays.toString(createDoubleDigitArray(array10)));
-
-
-
-
-
-
-
-
-
+        return newArray;
     }
-}
+
+
+        public static void main (String[]args){
+
+            numberTask(5);
+            /** In class HW8_1:
+             * Create objects of type Integer, Double, String and assign any values to them.
+             */
+
+            Integer regNum = new Integer(45);
+            Double regWeight = new Double(60.5);
+            String regName = new String("Irina");
+
+            System.out.println("Integer regNum = 45");
+            System.out.println("Double regWeight = 60.5");
+            System.out.println("String regName = Irina");
+
+            numberTask(6);
+            /** Compare variables specific to HW8_1 and HW8 classes
+             * and print the comparison results in a table.
+             */
+
+            boolean regNum3 = regNum.equals(HW8_1.regNum1);
+            boolean regWeight3 = regWeight.equals(HW8_1.regWeight1);
+            boolean regName3 = regName.equals(HW8_1.regName1);
+
+            line();
+            System.out.println("| HW8                     | " + "HW8_1                    | " + "areEquals |");
+            line();
+            System.out.println("| Integer regNum = " + regNum + "     | " + "Integer regNum1 = "
+                    + HW8_1.regNum1 + "     | " + regNum3 + "      |");
+            line();
+            System.out.println("| Double regWeight = " + regWeight + " | " + "Double regWeight1 = "
+                    + HW8_1.regWeight1 + " | " + regWeight3 + "      |");
+            line();
+            System.out.println("| String regName = " + regName + "  | " + "String regName1 = "
+                    + HW8_1.regName1 + "  | " + regName3 + "      |");
+            line();
+
+            numberTask(7);
+            /** Write a method that takes 5 integers as input
+             * and returns an array of the same numbers
+             */
+
+            System.out.println(Arrays.toString(createArrayOf5Numbers(2, 5, 7, 9, 1)));
+
+            numberTask(8);
+            /** Write a method that takes 5 doubles as input
+             * and returns an array of the same numbers
+             */
+
+            System.out.println(Arrays.toString(createArrayOf5Double(1.2, 5.3, 4.0, 8.0, 6.5)));
+
+            numberTask(9);
+            /** Write a method that takes 5 words as input
+             * and returns an array of these words
+             */
+
+            System.out.println(Arrays.toString(createArrayOf5Words("Pavel", "Irina", "Darya",
+                    "Veronika", "Egor")));
+
+            line();
+            //generic
+            System.out.println(Arrays.toString(createArray(1, 2, 3, 4, 5)));
+            System.out.println(Arrays.toString(createArray(0.5, 5.2, 4.8, 5.0, 9.1)));
+            System.out.println(Arrays.toString(createArray("one", "two", "three", "four", "five")));
+
+            numberTask(10);
+            /** Write a method that takes an array of integers as input
+             * and returns an array of the same numbers multiplied by 2.5
+             */
+
+            int[] array = {1, 2, 3};
+
+            System.out.println(Arrays.toString(multipleArray(array, 2.5)));
+
+            numberTask(11);
+            /** Write a method that takes an array of positive integers as input
+             * and returns the number of even numbers in this array.
+             */
+
+            int[] array1 = {2, 4, 5, 15, 8, 20};
+            int[] array2 = {-2, -4, 5, -15, 8, 20};
+
+            System.out.println(returnEvenNumIfNoNegatives(array1));
+            System.out.println(returnEvenNumIfNoNegatives(array2));
+
+            numberTask(12);
+            /** Write a method that takes an array of positive integers as input
+             * and returns an array of odd numbers.
+             */
+
+            int[] array3 = {2, 4, 5, 15, 8, 20, 21, 43, 51};
+
+            System.out.println(countOdds(array3));
+            System.out.println(Arrays.toString(createArrayOfOdds(array3)));
+
+            numberTask(13);
+            /** Write a method that takes an array of integers as input
+             * and returns an array of values true or false if the numbers are greater than 10
+             */
+
+            int[] array4 = {12, 14, 5, 15, 8, 25, 1, 3, 51};
+            System.out.println(Arrays.toString(returnTrueOrFalseMore10(array4)));
+
+            numberTask(14);
+            /** Write a method that takes an array of words as input
+             * and returns a string consisting of these words.
+             */
+
+            String[] array5 = {"I", "like", "playing", "the", "guitar"};
+            System.out.println(returnStringOfWords(array5));
+
+            numberTask(15);
+            /** Write a method that takes an array of integers
+             * and calculates the sum of the numbers in the second half of the array.
+             */
+
+            int[] array6 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+            System.out.println(sumOfNumbersOfArray(array6));
+
+            numberTask(16);
+            /** Write a method that takes as input a positive integer in the range from 1 to 10 exclusively,
+             * and returns the multiplication table for this number as an array.
+             */
+
+            System.out.println(Arrays.toString(returnMultiplicationTable(2)));
+            System.out.println(Arrays.toString(returnMultiplicationTable(-2)));
+
+            numberTask(17);
+            /** Write a method that takes an array of integers
+             * and returns an array of even numbers if there are more even numbers,
+             * or an array of odd numbers if there are more odd numbers.
+             */
+
+            int[] array7 = {8, 14, 4, 30, 6, 15, 10, 13, 17};
+            int[] array8 = {7, 11, 5, 29, 8, 25, 32, 23, 21};
+
+            System.out.println(Arrays.toString(returnArrayOfOddOrEvenNum(array7)));
+            System.out.println(Arrays.toString(returnArrayOfOddOrEvenNum(array8)));
+
+            numberTask(18);
+            /** Write a method that takes the length of an array as input
+             * and generates an array of random positive numbers from 0 to 100 exclusively.
+             */
+
+            int[] array9 = {70, 81, 5, 19, 18, 2, 34, 23};
+
+            System.out.println(countLength(array9));
+            System.out.println(Arrays.toString(createRandomArray1(array9)));
+
+            numberTask(19);
+            /** Write a method that takes as input the length of the array l
+             * and the number of characters d (one-digit, two-digit, three-digit, etc. numbers),
+             * and generates an array of random positive integers of length l,
+             * in which all numbers have the number of characters d.
+             */
+
+            System.out.println(Arrays.toString(createRandomArrayLToD(7, 1)));
+            System.out.println(Arrays.toString(createRandomArrayLToD(5, 2)));
+            System.out.println(Arrays.toString(createRandomArrayLToD(8, 3)));
+
+            numberTask(20);
+            /** Write a method that takes an array of positive integers as input
+             * and returns an array of only two-digit numbers.
+             */
+
+            int[] array10 = {70, 10, 53, 19, 18, 26, 43, 12};
+            System.out.println(Arrays.toString(createDoubleDigitArray(array10)));
+
+            numberTask(21);
+            /** Write a method that takes an array of positive integer two-digit numbers as input
+             * and returns an array of differences between tens and ones.
+             *
+             */
+
+            int[] array11 = {17, 10, 54, 29, 17, 28, 43, 23};
+            System.out.println(Arrays.toString(createDifferencesArray(array11)));
+
+
+        }
+    }
