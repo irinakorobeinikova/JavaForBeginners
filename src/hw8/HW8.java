@@ -312,6 +312,14 @@ public class HW8 {
         return new String[] {phoneNumber, country};
     }
 
+    //Task 23
+
+
+
+
+
+
+
         public static void main (String[]args){
 
             numberTask(5);
@@ -497,6 +505,11 @@ public class HW8 {
 
             int[] array12 = {1, 8, 0, 0, 1, 2, 3, 4, 5, 6, 7};
             System.out.println(Arrays.toString(returnThePhone(array12)));
+
+            numberTask(23);
+            /** Write a method that takes an array of positive integers greater than 0
+             * and returns an array of unique numbers.
+             */
 
 
 
