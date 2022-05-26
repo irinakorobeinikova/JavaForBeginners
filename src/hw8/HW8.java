@@ -313,6 +313,31 @@ public class HW8 {
     }
 
     //Task 23
+    public static int[] createUniqueArray(int[] array) {
+        if (array.length > 0) {
+            int count = 0;
+            for (int i = 0; count != array.length - 1 && i < array.length; i++) {
+                if (array[i] >= 0) {
+                    for (int j = i + 1; j < array.length; j++) {
+                        if (array[i] == array[j]) {
+                            array[j] = -1;
+                            count++;
+                        }
+                    }
+                }
+            }
+            int[] uniqueArray = new int[array.length - count];
+            int j = 0;
+            for (int i = 0; j < uniqueArray.length && i < array.length; i++) {
+                if (array[i] != -1) {
+                    uniqueArray[j] = array[i];
+                    j++;
+                }
+            }
+            return uniqueArray;
+        }
+        return new int[] {};
+    }
 
 
 
@@ -510,6 +535,9 @@ public class HW8 {
             /** Write a method that takes an array of positive integers greater than 0
              * and returns an array of unique numbers.
              */
+
+            int[] array13 = {8, 6, 0, 5, 7, 1, 2, 3, 8, 6, 4, 7};;
+            System.out.println(Arrays.toString(createUniqueArray(array13)));
 
 
 
