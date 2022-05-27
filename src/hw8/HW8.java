@@ -361,6 +361,27 @@ public class HW8 {
         return new int[]{0, 0};
     }
 
+    //Task 25
+    public static int[] createArrayBetweenIndices(int[] array, int start, int end) {
+        if (start >= 0 && end >= 0 && start < end + 1
+            && start < array.length && end < array.length) {
+            if (start == end) {
+                return new int[] {array[start]};
+            } else {
+
+                int[] newArray = new int[end - start + 1];
+                for (int i = 0; i < newArray.length; i++) {
+                    if (array[start] >= 0) {
+                        newArray[i] = array[start];
+                        start++;
+                    }
+                }
+                return newArray;
+            }
+        }
+        return new int[0];
+    }
+
 
     public static void main(String[] args) {
 
@@ -554,7 +575,6 @@ public class HW8 {
          */
 
         int[] array13 = {8, 6, 0, 5, 7, 1, 2, 3, 8, 6, 4, 7};
-        ;
         System.out.println(Arrays.toString(createUniqueArray(array13)));
 
         numberTask(24);
@@ -570,6 +590,11 @@ public class HW8 {
          * The method returns an array that contains only the numbers
          * from the first array in between the indices.
          */
+
+        int[] array14 = {1, 2, 3, 4, 5};
+        System.out.println(Arrays.toString(createArrayBetweenIndices(array14, 1, 3)));
+        System.out.println(Arrays.toString(createArrayBetweenIndices(array14, 1, 1)));
+        System.out.println(Arrays.toString(createArrayBetweenIndices(array14, 3, 1)));
 
 
     }
