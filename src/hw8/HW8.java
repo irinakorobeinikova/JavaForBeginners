@@ -323,7 +323,7 @@ public class HW8 {
                 }
             }
         }
-        for (int i = 0; i < array.length; i++) {            //count not 0;
+        for (int i = 0; i < array.length; i++) {            //count "0"
             if (array[i] == 0) {
                 count++;
             }
@@ -356,7 +356,7 @@ public class HW8 {
                 }
             }
 
-            return new int[]{array.length - n};
+            return new int[]{array.length - n, n};
         }
         return new int[]{0, 0};
     }
@@ -563,6 +563,13 @@ public class HW8 {
          */
 
         System.out.println(Arrays.toString(countUniqueNonUnique(array13)));
+
+        numberTask(25);
+        /** Write a method that takes an array of positive integers
+         * and 2 positive integers (index values) as input.
+         * The method returns an array that contains only the numbers
+         * from the first array in between the indices.
+         */
 
 
     }
