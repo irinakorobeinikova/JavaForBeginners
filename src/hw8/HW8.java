@@ -38,6 +38,7 @@ public class HW8 {
     //Task 10
     public static double[] multipleArray(int[] array, double a) {
         double[] newArray = new double[array.length];
+
         for (int i = 0; i < array.length; i++) {
             newArray[i] = array[i] * a;
         }
@@ -53,6 +54,7 @@ public class HW8 {
                 return true;
             }
         }
+
         return false;
     }
 
@@ -60,6 +62,7 @@ public class HW8 {
     public static int returnEvenNumIfNoNegatives(int[] array) {
         if (!containsNegativeNumbers(array) && array.length != 0) {
             int count = 0;
+
             for (int i = 0; i < array.length; i++) {
                 if (array[i] % 2 == 0) {
                     count++;
@@ -76,11 +79,13 @@ public class HW8 {
     //Task 12
     public static int countOdds(int[] array) {
         int counter = 0;
+
         for (int i = 0; i < array.length; i++) {
             if (array[i] % 2 != 0) {
                 counter++;
             }
         }
+
         return counter;
     }
 
@@ -88,18 +93,21 @@ public class HW8 {
     public static int[] createArrayOfOdds(int[] array) {
         int a = countOdds(array);
         int[] oddsArray = new int[a];
+
         for (int i = 0; i < array.length; i++) {
             if (array[i] % 2 != 0) {
                 oddsArray[oddsArray.length - a] = array[i];
                 a--;
             }
         }
+
         return oddsArray;
     }
 
     //Task 13
     public static boolean[] returnTrueOrFalseMore10(int[] array) {
         boolean[] arrayBoolean = new boolean[array.length];
+
         if (array == null || array.length == 0) {
             return null;
         }
@@ -117,6 +125,7 @@ public class HW8 {
     //Task 14
     public static String returnStringOfWords(String[] array) {
         String arrayString = "";
+
         if (array == null || array.length == 0) {
             return null;
         }
@@ -131,6 +140,7 @@ public class HW8 {
     //Task 15
     public static int sumOfNumbersOfArray(int[] array) {
         int sumOfNumbers = 0;
+
         if (array.length > 0) {
             for (int i = array.length / 2; i < array.length; i++) {
                 sumOfNumbers += array[i];
@@ -143,6 +153,7 @@ public class HW8 {
     //Task 16
     public static int[] returnMultiplicationTable(int num) {
         int[] table = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+
         for (int i = 0; i < table.length; i++) {
             if (num >= 1 && num < 10) {
                 table[i] = num * table[i];
@@ -158,11 +169,13 @@ public class HW8 {
     //Task 17
     public static int countEven(int[] array) {
         int counter = 0;
+
         for (int i = 0; i < array.length; i++) {
             if (array[i] % 2 == 0) {
                 counter++;
             }
         }
+
         return counter;
     }
 
@@ -170,12 +183,14 @@ public class HW8 {
     public static int[] createArrayOfEven(int[] array) {
         int a = countEven(array);
         int[] evenArray = new int[a];
+
         for (int i = 0; i < array.length; i++) {
             if (array[i] % 2 == 0) {
                 evenArray[evenArray.length - a] = array[i];
                 a--;
             }
         }
+
         return evenArray;
     }
 
@@ -193,17 +208,21 @@ public class HW8 {
     //Task 18
     public static int countLength(int[] array) {
         int counter = 0;
+
         for (int i = 0; i < array.length; i++) {
             counter++;
         }
+
         return counter;
     }
 
     //Task 18
     public static int[] createRandomArray1(int[] array) {
         if (array.length <= 0) {
+
             return null;
         }
+
         int arrayR = countLength(array);
         int[] randomArray = new int[arrayR];
         for (int i = 0; i < array.length; i++) {
@@ -216,20 +235,24 @@ public class HW8 {
     //Task 18.1
     public static int[] createRandomArray2(int length, int from, int to) {
         int[] array = new int[length];
+
         for (int i = 0; i < array.length; i++) {
             array[i] = from + (int) (Math.random() * (to + 1));
         }
+
         return array;
     }
 
     //Task 19
     public static int randomInt(int upper, int lower) {
+
         return (int) (Math.random() * (upper - lower)) + lower;
     }
 
     //Task 19
     public static int[] createRandomArrayLToD(int l, int d) {
         int[] array = new int[l];
+
         for (int i = 0; i < array.length; i++) {
             array[i] = Utils.randomInt((int) Math.pow(10, d - 1) * 10, (int) Math.pow(10, d - 1));
         }
@@ -240,8 +263,10 @@ public class HW8 {
     //Task 20
     public static int[] createDoubleDigitArray(int[] array) {
         if (array.length <= 0) {
+
             return null;
         }
+
         int count = 0;
 
         for (int i = 0; i < array.length; i++) {
@@ -264,8 +289,10 @@ public class HW8 {
     //Task 21
     public static int[] createDifferencesArray(int[] array) {
         if (array.length <= 0) {
+
             return null;
         }
+
         int[] newArray = new int[array.length];
 
         for (int i = 0; i < array.length; i++) {
@@ -295,6 +322,7 @@ public class HW8 {
     public static String[] returnThePhone(int[] array) {
         String phoneNumber = "";
         String country = selectCountry(array[0]);
+
         for (int i = 0; i < array.length; i++) {
             if (i == 1) {
                 phoneNumber += "(" + array[i];
@@ -336,6 +364,7 @@ public class HW8 {
                 count++;
             }
         }
+
         return uniqueArray;
     }
 
@@ -358,6 +387,7 @@ public class HW8 {
 
             return new int[]{array.length - n, n};
         }
+
         return new int[]{0, 0};
     }
 
@@ -376,10 +406,30 @@ public class HW8 {
                         start++;
                     }
                 }
+
                 return newArray;
             }
         }
+
         return new int[0];
+    }
+
+    //Task 26
+    public static int[] createUniqueArrayFromTwo(int[] array1, int[] array2) {
+        if (array1.length > 0 || array2.length > 0) {
+
+            int[] newArray = new int[array1.length + array2.length];
+            for (int i = 0; i < array1.length; i++) {
+                newArray[i] = array1[i];
+            }
+            for (int i = 0; i < array2.length; i++) {
+                newArray[array1.length + i] = array2[i];
+            }
+
+            return createUniqueArray(newArray);
+        }
+
+        return new int[] {};
     }
 
 
@@ -484,6 +534,7 @@ public class HW8 {
          */
 
         int[] array4 = {12, 14, 5, 15, 8, 25, 1, 3, 51};
+
         System.out.println(Arrays.toString(returnTrueOrFalseMore10(array4)));
 
         numberTask(14);
@@ -492,6 +543,7 @@ public class HW8 {
          */
 
         String[] array5 = {"I", "like", "playing", "the", "guitar"};
+
         System.out.println(returnStringOfWords(array5));
 
         numberTask(15);
@@ -500,6 +552,7 @@ public class HW8 {
          */
 
         int[] array6 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+
         System.out.println(sumOfNumbersOfArray(array6));
 
         numberTask(16);
@@ -549,6 +602,7 @@ public class HW8 {
          */
 
         int[] array10 = {70, 10, 53, 19, 18, 26, 43, 12};
+
         System.out.println(Arrays.toString(createDoubleDigitArray(array10)));
 
         numberTask(21);
@@ -558,6 +612,7 @@ public class HW8 {
          */
 
         int[] array11 = {17, 10, 54, 29, 17, 28, 43, 23};
+
         System.out.println(Arrays.toString(createDifferencesArray(array11)));
 
         numberTask(22);
@@ -567,6 +622,7 @@ public class HW8 {
          */
 
         int[] array12 = {1, 8, 0, 0, 1, 2, 3, 4, 5, 6, 7};
+
         System.out.println(Arrays.toString(returnThePhone(array12)));
 
         numberTask(23);
@@ -575,6 +631,7 @@ public class HW8 {
          */
 
         int[] array13 = {8, 6, 0, 5, 7, 1, 2, 3, 8, 6, 4, 7};
+
         System.out.println(Arrays.toString(createUniqueArray(array13)));
 
         numberTask(24);
@@ -592,9 +649,22 @@ public class HW8 {
          */
 
         int[] array14 = {1, 2, 3, 4, 5};
+
         System.out.println(Arrays.toString(createArrayBetweenIndices(array14, 1, 3)));
         System.out.println(Arrays.toString(createArrayBetweenIndices(array14, 1, 1)));
         System.out.println(Arrays.toString(createArrayBetweenIndices(array14, 3, 1)));
+
+        numberTask(26);
+        /** Write a method that takes 2 int[] arrays as input
+         * and returns a combined array of unique non-repeating elements.
+         */
+
+        int[] array15 = {6, 7, 8, 9, 10};
+        int[] array16 = {};
+        int[] array17 = {};
+
+        System.out.println(Arrays.toString(createUniqueArrayFromTwo(array14, array15)));
+        System.out.println(Arrays.toString(createUniqueArrayFromTwo(array16, array17)));
 
 
     }
