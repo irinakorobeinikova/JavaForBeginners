@@ -33,13 +33,26 @@ public class Lesson10 {
             System.out.println(str4.charAt(i));
         }
 
-        for (int i = 0; i < str4.length(); i++) {
-            if (str4.charAt(i) == 'a') {
-                System.out.println(str4.charAt(i));
-            } else {
-                System.out.println("Letter not a");
-            }
-        }
+//        for (int i = 0; i < str4.length(); i++) {
+//            if (str4.charAt(i) == 'a') {
+//                System.out.println(i);              //indices
+//                System.out.println(str4.charAt(i)); //letter
+//            } else {
+//                System.out.println("Letter not a");
+//            }
+//        }
+
+//        for (int i = 0; i < str4.length(); i++) {
+//            if (str4.charAt(i) < 'i') {
+//                System.out.println(str4.charAt(i)); //letter
+//            } else {
+//                System.out.println(">= i");
+//            }
+//        }
+
+        System.out.println('i' - 1);
+        System.out.println('i');
+        System.out.println('i' + 1);
 
 
 
