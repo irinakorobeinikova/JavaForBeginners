@@ -67,10 +67,23 @@ public class Lesson10 {
             arrayStr[i] = Character.toString(str4.charAt(i));
         }
 
-        System.out.println(Arrays.toString(arrayStr));
+        System.out.println(Arrays.toString(arrayStr));               //[J, a, v, a,  , i, s,  , f, u, n]
 
+        System.out.println(str4.toCharArray());                      //Java is fun
+        System.out.println(Arrays.toString(str4.toCharArray()));     //[J, a, v, a,  , i, s,  , f, u, n]
 
+        char[] arrayChar = str4.toCharArray();
+        System.out.println(arrayStr[0].equals(arrayChar[0]));        //false
+        System.out.println(arrayStr[0].compareTo(Character.toString(arrayChar[0])));     //0(true)
+//        if (arrayStr[0].compareTo(Character.toString(arrayChar[0])) == 0) {
+//        }
 
+        System.out.println(str4);                 //Java is fun
+        System.out.println(str4.toLowerCase());   //Java is fun
+        System.out.println(str4.toUpperCase());   //JAVA IS FUN
+
+        String str5 = str4.toUpperCase();         //0(true)
+        System.out.println(str4.compareToIgnoreCase(str5));
 
 
 
