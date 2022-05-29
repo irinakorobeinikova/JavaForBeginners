@@ -1,5 +1,7 @@
 package lessons.lesson10StringChar;
 
+import java.util.Arrays;
+
 public class Lesson10 {
 
     public static void main(String[] args) {
@@ -53,6 +55,21 @@ public class Lesson10 {
         System.out.println('i' - 1);
         System.out.println('i');
         System.out.println('i' + 1);
+
+        System.out.println(Character.toString('i' - 1));
+        System.out.println('i');
+        System.out.println(Character.toString('i' + 1));
+
+        //convert string to array
+        String[] arrayStr = new String[str4.length()];
+
+        for (int i = 0; i < str4.length(); i++) {
+            arrayStr[i] = Character.toString(str4.charAt(i));
+        }
+
+        System.out.println(Arrays.toString(arrayStr));
+
+
 
 
 
