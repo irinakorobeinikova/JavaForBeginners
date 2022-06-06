@@ -35,7 +35,7 @@ public class HW10 {
         return "";
     }
 
-    public static int[] minMaxAve(int[] array, int index1, int index2) {
+    public static int[] returnMinMaxAveArray(int[] array, int index1, int index2) {
 
         if (array == null || array.length < 1 || index1 < 0 || index1 > index2 || index2 > array.length) {
 
@@ -75,7 +75,7 @@ public class HW10 {
         int a = 2;
         int b = 6;
 
-        System.out.println(Arrays.toString(minMaxAve(arr, a, b)));
+        System.out.println(Arrays.toString(returnMinMaxAveArray(arr, a, b)));
 
 
 
